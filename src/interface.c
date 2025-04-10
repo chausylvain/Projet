@@ -148,7 +148,6 @@
 \param p : player p défini dans player.h et player.c
 \return : entier i encodant le pari
 */
- 
 int ask_gamble(player p){
     int gamble = -1; // initialisation de la variable gamble
     printf("Joueuse %d, quel est votre pari ? ", get_player_id(p));

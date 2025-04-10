@@ -77,18 +77,32 @@ int main() {
             for (int j = 0; j < NB_PLAYERS_TEAM; j++) {
                 player p = get_player(b, i, j);
                 int nb_cards = ask_number_of_played_cards(p);
+                if (nb_cards > 2 || nb_cards < 1) {
+                    display_message("Nombre de cartes à jouer invalide\n");
+                    nb_cards = get_size_of_hand(p);
+                }
                 card* played_cards = malloc(nb_cards * sizeof(card));
-                for (int k = 0; k < nb_cards; k++) {
-                    card c = ask_card(p);
-                    play_card(p, c);
-                    played_cards[k] = c;
-                    team_scores[i] += get_value(c);
-                }
+                if (nb_cards == 1) {
+                    for (int k = 0; k < nb_cards; k++) {
+                        card c = ask_card(p);
+                        play_card(p, c);
+                        played_cards[k] = c;
+                        team_scores[i] += get_value(c);
+                    }
 
-                for (int k = 0; k < nb_cards; k++) {
-                    remove_card_from_hand(p, played_cards[k]);
+                    for (int k = 0; k < nb_cards; k++) {
+                        remove_card_from_hand(p, played_cards[k]);
+                    }
                 }
-
+                else if (nb_cards == 2) {
+                    for (int k = 0; k < nb_cards; k++) {
+                        card c = ask_card(p);
+                        play_card(p, c);
+                        played_cards[k] = c;
+                        remove_card_from_hand(p, played_cards[k]);
+                        team_scores[i] += get_value(c);
+                    }
+                }
             }
         }
         
