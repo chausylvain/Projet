@@ -22,8 +22,8 @@
  
     /* Pour la première joueuse */
     printf("L'identifiant de la première joueuse est %d\n",get_player_id (player1_1) );
-    printf("Cette joueuse à %d cartes dans sa main.\n", get_size_of_hand(player1_1) );
-    printf("Les cartes de sa main sont : ");
+    printf("Cette joueuse a %d cartes dans sa main.\n", get_size_of_hand(player1_1) );
+    printf("Les valeurs des cartes de sa main sont : ");
     for(int i=0; i<get_size_of_hand(player1_1); i++)
     {
         card c1 = get_card_in_hand(player1_1, i); // Il faut récupérer l'id de la carte
@@ -34,22 +34,22 @@
         }
  
     }
-    printf("\nElle a joué %d cartes\n", get_number_of_played_cards(player1_1) );
-    printf("Les cartes qu'elle a joué sont: ");
+    printf("\nElle a joué %d cartes jusque-là\n", get_number_of_played_cards(player1_1) );
+    printf("Les valeurs des cartes qu'elle a joué sont: ");
     for(int k=0; k<get_number_of_played_cards(player1_1);k++)
     {
         card c2 = get_played_card(player1_1, k);
         printf("%d",get_value(c2)) ;
  
     }
-    printf("\nSon pari est %d \n", get_slate(player1_1) );
+    printf("\nSon pari est %d, pourquoi print ça ici \n", get_slate(player1_1) );
  
     /* Pour la deuxième joueuse */
     printf("\n");
  
     printf("L'identifiant de la deuxième joueuse est %d\n",get_player_id (player1_2) );
-    printf("Cette joueuse à %d cartes dans sa main.\n", get_size_of_hand(player1_2) );
-    printf("Les cartes de sa main sont : ");
+    printf("Cette joueuse a %d cartes dans sa main.\n", get_size_of_hand(player1_2) );
+    printf("Les valeurs des cartes de sa main sont : ");
     for(int i=0; i<get_size_of_hand(player1_2); i++)
     {
         card c1 = get_card_in_hand (player1_2, i);
@@ -59,15 +59,15 @@
             printf(", ");
         }
     }
-    printf("\nElle a joué %d cartes\n", get_number_of_played_cards(player1_2) );
-    printf("Les cartes qu'elle a joué sont: ");
+    printf("\nElle a joué %d cartes jusque-là\n", get_number_of_played_cards(player1_2) );
+    printf("Les valeurs des cartes qu'elle a joué sont: ");
     for(int k=0; k<get_number_of_played_cards(player1_2);k++)
     {
         card c2 = get_played_card(player1_2, k);
         printf("%d\n",get_value(c2));
  
     }
-    printf("Son pari est %d \n", get_slate(player1_2) );
+    printf("\nSon pari est %d, pourquoi print ça ici \n", get_slate(player1_2) );
  
     printf("\nLe score de l'équipe 1 est %d\n\n", get_score_of_team(b, team1.team_id));
  
@@ -81,8 +81,8 @@
     printf("\n");
  
     printf("L'indentifiant de la première joueuse est %d\n",get_player_id (player2_1) );
-    printf("Cette joueuse à %d cartes dans sa main \n", get_size_of_hand(player2_1) );
-    printf("Les cartes de sa main sont : ");
+    printf("Cette joueuse a %d cartes dans sa main \n", get_size_of_hand(player2_1) );
+    printf("Les valeurs des cartes de sa main sont : ");
     for(int i=0; i<get_size_of_hand(player2_1); i++)
     {
         card c1 = get_card_in_hand (player2_1, i);
@@ -93,23 +93,23 @@
         }
  
     }
-    printf("\nElle a joué %d cartes.\n", get_number_of_played_cards(player2_1) );
-    printf("Les cartes qu'elle a joué sont:");
+    printf("\nElle a joué %d cartes jusque-là\n", get_number_of_played_cards(player2_1) );
+    printf("Les valeurs des cartes qu'elle a joué sont:");
     for(int k=0; k<get_number_of_played_cards(player2_1);k++)
     {
         card c2 = get_played_card(player2_1, k);
         printf("%d",get_value(c2));
  
     }
-    printf("\nSon pari est %d \n", get_slate(player2_1) );
+    printf("\nSon pari est %d, pourquoi print ça ici \n", get_slate(player2_1) );
  
     /* Pour la deuxième joueuse */
  
     printf("\n");
  
     printf("L'indentifiant de la deuxième joueuse est %d\n",get_player_id (player2_2) );
-    printf("Cette joueuse à %d cartes dans sa main\n", get_size_of_hand(player2_2) );
-    printf("Les cartes de sa main sont :");
+    printf("Cette joueuse a %d cartes dans sa main\n", get_size_of_hand(player2_2) );
+    printf("Les valeurs des cartes de sa main sont :");
     for(int i=0; i<get_size_of_hand(player2_2); i++)
     {
         // Il faut récupérer l'id de la carte
@@ -121,20 +121,20 @@
         }
  
     }
-    printf("\nElle a joué %d cartes.\n", get_number_of_played_cards(player2_2) );
-    printf("Les cartes qu'elle a joué sont: ");
+    printf("\nElle a joué %d cartes jusque-là\n", get_number_of_played_cards(player2_2) );
+    printf("Les valeurs des cartes qu'elle a joué sont: ");
     for(int k=0; k<get_number_of_played_cards(player2_2);k++)
     {
         card c2 = get_played_card(player2_2, k);
         printf("%d,",get_value(c2));
  
     }
-    printf("\nSon pari est %d \n\n", get_slate(player2_2) );
+    printf("\nSon pari est %d, pourquoi print ça ici \n\n", get_slate(player2_2) );
  
     printf("Le score de l'équipe 2 est %d\n\n", get_score_of_team(b, team2.team_id));
  
     printf("Le nombre de cartes mises de côté est %d\n\n", get_number_of_out_of_game_cards(b));
-    printf("Les cartes mises des coté sont:\n");
+    printf("Les valeurs des cartes mises des coté sont:\n");
     for(int j=0; j<get_number_of_out_of_game_cards(b); j++)
     {
         card c3 = get_out_of_game_card(b, j);
@@ -226,12 +226,12 @@ int ask_number_of_played_cards(player p){
 */
 card ask_card(player p){
     int reponse = 0;
-    static int used_indices[5] = {0}; 
+    //static int used_indices[5] = {0}; 
     printf("Entrez l'indice de la carte que vous voulez jouer (0 à %d) ", get_size_of_hand(p)-1); // on demande à la joueuse de choisir une carte
     scanf("%d",&reponse); // utilisation de scanf pour lire la réponse
     //printf("test\n");
-    while (reponse < 0 || reponse >= get_size_of_hand(p) || used_indices[reponse]) // tant que la réponse ne contient pas "Victoire" ou "Defaite"
-    {
+    while (reponse < 0 || reponse >= get_size_of_hand(p) /*|| used_indices[reponse]*/)
+    {/*
         if(used_indices[reponse]) // si la carte a déjà été jouée
         {
             printf("Cette carte a déjà été jouée. Veuillez en choisir un autre indice.\n");
@@ -240,10 +240,12 @@ card ask_card(player p){
         {
             printf("Indice invalide. Veuillez entrer un indice entre 0 et %d.\n", get_size_of_hand(p)-1);
         }
+        */
+        printf("Indice invalide. Veuillez entrer un indice entre 0 et %d.\n", get_size_of_hand(p)-1);
         scanf("%d",&reponse); // utilisation de scanf pour lire la réponse
     }
     
-    used_indices[reponse] = 1;
+    //used_indices[reponse] = 1;
 
     return get_card_in_hand(p, reponse); // on récupère la carte à l'indice donné par la joueuse
 }
