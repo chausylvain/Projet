@@ -2,6 +2,7 @@
 #include "../include/card.h"
 #include "../include/player.h"
 
+
 board create_board() {
     board b = malloc(sizeof(*b));
     b->team1.team_id = -1;
@@ -12,12 +13,13 @@ board create_board() {
     b->team1.player2 = NULL;
     b->team2.player1 = NULL;
     b->team2.player2 = NULL;
-    b->out_of_game_cards = NULL; // We make space for it later
+    for (int i = 0; i < NB_CARDS; i++) {
+        b->out_of_game_cards[i] = 0;
+    }
     return b;
 }
 
 void free_board(board b) {
-    free(b->out_of_game_cards);
     free(b);
 }
 
@@ -123,7 +125,7 @@ player get_player(board b, int team_id, int player_index) {
     else {
         printf("Error: wrong team id\n");
     }
-    printf("Unknown error\n");
+    printf("Unknown error in get_player\n");
     return NULL;
 }
 
@@ -136,8 +138,9 @@ int get_score_of_team(board b, int team_id) {
     }
     else {
         printf("Error: wrong team id\n");
+        return -1;
     }
-    printf("Unknown error\n");
+    printf("Unknown error in get_score_of_team\n");
     return -1;
 }
 
@@ -150,56 +153,51 @@ void set_score_of_team(board b, int team_id, int score) {
     }
     else {
         printf("Error: wrong team id\n");
+        return;
     }
-    printf("Unknown error\n");
 }
 
 void add_out_of_game_card(board b, card c) {
-    if (b->out_of_game_cards == NULL) {
-        b->out_of_game_cards = malloc(sizeof(card));
-        b->out_of_game_cards[0] = c;
+    // On récupère le nombre actuel de cartes hors jeu
+    int count = get_number_of_out_of_game_cards(b);
+    
+    // On vérifie si le tableau n'est pas plein
+    if (count < NB_CARDS) {
+        b->out_of_game_cards[count] = c;
     }
     else {
-        int i = 0;
-        while (b->out_of_game_cards[i] != NULL) {
-            i++;
-        }
-        b->out_of_game_cards = malloc(sizeof(card));
-        b->out_of_game_cards[i] = c;
+        printf("Error: out of game cards array is full\n");
     }
 }
 
 int get_number_of_out_of_game_cards(board b) {
     int count = 0;
-    if (b->out_of_game_cards != NULL) {
-        while (b->out_of_game_cards[count] != NULL) {
-            count++;
-        }
+    
+    // On parcourt le tableau jusqu'à trouver une carte nulle (0)
+    // ou jusqu'à atteindre la fin du tableau
+    while (count < NB_CARDS && b->out_of_game_cards[count] != 0) {
+        count++;
     }
+    
     return count;
 }
 
 card get_out_of_game_card(board b, int card_index) {
-    if (b->out_of_game_cards != NULL) {
-        return b->out_of_game_cards[card_index];
+    if (b->out_of_game_cards[card_index] == 0) {
+        printf("Error: no card at this index\n");
+        return NULL;
     }
-    else {
-        printf("Error: no out of game cards\n");
-    }
-    printf("Unknown error\n");
-    return NULL;
+    return b->out_of_game_cards[card_index];
 }
 
 void remove_out_of_game_card(board b, card c) {
-    if (b->out_of_game_cards != NULL) {
-        int i = 0;
-        while (b->out_of_game_cards[i] != c) {
-            i++;
+    int i = 0;
+    while (b->out_of_game_cards[i] != c) {
+        i++;
+        if (i >= NB_CARDS) {
+            printf("Error: card not found\n");
+            return;
         }
-        b->out_of_game_cards[i] = NULL;
     }
-    else {
-        printf("Error: no out of game cards\n");
-    }
-    printf("Unknown error\n");
+    b->out_of_game_cards[i] = 0;
 }

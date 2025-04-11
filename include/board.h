@@ -4,6 +4,8 @@
 #include "card.h"
 #include "player.h"
 
+#define NB_CARDS 20
+
 struct team {
     int team_id;
     player player1;
@@ -19,7 +21,7 @@ typedef struct team team;
 struct board {
     team team1;
     team team2;
-    card * out_of_game_cards;
+    card out_of_game_cards[NB_CARDS];
 };
 
 /**

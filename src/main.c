@@ -1,5 +1,7 @@
 #include <stdio.h>              
 #include <stdlib.h>
+#include <time.h>
+#include <stdint.h> 
 #include "../include/board.h"
 #include "../include/card.h"
 #include "../include/player.h"
@@ -8,7 +10,7 @@
 #define NB_TEAMS 2
 #define NB_PLAYERS_TEAM 2
 #define NB_ROUNDS 3
-#define NB_CARDS 20
+//#define NB_CARDS 20 // déjà défini dans board.h
 
 int main() {
 
@@ -18,7 +20,6 @@ int main() {
     board b = create_board();
     
     /* Ajout des équipes et des joueuses */
-    int all_card_id[NB_CARDS];
     int count = 0;
     
     card* card_tot = malloc(20 * sizeof(card));
@@ -29,25 +30,43 @@ int main() {
             player p = create_player();
             add_player_to_team(b, i, p);
 
-            /* Distribution des cartes */
+            /* Création des cartes */
 
             for (int k = 0; k < 5; k++) {
                 card c = create_card();
                 set_value(c, (k + 1)); 
                 card_tot[count] = c;
-                all_card_id[count] = get_card_id(c);
                 count++;
             }
         }
     }
 
+     /* Distribution des cartes */
+     int index[NB_CARDS];
+
+     srand(time(NULL) ^ (intptr_t)NB_CARDS); // Graine plus aléatoire
+
+     
+    for (int i = 0; i < NB_CARDS; i++) {
+        index[i] = i;
+    }
+
+    for (int i = NB_CARDS - 1; i > 0; i--) {
+        int j = rand() % (i + 1);
+        int temp = index[i];
+        index[i] = index[j];
+        index[j] = temp;
+    }
+
+    count = 0;
+
     for (int i = 0; i < NB_TEAMS; i++) {
         for (int j = 0; j < NB_PLAYERS_TEAM; j++) {
             for (int k = 0; k < 5; k++) {
-                int random_index = rand() % (NB_CARDS - k);
-                player p = get_player(b, i, j);
-                card c = card_tot[random_index];
+                player p = get_player(b, i, j); 
+                card c = card_tot[index[count]];
                 add_card_to_hand(p, c);
+                count++;
             }
         }
     }
@@ -59,7 +78,7 @@ int main() {
         
         /* Phase de pari */
 
-        display_message("Le pari à noter est \"Victoire\" ou \"Défaite\"\n\n");
+        display_message("\nLe pari à noter est \"v\" pour victoire ou \"d\" pour Défaite\n\n");
 
         for (int i = 0; i < NB_TEAMS; i++) {
             for (int j = 0; j < NB_PLAYERS_TEAM; j++) {
@@ -77,31 +96,45 @@ int main() {
             for (int j = 0; j < NB_PLAYERS_TEAM; j++) {
                 player p = get_player(b, i, j);
                 int nb_cards = ask_number_of_played_cards(p);
-                if (nb_cards > 2 || nb_cards < 1) {
-                    display_message("Nombre de cartes à jouer invalide\n");
-                    nb_cards = get_size_of_hand(p);
+
+                while (nb_cards > 2 || nb_cards < 1) {
+                    display_message("Nombre de cartes à jouer invalide");
+                    nb_cards = ask_number_of_played_cards(p);
                 }
-                card* played_cards = malloc(nb_cards * sizeof(card));
+
                 if (nb_cards == 1) {
-                    for (int k = 0; k < nb_cards; k++) {
-                        card c = ask_card(p);
-                        play_card(p, c);
-                        played_cards[k] = c;
-                        team_scores[i] += get_value(c);
+                    card c = ask_card(p);
+                    play_card(p, c);
+                    add_out_of_game_card(b,c);
+                    remove_card_from_hand(p,c);
+                    team_scores[i] += get_value(c);
+                    //printf("%d\n", team_scores[i]);
+                }
+
+                else{
+                    card c1 = ask_card(p);
+                    card c2 = ask_card(p);  
+
+                    while (c1 == c2){
+                        display_message("Vous avez joué 2 fois la même carte, veuillez jouer une autre carte");
+                        c2 = ask_card(p);
                     }
 
-                    for (int k = 0; k < nb_cards; k++) {
-                        remove_card_from_hand(p, played_cards[k]);
-                    }
-                }
-                else if (nb_cards == 2) {
-                    for (int k = 0; k < nb_cards; k++) {
-                        card c = ask_card(p);
-                        play_card(p, c);
-                        played_cards[k] = c;
-                        remove_card_from_hand(p, played_cards[k]);
-                        team_scores[i] += get_value(c);
-                    }
+                    //printf("c2 : %d\n", get_value(c2));        
+                    play_card(p, c1);
+                    play_card(p, c2);
+
+
+                    team_scores[i] += get_value(c1);
+                    //printf("%d\n", team_scores[i]);
+                    team_scores[i] += get_value(c2);
+                    //printf("%d\n", team_scores[i]);
+
+                    ///add_out_of_game_card(b,c1);
+                    //add_out_of_game_card(b,c2);
+
+                    remove_card_from_hand(p, c1);
+                    remove_card_from_hand(p, c2);
                 }
             }
         }
@@ -135,6 +168,7 @@ int main() {
                 }
             }
         }
+        display_message("\nFin du tour ---------------------------------------------------\n");
     }
     
     /* Fin du jeu */
@@ -144,13 +178,12 @@ int main() {
     for (int i = 0; i < NB_TEAMS; i++) {
         for (int j = 0; j < NB_PLAYERS_TEAM; j++) {
             player p = get_player(b, i, j);
-
             free_player(p);
         }
     }
 
     for(int i = 0; i < NB_CARDS; i++){
-        card c = get_card_by_id(all_card_id[i]);
+        card c = get_card_by_id(i);
         free_card(c);
     }
 

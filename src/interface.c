@@ -16,7 +16,7 @@
  
     /* Pour la première équipe */
     team team1 = b->team1;
-    printf("Dans l'équipe team1 il y a %d joueuses\n\n", get_number_of_players_in_team(b, team1.team_id)); 
+    printf("Dans l'équipe 1 il y a %d joueuses\n\n", get_number_of_players_in_team(b, team1.team_id)); 
     player player1_1 = get_player(b, team1.team_id, 0);
     player player1_2 = get_player(b, team1.team_id, 1);
  
@@ -35,14 +35,22 @@
  
     }
     printf("\nElle a joué %d cartes jusque-là\n", get_number_of_played_cards(player1_1) );
-    printf("Les valeurs des cartes qu'elle a joué sont: ");
+    printf("Les valeurs des cartes qu'elle a jouées sont : ");
     for(int k=0; k<get_number_of_played_cards(player1_1);k++)
     {
         card c2 = get_played_card(player1_1, k);
-        printf("%d",get_value(c2)) ;
+        printf("%d, ",get_value(c2)) ;
  
     }
-    printf("\nSon pari est %d, pourquoi print ça ici \n", get_slate(player1_1) );
+    if (get_slate(player1_1) != -1) { // le -1 pour éviter d'afficher au début
+        if (get_slate(player1_1)==0) {
+            printf("\nSon pari est défaite");
+        } 
+        else if (get_slate(player1_1)==1) {
+            printf("\nSon pari est victoire");
+        }
+    }
+    printf("\n");
  
     /* Pour la deuxième joueuse */
     printf("\n");
@@ -60,20 +68,28 @@
         }
     }
     printf("\nElle a joué %d cartes jusque-là\n", get_number_of_played_cards(player1_2) );
-    printf("Les valeurs des cartes qu'elle a joué sont: ");
+    printf("Les valeurs des cartes qu'elle a jouées sont : ");
     for(int k=0; k<get_number_of_played_cards(player1_2);k++)
     {
         card c2 = get_played_card(player1_2, k);
-        printf("%d\n",get_value(c2));
+        printf("%d, ",get_value(c2));
  
     }
-    printf("\nSon pari est %d, pourquoi print ça ici \n", get_slate(player1_2) );
+    if (get_slate(player1_2) != -1) { // le -1 pour éviter d'afficher au début
+        if (get_slate(player1_2)==0) {
+            printf("\nSon pari est défaite");
+        } 
+        else if (get_slate(player1_2)==1) {
+            printf("\nSon pari est victoire");
+        }
+    }
+    printf("\n");
  
     printf("\nLe score de l'équipe 1 est %d\n\n", get_score_of_team(b, team1.team_id));
  
    /* Pour la deuxième équipe */
     team team2 = b->team2;
-    printf("Dans l'équipe team2 il y a %d joueuses\n", get_number_of_players_in_team(b, team2.team_id));
+    printf("Dans l'équipe 2 il y a %d joueuses\n", get_number_of_players_in_team(b, team2.team_id));
     player player2_1 = get_player(b, team2.team_id, 0);
     player player2_2 = get_player(b, team2.team_id, 1);
  
@@ -94,14 +110,22 @@
  
     }
     printf("\nElle a joué %d cartes jusque-là\n", get_number_of_played_cards(player2_1) );
-    printf("Les valeurs des cartes qu'elle a joué sont:");
+    printf("Les valeurs des cartes qu'elle a jouées sont : ");
     for(int k=0; k<get_number_of_played_cards(player2_1);k++)
     {
         card c2 = get_played_card(player2_1, k);
-        printf("%d",get_value(c2));
+        printf("%d, ",get_value(c2));
  
     }
-    printf("\nSon pari est %d, pourquoi print ça ici \n", get_slate(player2_1) );
+    if (get_slate(player2_1) != -1) { // le -1 pour éviter d'afficher au début
+        if (get_slate(player2_1)==0) {
+            printf("\nSon pari est défaite");
+        } 
+        else if (get_slate(player2_1)==1) {
+            printf("\nSon pari est victoire");
+        }
+    }
+    printf("\n");
  
     /* Pour la deuxième joueuse */
  
@@ -109,7 +133,7 @@
  
     printf("L'indentifiant de la deuxième joueuse est %d\n",get_player_id (player2_2) );
     printf("Cette joueuse a %d cartes dans sa main\n", get_size_of_hand(player2_2) );
-    printf("Les valeurs des cartes de sa main sont :");
+    printf("Les valeurs des cartes de sa main sont : ");
     for(int i=0; i<get_size_of_hand(player2_2); i++)
     {
         // Il faut récupérer l'id de la carte
@@ -122,27 +146,34 @@
  
     }
     printf("\nElle a joué %d cartes jusque-là\n", get_number_of_played_cards(player2_2) );
-    printf("Les valeurs des cartes qu'elle a joué sont: ");
+    printf("Les valeurs des cartes qu'elle a jouées sont : ");
     for(int k=0; k<get_number_of_played_cards(player2_2);k++)
     {
         card c2 = get_played_card(player2_2, k);
-        printf("%d,",get_value(c2));
+        printf("%d, ",get_value(c2));
  
     }
-    printf("\nSon pari est %d, pourquoi print ça ici \n\n", get_slate(player2_2) );
+    if (get_slate(player2_2) != -1) { // le -1 pour éviter d'afficher au début
+        if (get_slate(player2_2)==0) {
+            printf("\nSon pari est défaite");
+        } 
+        else if (get_slate(player2_2)==1) {
+            printf("\nSon pari est victoire");
+        }
+    }
+    printf("\n");
  
     printf("Le score de l'équipe 2 est %d\n\n", get_score_of_team(b, team2.team_id));
  
-    printf("Le nombre de cartes mises de côté est %d\n\n", get_number_of_out_of_game_cards(b));
-    printf("Les valeurs des cartes mises des coté sont:\n");
+    printf("Le nombre de cartes mises de côté est %d\n", get_number_of_out_of_game_cards(b));
+    printf("Les valeurs des cartes mises des coté sont : ");
     for(int j=0; j<get_number_of_out_of_game_cards(b); j++)
     {
         card c3 = get_out_of_game_card(b, j);
-        printf("%d\n",get_value(c3));
+        printf("%d, ",get_value(c3));
     }
- 
  }
- 
+
 /**
 \brief : demande à la joueuse de donner son pari et renvoyer un entier encodant ce pari 
 \param p : player p défini dans player.h et player.c
@@ -160,18 +191,14 @@ int ask_gamble(player p){
  
     while (strstr(reponse, "v") == NULL && strstr(reponse, "d") == NULL) // tant que la réponse ne contient pas "Victoire" ou "Defaite"
     {
-        printf("Réponse invalide. Veuillez entrer 'Victoire' ou 'Defaite'.\n");
+        printf("Réponse invalide ");
         if (fgets(reponse, sizeof(reponse), stdin) == NULL) // utilisation de fgets pour lire un a un les caractères de la réponse
         {
             fprintf(stderr, "Erreur dans la lecture de la réponse\n");
             exit(1);
         } 
     }
-    {
-        /* code */
-    }
- 
- 
+
     if(strstr(reponse, "v") != NULL) // si la réponse contient "Victoire"
     {
         gamble = 1; // pari de victoire
@@ -183,8 +210,7 @@ int ask_gamble(player p){
  
     return gamble; // valeur par défaut si la réponse n'est pas reconnue
 }
- 
- 
+
 /**
 \brief : demande à la joueuse combien de cartes elle souhaite poser sur la table et renvoyer ce nombre
 \param p : player p défini dans player.h et player.c
@@ -192,32 +218,19 @@ int ask_gamble(player p){
 */
 int ask_number_of_played_cards(player p){
     printf("Joueuse %d, combien de cartes souhaitez-vous poser ? ", get_player_id(p));
-    int reponse; // pour stocker la réponse; 1 chiffre car les joueuses ont 5 cartes max dans les mains
-    if (scanf("%d",&reponse)==1) // utilisation de scanf pour lire la réponse
-    {
-        return reponse;
-    }
-    else 
-    {
-        fprintf(stderr, "Erreur dans la lecture de la réponse\n");
-        exit(1);
-    }
-    
-    /*
-    printf("Joueuse %d, combien de cartes souhaitez-vous poser ? ", get_player_id(p));
-    int reponse = 0; // pour stocker la réponse; 1 chiffre car les joueuses ont 5 cartes max dans les mains
-    scanf("%d",&reponse); // utilisation de scanf pour lire la réponse
+    int reponse = -1; // pour stocker la réponse; 1 chiffre car les joueuses ont 5 cartes max dans les mains
+    scanf("%d", &reponse);
     while (reponse < 0 || reponse > get_size_of_hand(p)) // utilisation de scanf pour lire la réponse
+
     {
-        printf("Joueuse %d, veuillez entrer un nombre entre 1 et %d ", get_player_id(p), get_size_of_hand(p));
+        printf("Joueuse %d, veuillez entrer un nombre entre 1 et 2", get_player_id(p));
         scanf("%d",&reponse); // utilisation de scanf pour lire la réponse
     }
     
     return reponse;
-    */
 }
- 
- 
+
+
 /** 
 \brief : demande à la joueuse une carte de sa main qu'elle souhaite jouer et renvoyer cette carte 
 \param p : player p défini dans player.h et player.c
@@ -240,7 +253,7 @@ card ask_card(player p){
             printf("Indice invalide. Veuillez entrer un indice entre 0 et %d.\n", get_size_of_hand(p)-1);
         }
         */
-        printf("Indice invalide. Veuillez entrer un indice entre 0 et %d.\n", get_size_of_hand(p)-1);
+        printf("Indice invalide. Veuillez entrer un indice entre 0 et %d ", get_size_of_hand(p)-1);
         scanf("%d",&reponse); // utilisation de scanf pour lire la réponse
     }
     
@@ -262,11 +275,11 @@ void display_end_game(board b)
     team team2= b->team2;
     if(get_score_of_team(b,team1.team_id)>get_score_of_team(b,team2.team_id)) // cas ou le score de l'équipe 1 est supérieur
     {
-        printf("l'équipe victorieuse est l'équie team1 ");
+        printf("l'équipe victorieuse est l'équie 1 ");
     }
     if(get_score_of_team(b,team1.team_id)<get_score_of_team(b,team2.team_id)) // cas ou le score de l'équipe 2 est supérieur
     {
-        printf("l'équipe victorieuse est l'équie team2 ");
+        printf("l'équipe victorieuse est l'équie 2 ");
     }
     else // cas d'égalité
     {
