@@ -176,7 +176,7 @@ int ask_gamble(player p){
     {
         gamble = 1; // pari de victoire
     }
-    else if(strstr(reponse, "v") != NULL) // si la réponse contient "Defaite"
+    else if(strstr(reponse, "d") != NULL) // si la réponse contient "Defaite"
     {
         gamble = 0; // pari de défaite
     }
