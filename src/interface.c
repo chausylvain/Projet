@@ -42,7 +42,15 @@
         printf("%d, ",get_value(c2)) ;
  
     }
-    printf("\nSon pari est %d, pourquoi print ça ici \n", get_slate(player1_1) );
+    if (get_slate(player1_1) != -1) { // le -1 pour éviter d'afficher au début
+        if (get_slate(player1_1)==0) {
+            printf("\nSon pari était défaite");
+        } 
+        else if (get_slate(player1_1)==1) {
+            printf("\nSon pari était victoire");
+        }
+    }
+    printf("\n");
  
     /* Pour la deuxième joueuse */
     printf("\n");
@@ -67,7 +75,15 @@
         printf("%d, ",get_value(c2));
  
     }
-    printf("\nSon pari est %d, pourquoi print ça ici \n", get_slate(player1_2) );
+    if (get_slate(player1_2) != -1) { // le -1 pour éviter d'afficher au début
+        if (get_slate(player1_2)==0) {
+            printf("\nSon pari était défaite");
+        } 
+        else if (get_slate(player1_2)==1) {
+            printf("\nSon pari était victoire");
+        }
+    }
+    printf("\n");
  
     printf("\nLe score de l'équipe 1 est %d\n\n", get_score_of_team(b, team1.team_id));
  
@@ -101,7 +117,15 @@
         printf("%d, ",get_value(c2));
  
     }
-    printf("\nSon pari est %d, pourquoi print ça ici \n", get_slate(player2_1) );
+    if (get_slate(player2_1) != -1) { // le -1 pour éviter d'afficher au début
+        if (get_slate(player2_1)==0) {
+            printf("\nSon pari était défaite");
+        } 
+        else if (get_slate(player2_1)==1) {
+            printf("\nSon pari était victoire");
+        }
+    }
+    printf("\n");
  
     /* Pour la deuxième joueuse */
  
@@ -129,7 +153,15 @@
         printf("%d, ",get_value(c2));
  
     }
-    printf("\nSon pari est %d, pourquoi print ça ici \n\n", get_slate(player2_2) );
+    if (get_slate(player2_2) != -1) { // le -1 pour éviter d'afficher au début
+        if (get_slate(player2_2)==0) {
+            printf("\nSon pari était défaite");
+        } 
+        else if (get_slate(player2_2)==1) {
+            printf("\nSon pari était victoire");
+        }
+    }
+    printf("\n");
  
     printf("Le score de l'équipe 2 est %d\n\n", get_score_of_team(b, team2.team_id));
  
@@ -159,18 +191,14 @@ int ask_gamble(player p){
  
     while (strstr(reponse, "v") == NULL && strstr(reponse, "d") == NULL) // tant que la réponse ne contient pas "Victoire" ou "Defaite"
     {
-        printf("Réponse invalide. Veuillez entrer 'Victoire' ou 'Defaite'.\n");
         if (fgets(reponse, sizeof(reponse), stdin) == NULL) // utilisation de fgets pour lire un a un les caractères de la réponse
         {
             fprintf(stderr, "Erreur dans la lecture de la réponse\n");
             exit(1);
-        } 
+        }
+        //printf("Réponse invalide, réessayez : "); // enlevé car cause une gêne
     }
-    {
-        /* code */
-    }
- 
- 
+
     if(strstr(reponse, "v") != NULL) // si la réponse contient "Victoire"
     {
         gamble = 1; // pari de victoire
@@ -190,21 +218,8 @@ int ask_gamble(player p){
 */
 int ask_number_of_played_cards(player p){
     printf("Joueuse %d, combien de cartes souhaitez-vous poser ? ", get_player_id(p));
-    int reponse; // pour stocker la réponse; 1 chiffre car les joueuses ont 5 cartes max dans les mains
-    if (scanf("%d",&reponse)==1) // utilisation de scanf pour lire la réponse
-    {
-        return reponse;
-    }
-    else 
-    {
-        fprintf(stderr, "Erreur dans la lecture de la réponse\n");
-        exit(1);
-    }
-    
-    /*
-    printf("Joueuse %d, combien de cartes souhaitez-vous poser ? ", get_player_id(p));
-    int reponse = 0; // pour stocker la réponse; 1 chiffre car les joueuses ont 5 cartes max dans les mains
-    scanf("%d",&reponse); // utilisation de scanf pour lire la réponse
+    int reponse = -1; // pour stocker la réponse; 1 chiffre car les joueuses ont NB_PLAYERS_TEAM*NB_TEAMS cartes max dans les mains
+    scanf("%d", &reponse);
     while (reponse < 0 || reponse > get_size_of_hand(p)) // utilisation de scanf pour lire la réponse
 
     {
@@ -260,11 +275,11 @@ void display_end_game(board b)
     team team2= b->team2;
     if(get_score_of_team(b,team1.team_id)>get_score_of_team(b,team2.team_id)) // cas ou le score de l'équipe 1 est supérieur
     {
-        printf("l'équipe victorieuse est l'équie team1 ");
+        printf("L'équipe victorieuse est l'équie 1\n");
     }
     if(get_score_of_team(b,team1.team_id)<get_score_of_team(b,team2.team_id)) // cas ou le score de l'équipe 2 est supérieur
     {
-        printf("l'équipe victorieuse est l'équie team2 ");
+        printf("L'équipe victorieuse est l'équie 2\n");
     }
     else // cas d'égalité
     {

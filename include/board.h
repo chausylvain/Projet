@@ -4,13 +4,9 @@
 #include "card.h"
 #include "player.h"
 
-<<<<<<< HEAD
-#define NB_CARDS 20
-=======
 #define NB_CARDS 200 // DOIT ETRE MULTIPLE DE NB_PLAYERS_TEAM*NB_TEAMS
 #define NB_TEAMS 2
 #define NB_PLAYERS_TEAM 2
->>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
 
 struct team {
     int team_id;
