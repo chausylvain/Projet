@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include "../include/player.h"
 #include "../include/card.h"
+<<<<<<< HEAD
+=======
+#include "../include/board.h" // for NB_CARDS
+>>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
  
 struct player_s
 {
@@ -14,13 +18,39 @@ struct player_s
     int team_id;                /*l'identifiant de son équipe*/
 };
  
+<<<<<<< HEAD
 int creation_id_bis()       /*creer un identifiant id unique qui commence à 0 pour la première joueuse*/
+=======
+int creation_id_bis(int reset)       /*creer un identifiant id unique qui commence à 0 pour la première joueuse*/
+>>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
 {
     static int id = 0;
+    if (reset) {
+        id = 0;
+        return 0;
+    }
     return id++;
+
 }
  
+player player_tab[NB_PLAYERS_TEAM*NB_TEAMS];       /*on créer un tableau de joueuses*/
+
+void reset_player_id_counter() {
+    extern int creation_id_bis(int reset);
+    creation_id_bis(1);  // Pass 1 to reset
+}
+<<<<<<< HEAD
+ 
 player player_tab[4];       /*on créer un tableau de joueuses*/
+=======
+
+void reset_global_array1() {
+    // Reset player_tab
+    for (int i = 0; i < NB_PLAYERS_TEAM*NB_TEAMS; i++) {
+        player_tab[i] = NULL;
+    }
+}
+>>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
  
  
 /**
@@ -37,12 +67,21 @@ player create_player()
         perror("Erreur durant l'allocation");       
         exit(1);
     }
+<<<<<<< HEAD
     p->cards_in_hand = malloc(5 * sizeof(card));        
+=======
+    p->cards_in_hand = malloc((NB_CARDS/(NB_PLAYERS_TEAM*NB_TEAMS)) * sizeof(card));        
+>>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
     p->hand = 0;
-    p->cards_on_table = malloc (5 * sizeof(card));
+    p->cards_on_table = malloc ((NB_CARDS/(NB_PLAYERS_TEAM*NB_TEAMS)) * sizeof(card));
     p->table = 0;
     p->ardoise = -1; /*-1 signifie que la joueuse n'a pas encore parié*/
+<<<<<<< HEAD
     p->id = creation_id_bis();
+=======
+    p->id = creation_id_bis(0);
+    //printf("ID de la joueuse : %d\n", p->id);
+>>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
     player_tab[p->id] = p;      /*l'identifiant de la joueuse est sa place dans le tableau des joueuses*/
     return p;
 };
@@ -78,7 +117,7 @@ int get_player_id(player p)
  */
 player get_player_by_id(int n)
 {
-    if (n >= 0 && n < 4) /*il ny a que 4 joueurs donc les identifiants sont compris entre 0 et 4*/
+    if (n >= 0 && n < NB_PLAYERS_TEAM*NB_TEAMS) /*il n'y a que NB_PLAYERS_TEAM*NB_TEAMS joueurs donc les identifiants sont compris entre 0 et NB_PLAYERS_TEAM*NB_TEAMS*/
     {
         return player_tab[n];
     }
@@ -136,7 +175,11 @@ void remove_card_from_hand(player p, card c)
             //free(p->cards_in_hand[i]);
             //printf("CH %d\n", get_value(p->cards_in_hand[i]));
             //printf("C %d \n", get_value(c));
+<<<<<<< HEAD
             j = i + 1; // IL FALLAIT CORRIGER CELA
+=======
+            j = i; // IL FALLAIT CORRIGER CELA
+>>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
             break;
         }
     }
@@ -202,7 +245,11 @@ void remove_played_card(player p, card c)
     {
         if (get_card_id(p->cards_on_table[i]) == id_card)
         {
+<<<<<<< HEAD
             j = i + 1; // IL FALLAIT CORRIGER CELA ICI AUSSI
+=======
+            j = i; // IL FALLAIT CORRIGER CELA ICI AUSSI
+>>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
             break;
         }
     }

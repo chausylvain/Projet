@@ -23,15 +23,21 @@ int main() {
     int count = 0;
     
     card* card_tot = malloc(20 * sizeof(card));
+    if (card_tot == NULL) {
+        printf("Error: memory allocation failed for card_tot\n");
+    }
 
     for (int i = 0; i < NB_TEAMS; i++) {
         add_team(b);
         for (int j = 0; j < NB_PLAYERS_TEAM; j++) {
             player p = create_player();
             add_player_to_team(b, i, p);
+<<<<<<< HEAD
 
             /* Création des cartes */
 
+=======
+>>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
             for (int k = 0; k < 5; k++) {
                 card c = create_card();
                 set_value(c, (k + 1)); 
@@ -144,15 +150,28 @@ int main() {
         int max_score = 0;
         int winning_team = 1;
 
-        if(team_scores[0] == team_scores[1]){
-            display_message("Il y a égalité");
-        }
-
         for (int i = 0; i < NB_TEAMS; i++) {
             if (team_scores[i] > max_score) {
                 max_score = team_scores[i];
                 winning_team = i;
             }
+        }
+        // Regarde s'il y a égalité en toutes les équipes
+        int draw = 1; // Suppose égalité au départ
+
+        for (int i = 0; i < NB_TEAMS; i++) {
+            for (int j = i + 1; j < NB_TEAMS; j++) { // j = i + 1 pour éviter i == j
+                if (team_scores[i] != team_scores[j]) {
+                    draw = 0; // Pas d'égalité
+                    break;
+                }
+            }
+            if (!draw) break; // Sortir aussi de la boucle extérieure
+        }
+        
+        if (draw) {
+            winning_team = -1;
+            display_message("Il y a égalité pour ce round");
         }
         
         /* Attribution des points */
@@ -163,9 +182,13 @@ int main() {
                 int gamble = get_slate(p);
                 if (winning_team == i && gamble == 1) {
                     set_score_of_team(b, i, get_score_of_team(b, i) + 1);
-                } else if (winning_team != i && gamble == 0) {
+                } 
+                else if (winning_team != i && gamble == 0) {
                     set_score_of_team(b, i, get_score_of_team(b, i) + 1);
                 }
+                else if (winning_team == -1) {
+                    set_score_of_team(b, i, get_score_of_team(b, i) + 1);
+                } // si égalité, toute le monde gagne
             }
         }
         display_message("\nFin du tour ---------------------------------------------------\n");
@@ -182,12 +205,25 @@ int main() {
         }
     }
 
+<<<<<<< HEAD
     for(int i = 0; i < NB_CARDS; i++){
         card c = get_card_by_id(i);
         free_card(c);
+=======
+    for (int i = 0; i < 20; i++) {
+        free_card(card_tot[i]);
+>>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
     }
+    free(card_tot);
+
 
     free_board(b);
+
+    reset_player_id_counter();
+    reset_card_id_counter();
+    reset_global_array1();
+    reset_global_array2();
+
     
     return 0;
 }

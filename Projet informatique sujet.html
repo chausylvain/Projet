@@ -1,0 +1,885 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Projet informatique</title>
+  <meta name="description" content="Projet informatique">
+  <meta name="author" content="Dimitri Watel">
+  
+  <link rel="stylesheet" href="/static/main.css">
+  
+</head>
+
+<body>
+
+  <div class="title">
+    PROJET INFORMATIQUE -  Sujet  </div>
+  <div class="person-information"> Ewen Expuesto (FISE) - APPRENANT</div>
+
+  <hr class="separator" />
+  
+  <div class="menu">
+    <a href="/subject"><div class="menu-link active-menu-link">Sujet</div></a>
+    <a href="/groups"><div class="menu-link">Les groupes</div></a>
+    <a href="/notes"><div class="menu-link">Évaluation du projet</div></a>
+          </div>
+
+<hr class="separator" /> 
+  <div class="main"> 
+
+  
+<h1>Le projet en quelques lignes</h1>
+
+<ul>
+  <li>Vous devez développer une application ou un jeu, décrit ci-après.</li>
+  <li>Vous êtes par groupe d'au plus 4 personnes. Cette limite est non négociable. Allez sur la page des groupes pour choisir votre groupe. Chaque groupe est encadré par une personne.</li>
+  <li>Votre projet est découpé en lots et en tâches. La partie gestion de projet est aussi importante que la partie technique. Vous devez vous organiser correctement. Les lots et les tâches sont détaillés plus bas dans ce sujet.</li>
+  <li>Chaque lot est associé à un domaine (math, info, ...). Vous aurez une note dans chaque domaine. 
+  <li>Les encadrants utilisent ce site pour noter vos projets. Allez sur la page correspondante pour en savoir plus.</li>
+  <li>Selon votre formation, il se peut que vous n'ayez pas à faire la totalité du projet. Ceci sera explicitement décrit dans la description des lot. </li>
+</ul>
+
+<hr/>
+
+
+<div class="subject">
+
+
+
+<h1>Jeu à programmer</h1>
+<h2>Poker universel</h2>
+<p><em>La porte entre les univers est enfin fermée mais une plaie béante reste ouverte dans le coeur des élèves de l'ensIIE, toutes les autres écoles d'ingénieur ayant disparu de la surface de l'univers. Afin de retrouver leur vie passée, les élèves ont demandé à une IA générative d'invoquer un démon millénaire. Le démon accepta d'exhaucer leur souhait mais imposa sa condition: ils devaient remporter un défi de leur choix pour arriver à leurs fins, ou perdre et rassacier le démon. Avec le sourire, les élèves utilisèrent leur meilleure compétence : le jeu de carte. C'est ainsi que démarra la plus importante partie de jeu de carte de tout l'univers.</em></p>
+<p>Vous devez développer et étudier un jeu de carte à 4 joueuses qui est une version très très simplifiée du jeu de coinche. Le jeu se décline en deux versions, une version de base et une version avancée. La suite décrit dans un premier temps les règles du jeu et des informations générales sur le travail à effectuer. Cette section est suivie d'une autre section découpant le projet en lots et en tâches. Lisez le projet une première fois en entier avant de démarrer quelque travail que ce soit. </p>
+<p><strong>Tous vos codes devront être codés en C et compiler sans erreur ni warnings (excepté les warning de fonctions ou variables non utilisées) avec la commande <code>gcc -Wall -Wextra -std=c99</code>. </strong></p>
+<h2>Jeu de base</h2>
+<p>Le jeu de base est une version très simple du jeu. Cette partie du projet devra être faite le vendredi. Développer ce jeu vous permettra d'accéder aux trois extensions suivantes du projet (qui incluent la version avancée du jeu). Les trois autres parties du projet sont indépendantes.  </p>
+<h3>Début du jeu</h3>
+<p>Le jeu se joue à 4, avec deux équipes de 2. Elles sont disposées autours de la table de sorte à alterner les équipes. Les joueuses disposent d'un paquet de 20 cartes, numérotées de 1 à 5. Il y a 4 cartes de chaque type. Au début du jeu, les cartes sont mélangées et 5 cartes sont distribuées à chaque joueuse. Toutes les cartes sont donc distribuées. </p>
+<p>Chaque joueuse reçoit également une ardoise pour pouvoir noter des choses dessus.</p>
+<p>Le jeu se joue ensuite en trois tours. Chaque tour rapporte des points aux équipes. </p>
+<h3>Tour de jeu</h3>
+<h4>Paris</h4>
+<p>Au début d'un tour de jeu, les 4 joueuses vont faire 2 paris. Elles inscrivent d'abord discrètement sur leur ardoise Victoire ou Défaite. Chaque joueuse révèle ensuite son ardoise à tout le monde puis l'efface. Enfin, chaque joueuse réinscrit discrètement sur son ardoise Victoire ou Défaite. Le choix effectué la seconde fois peut être différent du premier. </p>
+<h4>Placement des cartes et comparaison</h4>
+<p>Chaque joueuse place, en simultané, 1 ou 2 cartes sur la table. On fait ensuite la somme des numéros sur les cartes de chaque équipe et on compare les résultats. L'équipe victorieuse du tour est celle qui a le plus de points. L'équipe perdante du tour est celle qui a le point de points. Aucune équipe n'est victorieuse ou perdante si le nombre de points est identique. </p>
+<h4>Distribution des points et fin du tour</h4>
+<p>Les joueuses révèlent leur ardoise. Pour chaque pari &quot;Victoire&quot;, l'équipe victorieuse du tour gagne 1 point. Pour chaque pari &quot;Défaite&quot;, l'équipe perdante du tour gagne 1 point.</p>
+<p>Les cartes posées sur la table sont mises de côté. Les joueuses démarrent alors le tour suivant avec les cartes qu'il leur reste dans la main.</p>
+<h3>Fin du jeu</h3>
+<p>A la fin des trois tours, chaque équipe compte ses points. Celle qui a le plus de points a gagné la partie. En cas d'égalité, la victoire est partagée.  </p>
+<h3>Détails</h3>
+<p>Il n'est pas obligatoire d'utiliser toutes ses cartes pendant la partie. Ainsi, une joueuse peut utiliser entre 3 et 5 cartes au cours du jeu. </p>
+<p>Attention, le jeu devra proposer, à tout instant, la possibilité de quitter la partie.</p>
+<h2>Extension 1 : Propriétés mathématiques</h2>
+<p>Si vous suivez les séances de projet du mardi, cette partie du projet devra être faite (le mardi) lors des séances encadrées.</p>
+<p>Si vous ne suivez que les séances de projet du vendredi, vous n'avez pas à rendre cette partie du projet.</p>
+<h2>Extension 2 : Évaluation et reproductibilité</h2>
+<p>Cette partie du projet devra être faite le mardi lors des séances non encadrées ou le vendredi.</p>
+<p>L'objectif de cette partie est de simuler de la reproductibilité en recherche. Votre groupe va devoir coder un algorithme qui tentera de jouer au jeu et de maximiser son score, puis évaluer cet algorithme. Vous enverrez ensuite votre code et les résultats de vos évaluations à un second groupe. De votre côté, vous recevrez le code et les résultats d'évaluation d'un troisième groupe. Vous devrez enfin reproduire les évaluations du 3e groupe et confirmer ou infirmer les résultats qui ont été décrits dans leur rapport d'évaluations. </p>
+<p>Vous ne pourrez pas coder n'importe quel algorithme. Votre groupe se verra imposer un algorithme. Voir ci-après. Pour évaluer votre algorithme, vous aurez besoin de simuler le comportement des 4 joueuses. Afin de simplifier le processus de reproductibilité, vous pouvez utiliser 2 algorithmes différents pour les 4 joueuses:</p>
+<ul>
+<li>l'algorithme de votre groupe</li>
+<li>un algorithme agressif</li>
+</ul>
+<p>Tous les groupes doivent donc coder l'algorithme agressif et un autre algorithme. L'algorithme agressif fonctionnent ainsi: la joueuse regarde sa plus grande carte et sa plus petite carte. Soit <code>A</code> le numéro de la plus petite carte et <code>B</code> le numéro de la plus grande carte. Elle parie Victoire si <strong>A - 1 ≥ 5 - B</strong> et Défaite sinon. Son pari ne change pas pendant le tour. Elle envoie ensuite ses deux plus grandes cartes dans le premier cas, ou sa carte s'il ne lui en reste q'une. Dans le second cas, elle envoie sa plus petite carte. </p>
+<ul>
+<li>Mode miroir : faites un premier pari aléatoire en début de tour. Changez ensuite votre pari pour mettre le même que celui de votre partenaire. Jouez ensuite comme l'algorithme agressif.</li>
+<li>Mode antimiroir : faites un premier pari aléatoire en début de tour. Si le premier pari de vos deux adversaires est Victoire la première fois, pariez ensuite Défaite. Si vos deux adversaires parient Défaite, votre second pari sera Victoire. Si, enfin, vos deux adversaires parient différemment, pariez aléatoirement la deuxième fois. Jouez ensuite comme l'algorithme agressif. </li>
+<li>Mode probabiliste : compte tenu de vos cartes en main et des cartes déjà jouées et mises de côté, calculez la valeur moyenne des cartes de votre partenaire et de  chacun de votre adversaire (vous obtenez normalement la même valeur <code>M</code>). Si avec une ou deux cartes, vous pouvez dépasser <code>M</code>, pariez victoire et jouer cette/ces cartes. Sinon pariez défaite et jouez votre plus petite carte. </li>
+</ul>
+<p>En fonction de votre numéro de groupe, vous devrez coder l'un ou l'autre de ces algorithmes:</p>
+<ul>
+<li>Si votre numéro de groupe est égal à 0 modulo 3, codez le Mode miroir.</li>
+<li>Si votre numéro de groupe est égal à 1 modulo 3, codez le Mode antimiroir.</li>
+<li>Si votre numéro de groupe est égal à 2 modulo 3, codez le Mode probabiliste.</li>
+</ul>
+<h2>Extension 3 : Jeu avancé</h2>
+<p>Cette partie du projet devra être faite le vendredi après midi.</p>
+<p>Il y a plusieurs évolutions majeures du jeu de base dans cette version du jeu. </p>
+<ul>
+<li>les joueuses doivent miser des jetons lors de leurs paris</li>
+<li>les cartes ont maintenant des couleurs, les paris doivent tenir compte des couleurs</li>
+<li>les joueuses peuvent jouer des cartes spéciales</li>
+</ul>
+<h3>Mise</h3>
+<p>Au début du jeu, en plus des cartes, chaque joueuse reçoit 20 jetons. Au moment de faire un pari, une joueuse doit également miser un ou plusieurs jetons qu'elle pose devant elle. Au lieu de faire gagner à l'équipe un point lorsque son pari est réussi, la joueuse regagne les jetons posés devant elle et empoche une deuxième fois sa mise (donc si elle fait une mise de 5 jetons et remporte son pari, elle gagne 5 jetons par rapport à ce qu'elle avait au début). Lorsque le pari est perdu, la mise est simplement perdue. </p>
+<p>L'équipe qui remporte la partie est celle qui a le plus de jetons après trois tours. </p>
+<h3>Couleurs des cartes</h3>
+<p>Les cartes ont maintenant des couleurs, une carte peut être rouge ou noire. Il y a deux cartes portant chaque numéro et chaque couleur. Lorsqu'une joueuse fait un pari, elle doit toujours parier <code>Victoire</code> ou <code>Défaite</code> mais doit également annoncer une couleur au choix parmi: <code>rouge</code>, <code>noir</code>, <code>multicolore</code>. Pour déterminer si un pari est réussi, on regarde la somme des cartes de la couleur correspondante. Si la couleur était <code>multicolore</code>, alors le jeu se déroule comme dans le jeu de base, on regarde la somme de toutes les cartes de chaque équipe. Si la couleur était <code>rouge</code>, on ne fait la somme que des cartes rouges. </p>
+<h3>Pouvoir spéciaux</h3>
+<p>En plus des 5 cartes en main, une joueuse obtient également une sixième carte spéciale. Elle peut poser cette carte comme n'importe quelle autre pendant le jeu. Au moment où la carte est révélée, son pouvoir s'active. Si deux joueuses posent une carte au même moment, la joueuse qui a le moins de jeton active sa carte en premier. En cas d'égalité, le choix est aléatoire. Attention, comme dans le jeu de base, lors d'un tour, on ne peut poser qu'une ou deux cartes, ce total comprend la carte spéciale si celle ci est jouée. Il n'est donc pas possible de jouer 3 cartes dans le même tour. Les cartes spéciales comptent pour 0 points dans la somme et n'ont pas de couleur.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Nom</th>
+<th style="text-align: left;">Effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">Thuy Vo</td>
+<td style="text-align: left;">Choisissez une carte posée ce tour ci, cette carte devient un 1 rouge. S'il s'agit d'une carte spéciale, son pouvoir ne s'activera pas.</td>
+</tr>
+<tr>
+<td style="text-align: right;">David Roussel</td>
+<td style="text-align: left;">Choisissez une carte posée ce tour ci, cette carte devient un 2 noir. S'il s'agit d'une carte spéciale, son pouvoir ne s'activera pas.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Abass Sagna</td>
+<td style="text-align: left;">Choisissez une carte posée ce tour ci, cette carte devient un 3 sans couleur. Elle n'est pas comptée dans les sommes relatives aux paris dont la couleur est <code>noir</code> ou <code>rouge</code>. S'il s'agit d'une carte spéciale, son pouvoir ne s'activera pas.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Renaud Rioboo</td>
+<td style="text-align: left;">Choisissez une carte posée ce tour ci, cette carte devient un 4 rouge. S'il s'agit d'une carte spéciale, son pouvoir ne s'activera pas.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Kevin Goilard</td>
+<td style="text-align: left;">Choisissez une carte posée ce tour ci, cette carte devient un 5 noir. S'il s'agit d'une carte spéciale, son pouvoir ne s'activera pas.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Laurence Bourard</td>
+<td style="text-align: left;">Inversez le pari de toutes les joueuses. Les <code>Victoire</code> deviennent des <code>Défaite</code> et inversement. Les couleurs des paris restent inchangés.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Anne-Laure Ligozat</td>
+<td style="text-align: left;">Les cartes mises de côté lors des tours précédents sont redistribuées aléatoirement à toutes les joueuses.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Vincent Fagnon</td>
+<td style="text-align: left;">Lors de ce tour, les cartes de valeur 2 deviennent de valeur 5 et inversement.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Valentin Honoré</td>
+<td style="text-align: left;">Ajoutez un tour de jeu après celui ci.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Fetia Bannour</td>
+<td style="text-align: left;">Retirez un tour de jeu. Si ce tour était le dernier, le jeu s'arrête immédiatement, les mises ne sont pas rendues.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Christophe Mouilleron</td>
+<td style="text-align: left;">Si la somme des cartes en jeu est un nombre premier, vous gagnez votre pari, quel que soit le résultat.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Djibril-Aurelien Dembele-Cabot</td>
+<td style="text-align: left;">Choisissez une carte posée ce tour ci, mettez la de côté. Elle n'est pas comptée dans les sommes relatives aux paris de ce tour. S'il s'agit d'une carte spéciale, son pouvoir ne s'activera pas.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Lucienne Pacave</td>
+<td style="text-align: left;">Choisissez une carte mise de côté et mettez là devant un adversaire avec les cartes qu'il a joué ce tour-ci. Cette carte est comptée dans les sommes relatives aux paris de sa couleur.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Lawanda Gaydu</td>
+<td style="text-align: left;">Choisissez une carte mise de côté et mettez là devant vous avec les cartes que vous avez jouées ce tour-ci. Cette carte est comptée dans les sommes relatives aux paris de sa couleur.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Mathilde Mougeot</td>
+<td style="text-align: left;">Les paris de ce tour rapportent deux fois plus de jetons que prévu.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Dimitri Watel</td>
+<td style="text-align: left;">La couleur de tous les paris est remplacée par <code>noir</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Cyril Benezet</td>
+<td style="text-align: left;">La couleur de tous les paris est remplacée par <code>rouge</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">Marie Szafranski</td>
+<td style="text-align: left;">La couleur de tous les paris est remplacée par <code>multicolore</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disclaimer</strong> : Ce jeu se veut avant tout ludique et bon enfant. S’il est vrai (voire évident) que certains effets ont été associés à des membres du personnel à cause de leurs fonctions ou leurs enseignements, une bonne partie a été positionnée arbitrairement. Le tableau ci-dessus ne veut, en aucun cas, signifier qu’une personne affecte plus positivement ou plus négativement l’ensIIE et ses apprenants.</p>  </div>
+
+
+  <br/>
+  <br/>
+  <br/>
+
+  <hr/>
+
+  La suite décrit le travail à réaliser. Votre travail s'effectue par groupe d'au plus 4 personnes.
+  <br/>
+  <br/>
+
+  Le travail que vous devez rendre est découpé en 9 lots. Chaque lot est découpé en tâches, décrites ci-après avec chaque lot. Chaque tâche doit être attribuée à une seule et unique personne de votre groupe. Ces tâches doivent vous permettrent de vous répartir le travail en fonction de vos compétences et de vos envies. Chaque lot doit être rendu à une date précisée dans la page des évaluations. Toutes les tâches du lot sont ensuite évaluées par votre encadrant. La page des évaluations indique ce qui sera évalué, vous permettant ainsi de savoir ce qui est attendu. Chaque lot est associé à un domaine (math, info, ...), votre note sera découpée selon ces domaines.
+
+  <br/>
+  <br/>
+  Votre travail devra être développé et rendu avec l'outil de versionnement <strong>git</strong>. Cela vous permettra d'échanger facilement votre travail avec votre encadrant(e) et les autres membres de votre groupe. Cela permettra également à votre encadrant(e) de savoir qui a travaillé sur quelle partie du projet. 
+
+  <br/>
+  <br/>
+
+  Chaque personne de votre groupe devra travailler sur au moins 3 tâches de type Info, 5 tâches de type Math et 1 tâches de type Recherche (tous lots confondus). Ainsi, un groupe n'ayant que 2 membres devra rendre un travail correspondant à 6 tâches de type Info, 10 tâches de type Math et 2 tâches de type Recherche, moins conséquent qu'un groupe ayant 3 membres et devant rendre un travail correspondant à 9 tâches de type Info, 15 tâches de type Math et 3 tâches de type Recherche. Il est tout à fait possible, tant que vous respectez cette contrainte de ne pas rendre l'ensemble des lots décrits ci-dessous, mais plus votre travail est complet, meilleure sera votre note. Enfin, selon votre formation d'origine, vous pouvez être amené à ne faire pas les tâches d'un certain type, tout est précisé dans la description des lots.
+
+
+      <h1>Lot A - Base Mise en place (Info)</h1>
+      <p>Ce premier lot vise à démarrer le <em>jeu de base</em>. Vous devez coder en respectant les spécifications indiquées dans le sujet. Attention, les noms des fonctions, les types des paramètres d'entrée et de sortie doivent être respectés. Sinon il ne sera pas possible d'effectuer les extensions correctement.</p>
+  Attribuez chacune des tâches suivantes à une (et une seule) personne de votre groupe. Rappelez vous que chaque personne doit travailler sur au moins 3 tâches sur les lots de types Info.
+
+            <h2>Tâche A.1 - git, ganttproject, organisation</h2>
+      <p>Votre rôle est <strong>central</strong> pour ce lot et le projet. Toute défaillance sur cette tâche peut affecter tout le travail du groupe. Il est important de la considérer très sérieusement. Lisez les tâches de tous les membres du groupe avant de commencer.</p>
+<ul>
+<li>Mettez en place un nouveau dépôt <strong>git</strong> (n'utilisez pas le dépot du mini-TP tutoriel) et invitez votre encadrant sur votre dépôt en tant que <strong>reporter</strong> ainsi que tous les membres du groupe en tant que <strong>developer</strong>. Ce git contiendra votre code. Créez y une première branche <code>lot_a</code>. Le dernier commit de cette branche contiendra le code du Lot A de base une fois celui-ci terminé et déterminera la date à laquelle vous rendez votre lot.</li>
+<li>Créer un projet avec <strong>GanttProject</strong> et poussez le sur votre dépot git, dans la branche <code>lot_a</code>.  Remplissez ce ﬁchier avec les différentes tâches du projet (tous les lots). Regroupez les tâches d'un même lot dans une même super-tâche (pour cela, créez par exemple une tâche <code>Lot A</code> et glissez chaque tâche du lot A dans cette nouvelle tâche). Mettez des durées arbitraires sur vos tâches. Ajoutez chaque membre du groupe comme ressource. Affectez ces membres aux tâches après décision de qui effectue quelle tâche (ces décisions pourront changer plus tard pour les autres lots si besoin). Enﬁn, indiquez les contraintes de précédences sur les tâches (quelle tâche doit être ﬁnie pour pouvoir commencer une nouvelle tâche). Vous pouvez couper les tâches en sous-tâches.</li>
+<li>Créez 4 dossiers <code>src</code>, <code>include</code>, <code>obj</code> et <code>bin</code> pour y ranger respectivement les fichiers <code>.c</code>, <code>.h</code>, <code>.o</code> et les exécutables. Puisque ces dossiers seront vides, vous ne pourrez pas les pousser sur le dépôt. Vous pouvez y ajouter un fichier caché vide pour forcer git à ajouter un dossier sur le dépôt. </li>
+<li>Créez un <code>makefile</code> qui compilera votre projet en un exécutable. Basez vous sur les noms des fichiers prévus des autres tâches du lot A et du lot B. Vous ne pourrez rien compiler tant que votre lot B est incomplet. Mais vous pouvez vérifier les lignes de compilation avec <code>make -n</code> et vérifier la syntaxe d'un fichier <code>fichier.c</code> avec <code>make obj/fichier.o</code>.</li>
+</ul>
+<p><strong>Tous vos codes devront compiler sans erreur ni warning (excepté les warnings de fonctions ou variables non utilisées) avec la commande <code>gcc -Wall -Wextra -std=c99</code>. </strong></p>
+<ul>
+<li>Faites valider le Lot par votre encadrant une fois toutes les tâches terminées. </li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche A.1 sur la branche <code>lot_a</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche A.2 - board.h</h2>
+      <p>Le plateau gère les équipes, les scores et les cartes mises de côté. </p>
+<p>Vous devez créer un fichier <code>board.h</code> dans le dossier <code>include</code> contenant les informations suivantes: </p>
+<ul>
+<li>un type <strong>abstrait</strong> <code>board</code>. Une variable de type <code>board</code> permettra d'accéder à toutes les informations relatives au plateau de jeu. </li>
+<li>une signature de fonction <code>create_board</code> qui ne prend rien en entrée et renvoie un <code>board</code> initialement sans joueuse et sans carte mise de côté. Cette fonction devra allouer la mémoire nécessaire pour créer un nouveau plateau. Le fait de ne rien initialiser ici vous permettra dans la partie recherche de faire des expériences en modifiant le nombre d'équipes ou de joueuses par équipe ou en mettant des cartes de côté au début du jeu.</li>
+<li>une signature de fonction <code>free_board</code> qui prend un <code>board</code> en entrée et ne renvoie rien. Cette fonction devra libérer toute la mémoire allouée au plateau donné en entrée.</li>
+<li>une signature de fonction <code>add_team</code> qui prend un <code>board</code> en entrée et ne renvoie rien. Cette fonction devra ajouter une équipe au plateau. Cette équipe sera initialement vide et a un score nul. Chaque équipe se voit attribuer un id. La première équipe a l'id 0, la seconde l'id 1, ... </li>
+<li>une signature de fonction <code>get_number_of_teams</code> qui prend un <code>board</code> en entrée et renvoie un entier. Cette fonction devra renvoyer le nombre d'équipes présentes dans sur le plateau.</li>
+<li>une signature de fonction <code>add_player_to_team</code> qui prend un <code>board</code>, un entier <code>team_id</code> et une joueuse en entrée et ne renvoie rien. Cette fonction devra ajouter la joueuse à l'équipe dont l'id est <code>team_id</code>. Chaque joueuse ajoutée se voit attribuer un index dans l'équipe. La première joueuse de l'équipe a l'index 0, la seconde l'index 1, ... </li>
+<li>une signature de fonction <code>get_number_of_players_in_team</code> qui prend un <code>board</code> et un entier <code>team_id</code> en entrée et renvoie un entier. Cette fonction devra renvoyer le nombre de joueuses dans l'équipe dont l'id est <code>team_id</code>.</li>
+<li>une signature de fonction <code>get_player</code> qui prend un <code>board</code>, un entier <code>team_id</code> et un entier <code>player_index</code> en entrée et renvoie une joueuse. Cette fonction devra renvoyer la joueuse de l'équipe dont l'id est <code>team_id</code> et dont l'indice dans l'équipe est <code>player_index</code>.</li>
+<li>une signature de fonction <code>get_score_of_team</code> qui prend un <code>board</code> et un entier <code>team_id</code> en entrée et renvoie un entier. Cette fonction devra renvoyer le score de l'équipe dont l'id est <code>team_id</code>.</li>
+<li>une signature de fonction <code>set_score_of_team</code> qui prend un <code>board</code>, un entier <code>team_id</code> et un deuxième entier en entrée. Elle ne renvoie rien. Cette fonction devra remplacer le score de l'équipe dont l'id est <code>team_id</code> par la valeur donnée en entrée.</li>
+<li>une signature de fonction <code>add_out_of_game_card</code> qui prend un <code>board</code> et une carte en entrée et ne renvoie rien. Cette fonction devra ajouter la carte à l'ensemble des cartes mises de côté. Cette fonction ne modifie pas les mains ou les cartes posées sur la table. Chaque carte se voit attribuer un index. La première carte a l'index 0, la seconde a l'index 1, ...</li>
+<li>une signature de fonction <code>get_number_of_out_of_game_cards</code> qui prend un <code>board</code> en entrée et renvoie un entier. Cette fonction devra renvoyer le nombre de cartes mises de côté.</li>
+<li>une signature de fonction <code>get_out_of_game_card</code> qui prend un <code>board</code> et un entier <code>card_index</code> en entrée et renvoie une carte. Cette fonction devra renvoyer la carte mise de côté dont l'indice est <code>card_index</code>.</li>
+<li>une signature de fonction <code>remove_out_of_game_card</code> qui prend un <code>board</code> et une carte en entrée et ne renvoie rien. Cette fonction devra supprimer la carte de l'ensemble des cartes mises de côté. Les cartes se voient alors réattribuer un index de sorte que les index soient entre 0 et le nombre de cartes mises de côté moins une. </li>
+</ul>
+<p>Votre fichier <code>board.h</code> aura possiblement besoin d'importer un ou d'autres fichiers <code>.h</code>.<br />
+Puisqu'il s'agit d'un fichier <code>.h</code>, ce fichier ne devra contenir que les types abstraits et les signatures de fonctions demandées ; pas de code concret de ces éléments.<br />
+Vous devez enfin commenter chacun des types et chacune des fonctions présentes dans ce fichier.</p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche A.2 sur la branche <code>lot_a</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche A.3 - player.h</h2>
+      <p>Ce fichier gère les informations sur les joueuses, leurs cartes en main, les cartes posées sur la table et les paris sur les ardoises. Il ne gère pas les équipes, ou leur score.</p>
+<p>Vous devez créer un fichier <code>player.h</code> dans le dossier <code>include</code> contenant les informations suivantes: </p>
+<ul>
+<li>un type <strong>abstrait</strong> <code>player</code>. Une variable de type <code>player</code> permettra d'accéder à toutes les informations relatives à une joueuse. </li>
+<li>une signature de fonction <code>create_player</code> qui ne prend rien en entrée et renvoie un <code>player</code> initialement sans carte en main, sans carte posée sur la table et avec une ardoise vide. La joueuse se voit attribuer un identifiant unique entier. Cette fonction devra allouer la mémoire nécessaire pour créer un nouveau plateau. Le fait de ne rien initialiser ici vous permettra dans la partie recherche de faire des expériences en modifiant le nombre de cartes en main, sur la table ou les paris en début de partie.</li>
+<li>une signature de fonction <code>free_player</code> qui prend un <code>player</code> en entrée et ne renvoie rien. Cette fonction devra libérer toute la mémoire allouée à la joueuse donnée en entrée.</li>
+<li>une signature de fonction <code>get_player_id</code> qui prend un <code>player</code> en entrée et renvoie un entier. Cette fonction devra renvoyer l'identifiant de la joueuse.</li>
+<li>une signature de fonction <code>get_player_by_id</code> qui prend un entier en entrée et renvoie une joueuse. Cette fonction devra renvoyer la joueuse dont l'identifiant a été donné en entrée.</li>
+<li>une signature de fonction <code>add_card_to_hand</code> qui prend une joueuse et une carte en entrée et ne renvoie rien. cette fonction devra ajouter la carte à la main de la joueuse. Cette fonction ne modifie pas les cartes mises de côté ou les cartes posées sur la table. Chaque carte se voit attribuer un index. La première carte a l'index 0, la seconde a l'index 1, ...</li>
+<li>une signature de fonction <code>get_size_of_hand</code> qui prend un <code>player</code> en entrée et renvoie un entier. Cette fonction devra renvoyer le nombre de cartes dans la main de la joueuse.</li>
+<li>une signature de fonction <code>get_card_in_hand</code> qui prend un <code>player</code> et un entier <code>card_index</code> en entrée et renvoie une carte. Cette fonction devra renvoyer la carte de la main de la joueuse dont l'indice est <code>card_index</code>.</li>
+<li>une signature de fonction <code>remove_card_from_hand</code> qui prend un <code>player</code> et une carte en entrée et ne renvoie rien. Cette fonction devra supprimer la carte de la main de la joueuse. Les cartes se voient alors réattribuer un index de sorte que les index soient entre 0 et le nombre de cartes en main moins une. </li>
+<li>une signature de fonction <code>play_card</code> qui prend une joueuse et une carte en entrée et ne renvoie rien. Cette fonction devra ajouter la carte aux cartes jouées sur la table par la joueuse. Cette fonction ne modifie pas les cartes mises de côté ou les cartes en main. Chaque carte se voit attribuer un index. La première carte a l'index 0, la seconde a l'index 1, ...</li>
+<li>une signature de fonction <code>get_number_of_played_cards</code> qui prend un <code>player</code> en entrée et renvoie un entier. Cette fonction devra renvoyer le nombre de cartes jouées posées sur la table de la joueuse.</li>
+<li>une signature de fonction <code>get_played_card</code> qui prend un <code>player</code> et un entier <code>card_index</code> en entrée et renvoie une carte. Cette fonction devra renvoyer la carte jouée et posée sur la table par la joueuse dont l'indice est <code>card_index</code>.</li>
+<li>une signature de fonction <code>remove_played_card</code> qui prend un <code>player</code> et une carte en entrée et ne renvoie rien. Cette fonction devra supprimer la carte de la table de la joueuse. Les cartes se voient alors réattribuer un index de sorte que les index soient entre 0 et le nombre de cartes posée moins une. </li>
+<li>une signature de fonction <code>get_slate</code> qui prend un <code>player</code> en entrée et renvoie un entier. Cette fonction devra renvoyer le pari de la joueuse écrit sur son ardoise, codé avec un entier.</li>
+<li>une signature de fonction <code>set_slate</code> qui prend un <code>player</code> et un entier en entrée. Elle ne renvoie rien. Cette fonction devra remplacer le pari de la joueuse par le pari codé avec l'entier donné en entrée.</li>
+</ul>
+<p>Votre fichier <code>player.h</code> aura possiblement besoin d'importer un ou d'autres fichiers <code>.h</code>.<br />
+Puisqu'il s'agit d'un fichier <code>.h</code>, ce fichier ne devra contenir que les types abstraits et les signatures de fonctions demandées ; pas de code concret de ces éléments.<br />
+Vous devez enfin commenter chacun des types et chacune des fonctions présentes dans ce fichier.</p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche A.3 sur la branche <code>lot_a</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche A.4 - interface.h et card.h</h2>
+      <p>Le fichier <code>interface.h</code> gère l'interface avec la personne physique qui joue au jeu. <strong>Seule l'interface a le droit d'effectuer des appels aux fonctions telles que <code>printf</code> et <code>scanf</code></strong>. Le fichier <code>card.h</code> gère l'accès aux informations sur les cartes (mais pas leur emplacement dans le jeu). </p>
+<p>Vous devez créer un fichier <code>interface.h</code> dans le dossier <code>include</code> contenant les informations suivantes: </p>
+<ul>
+<li>une signature de fonction <code>display_board</code> qui prend en entrée un <code>board</code> et ne renvoie rien. Cette fonction devra afficher toutes les infos du jeu (plateau, joueuses, équipes, scores, mains, paris, ...)</li>
+<li>une signature de fonction <code>ask_gamble</code> qui prend en entrée un <code>player</code> et renvoie un entier. Cette fonction devra demander à la joueuse de donner son pari et renvoyer un entier encodant ce pari. </li>
+<li>une signature de fonction <code>ask_number_of_played_cards</code> qui prend en entrée un <code>player</code> et renvoie un entier. Cette fonction devra demander à la joueuse combien de cartes elle souhaite poser sur la table et renvoyer ce nombre.</li>
+<li>une signature de fonction <code>ask_card</code> qui prend en entrée un <code>player</code> et renvoie une un carte. Cette fonction devra demander à la joueuse une carte de sa main qu'elle souhaite jouer et renvoyer cette carte.</li>
+<li>une signature de fonction <code>display_end_game</code> qui prend en entrée un <code>board</code> et qui ne renvoie rien. La fonction devra afficher un message de fin de jeu avec les informations associées.</li>
+<li>une signature de fonction <code>display_message</code> qui prend en entrée un <code>char *</code> et qui ne renvoie rien. La fonction devra afficher le message donné en entrée.</li>
+</ul>
+<p>Vous devez créer un fichier <code>card.h</code> dans le dossier <code>include</code> contenant les informations suivantes: </p>
+<ul>
+<li>un type <strong>abstrait</strong> <code>card</code>. Une variable de type <code>card</code> permettra d'accéder à toutes les informations relatives à une carte.</li>
+<li>une signature de fonction <code>create_card</code> qui ne prend rien en entrée et renvoie une <code>card</code> initialement sans valeur. La carte se voit attribuer un identifiant unique entier. Cette fonction devra allouer la mémoire nécessaire pour créer une nouvelle carte. Le fait de ne rien initialiser ici vous permettra dans la partie recherche de faire des expériences en modifiant la valeur des cartes distribuées en début de partie. </li>
+<li>une signature de fonction <code>free_card</code> qui prend un <code>card</code> en entrée et ne renvoie rien. Cette fonction devra libérer toute la mémoire allouée à la carte donné en entrée. </li>
+<li>une signature de fonction <code>get_card_id</code> qui prend une <code>card</code> en entrée et ne renvoie rien. Cette fonction devra renvoyer l'identifiant de la carte.</li>
+<li>une signature de fonction <code>get_card_by_id</code> qui prend un entier en entrée et renvoie une carte. Cette fonction devra renvoyer la carte dont l'identifiant a été donné en entrée.</li>
+<li>une signature de fonction <code>get_value</code> qui prend un <code>card</code> en entrée et renvoie un entier. Cette fonction devra renvoyer la valeur inscrite sur la carte.</li>
+<li>une signature de fonction <code>set_value</code> qui prend un <code>card</code> et un entier en entrée. Elle ne renvoie rien. Cette fonction devra remplacer la valeur inscrite sur la carte par la valeur donnée en entrée.</li>
+</ul>
+<p>Vos fichiers <code>interface.h</code> et <code>card.h</code> auront possiblement besoin d'importer un ou d'autres fichiers <code>.h</code>.<br />
+Puisqu'il s'agit de fichiers <code>.h</code>, ces fichiers ne devront contenir que les types abstraits et les signatures de fonctions demandées ; pas de code concret de ces éléments.<br />
+Vous devez enfin commenter chacun des types et chacune des fonctions présentes dans ce fichier.</p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche A.4 sur la branche <code>lot_a</code> (en plus d’un message décrivant le commit).</p>        
+            <h1>Lot B - Base Code (Info)</h1>
+      <p>Ce second lot permet de finaliser le jeu de base en codant les fichiers <code>.c</code> relatifs aux fonctions décrites dans le lot A. Le travail devra repartir du dernier commit de la branche <code>lot_A</code> de votre dépôt. Vous ne devez pas commencer ce lot sans avoir eu une validation orale ou écrite de votre chargé(e) de projet. Attention cependant, vous ne devez pas déplacer la branche <code>lot_a</code>, vous devrez créer une nouvelle branche et vous y rattacher.</p>
+  Attribuez chacune des tâches suivantes à une (et une seule) personne de votre groupe. Rappelez vous que chaque personne doit travailler sur au moins 3 tâches sur les lots de types Info.
+
+            <h2>Tâche B.1 - main.c</h2>
+      <p>Votre objectif pour cette tâche est de coder le ﬁchier <code>main.c</code> qui gèrera l'articulation centrale de la boucle de jeu.</p>
+<ul>
+<li>créez une branche <code>lot_b</code> partant du dernier commit du lot A (donc de la branche <code>lot_a</code>). </li>
+<li>Codez le fichier <code>main.c</code>. Une fois ce lot terminé, <code>main.c</code> devra pouvoir être compilé en un exécutable qui fera tourner le projet à l'aide du makefile.</li>
+</ul>
+<p>Vous pouvez créer plusieurs fonctions internes dans votre fichier <code>main.c</code> ; mais <strong>vous ne pouvez pas</strong> ajouter des fonctions dans les autres fichiers du projet. Ainsi ce ﬁchier devra utiliser uniquement les fonctions qui auront été ajoutées dans les interfaces remplies par les autres membres du groupe dans le <code>lot_A</code>. Vous ne pouvez pas non plus modifier les noms des fonctions, leur type d'entrée ou de sortie. <em>Remarque</em> : il n'est pas obligatoire d'utiliser toutes les fonctions de ces interfaces.</p>
+<p><strong>N'oubliez pas que le jeu doit pouvoir être arrêté à tout instant de la partie.</strong></p>
+<p>Vous pouvez vériﬁer que votre ﬁchier <code>main.c</code> compile sous forme de ﬁchier objet <code>main.o</code> avec la commande <code>make main.o</code>. Cette vérification vous permettra de vous assurer que votre fichier est syntaxiquement correct.</p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche B.1 sur la branche <code>lot_b</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche B.2 - board.c</h2>
+      <p>Votre objectif est de coder toutes les fonctions de <code>board.h</code> dans un fichier <code>board.c</code>. </p>
+<p>Le type <code>board</code> est un type abstrait. Cela signifie qu'il s'agit d'un pointeur vers une structure indéfinie. Cette structure peut contenir toutes les informations que vous souhaitez.</p>
+<p>Vous pouvez créer plusieurs fonctions internes dans votre fichier <code>board.c</code> ; mais <strong>vous ne pouvez pas</strong> ajouter des fonctions dans les autres fichiers du projet. Ainsi ce ﬁchier devra utiliser uniquement les fonctions qui auront été ajoutées dans les interfaces remplies par les autres membres du groupe dans le <code>lot_A</code>. Vous ne pouvez pas non plus modifier les noms des fonctions, leur type d'entrée ou de sortie. </p>
+<p>Vous pouvez vériﬁer que votre ﬁchier <code>board.c</code> compile sous forme de ﬁchier objet <code>board.o</code> avec la commande <code>make board.o</code>. Cette vérification vous permettra de vous assurer que votre fichier est syntaxiquement correct.</p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche B.2 sur la branche <code>lot_b</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche B.3 - player.c et card.c</h2>
+      <p>Votre objectif est de coder toutes les fonctions de <code>player.h</code> et <code>card.h</code> dans des fichiers <code>player.c</code> et <code>card.c</code>. </p>
+<p>Les types <code>player</code> et <code>card</code> sont des types abstraits. Cela signifie qu'il s'agit d'un pointeur vers une structure indéfinie. Cette structure peut contenir toutes les informations que vous souhaitez.</p>
+<p>Vous pouvez créer plusieurs fonctions internes dans votre fichier <code>player.c</code> ou <code>card.c</code> ; mais <strong>vous ne pouvez pas</strong> ajouter des fonctions dans les autres fichiers du projet. Ainsi ce ﬁchier devra utiliser uniquement les fonctions qui auront été ajoutées dans les interfaces remplies par les autres membres du groupe dans le <code>lot_A</code>. Vous ne pouvez pas non plus modifier les noms des fonctions, leur type d'entrée ou de sortie. </p>
+<p>Vous pouvez vériﬁer que vos ﬁchiers <code>player.c</code> et <code>card.c</code> compilent sous forme de ﬁchier objet <code>player.o</code> et  <code>card.o</code> avec les commandes <code>make player.o</code> et <code>make card.o</code>. Cette vérification vous permettra de vous assurer que votre fichier est syntaxiquement correct.</p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche B.3 sur la branche <code>lot_b</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche B.4 - interface.c</h2>
+      <p>Votre objectif est de coder toutes les fonctions de <code>interface.h</code> dans un fichier <code>interface.c</code>. <strong>C'est le seul fichier du lot qui a le droit d'effectuer des appels aux fonctions telles que <code>printf</code> et <code>scanf</code>.</strong></p>
+<p>Vous pouvez créer plusieurs fonctions internes dans votre fichier <code>interface.c</code> ; mais <strong>vous ne pouvez pas</strong> ajouter des fonctions dans les autres fichiers du projet. Ainsi ce ﬁchier devra utiliser uniquement les fonctions qui auront été ajoutées dans les interfaces remplies par les autres membres du groupe dans le <code>lot_A</code>. Vous ne pouvez pas non plus modifier les noms des fonctions, leur type d'entrée ou de sortie. </p>
+<p><strong>N'oubliez pas que le jeu doit pouvoir être arrêté à tout instant de la partie.</strong></p>
+<p>Vous pouvez vériﬁer que votre ﬁchier <code>interface.c</code> compile sous forme de ﬁchier objet <code>interface.o</code> avec la commande <code>make interface.o</code>. Cette vérification vous permettra de vous assurer que votre fichier est syntaxiquement correct.</p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche B.4 sur la branche <code>lot_b</code> (en plus d’un message décrivant le commit).</p>        
+            <h1>Lot C - Etude d'un jeu simplifié - Les mains (Math)</h1>
+      <p>Les lots Mathématiques sont consacrés à l’étude théorique et numérique d'une version simplifiée du jeu.</p>
+<p><strong>Modalités pratiques</strong></p>
+<p>Il est demandé de produire du code. Il devra être implémenté en <strong>langage C</strong>.<br />
+Il est également demandé de produire des graphes/histogrammes. Ce n'est pas forcément pratique en C. Pour faire cela, vous pouvez :</p>
+<ul>
+<li>Faire les calculs nécessaires en C, afin de produire les nombres servant à générer le graphe/histogramme</li>
+<li>Ecrire ces nombres dans un fichier .csv</li>
+<li>Utiliser le fichier .csv afin de générer le graphe en utilisant le logiciel/langage de votre choix (Excel/python/R/...)</li>
+</ul>
+<p><strong>Description de la version simplifiée du jeu</strong></p>
+<ul>
+<li>La pioche contient <strong>6 cartes</strong> : 2 cartes de valeur 1, 2 cartes de valeur 2 et 2 cartes de valeur 3.</li>
+<li><strong>2 joueuses</strong> jouent l'une contre l'autre. On appellera <code>J1</code> la première joueuse et <code>J2</code> la deuxième joueuse.</li>
+<li><em>Distribution des cartes</em> :</li>
+<li>
+<ul>
+<li>Dans un premier temps, <code>J1</code> reçoit 2 cartes, aléatoirement et uniformément tirées dans la pioche. Les valeurs des deux cartes sont donc des variables aléatoires, dénotées <code>C^1_1 ≤ C^1_2</code>, et on dira que <code>J1</code> a la main <code>(C^1_1, C^1_2)</code>.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Dans un deuxième temps, <code>J2</code> reçoit 2 cartes, aléatoirement et uniformément tirées parmi les cartes restantes. On notera <code>C^2_1 ≤ C^2_2</code>, et on dira que <code>J2</code> a la main <code>(C^2_1, C^2_2)</code>.</li>
+</ul>
+</li>
+<li><em>Déroulé du jeu, en 2 manches</em> :</li>
+<li>
+<ul>
+<li>Chaque joueuse parie <strong>Victoire (V)</strong> ou <strong>Défaite (D)</strong>, et <strong>pose une carte</strong> parmi les cartes de sa main.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Si une joueuse a parié <strong>(V)</strong> et a posé une carte <strong>strictement plus haute</strong> que celle de son adversaire, elle remporte un point. De même, si une joueuse a parié <strong>(D)</strong> et a posé une carte <strong>strictement plus basse</strong> que celle de son adversaire, elle remporte un point. Dans tous les autres cas, la joueuse ne gagne pas de point.</li>
+</ul>
+</li>
+<li>Une joueuse gagne la partie si elle a strictement plus de points que l'autre au bout des deux manches.</li>
+</ul>
+<p><strong>Description du lot C</strong></p>
+<p>Dans le lot C, on se propose d'étudier la distribution des cartes obtenues par chacune des joueuses.</p>
+  Attribuez chacune des tâches suivantes à une (et une seule) personne de votre groupe. Rappelez vous que chaque personne doit travailler sur au moins 5 tâches sur les lots de types Math.
+
+            <h2>Tâche C.1 - Initialisation du lot (Appliquer des normes et référentiels de qualité, Coordonner une équipe projet)</h2>
+      <ul>
+<li>Créez une branche <code>lot_c</code>.</li>
+<li>Codez le dossier <code>theoretical_study</code> dans lequel vous placerez vos réponses aux questions (texte et code permettant de répondre à chaque question).</li>
+<li>En coordination avec les membres de votre groupe, répartir les tâches du lot de façon équilibrée. </li>
+<li>Pour un groupe de 4 étudiants, chaque membre du groupe doit s'attribuer 3 tâches :</li>
+<li>
+<ul>
+<li>une tâche parmi C.1, C.4, C.7, C.11</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>une tâche parmi C.2, C.5, C.8, C.12</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>une tâche parmi C.3, C.6, C.9, C.10.</li>
+</ul>
+</li>
+<li>Pour un groupe de 3 étudiants, chaque membre du groupe doit s'attribuer 4 tâches :</li>
+<li>
+<ul>
+<li>deux tâches parmi C.1, C.3, C.4, C.6, C.7, C.11</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>deux tâches parmi C.2, C.5, C.8, C.9, C.10, C.12</li>
+</ul>
+</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.1 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.2 - Etude théorique de la main de J1 (Mobiliser des connaissances pour diagnostiquer et modéliser)</h2>
+      <ul>
+<li>Lister toutes les mains possibles <code>(i,j)</code> pour un joueur.</li>
+<li>Calculer, pour chaque main <code>(i,j)</code>, la probabilité que <code>J1</code> ait cette main : <code>P( (C^1_1,C^1_2) = (i,j) )</code>.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.2 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.3 - Etude empirique de la main de J1 (Concevoir des modèles et des solutions techniques adaptées)</h2>
+      <ul>
+<li>Implémenter une fonction <code>distrib(pioche)</code>, prenant en argument un vecteur <code>pioche</code> contenant les valeurs des cartes disponibles dans la pioche, et retournant 2 cartes de la pioche, aléatoirement et uniformément choisies.</li>
+<li>Implémenter une fonction <code>main_J1</code> simulant la distribution des cartes à <code>J1</code>.</li>
+<li>Utiliser la fonction <code>main_J1</code> pour implémenter une fonction <code>P_approx_1(i,j,n)</code> retournant la proportion de mains (i,j) obtenues par <code>J1</code> lors de <code>n</code> distributions indépendantes.</li>
+<li>Utiliser la fonction <code>main_J1</code> pour implémenter une fonction <code>P_approx_1(n)</code> retournant, pour chaque main (i,j), la proportion de telles mains obtenues par <code>J1</code> lors de <code>n</code> distributions indépendantes.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.3 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.4 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)</h2>
+      <ul>
+<li>
+<ul>
+<li>En utilisant la fonction <code>P_approx_1(n)</code> (avec <code>n</code> grand) de la tâche C.3, tracer un histogramme de la loi empirique de <code>(C^1_1,C^1_2)</code>. </li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Lui superposer un histogramme de la loi théorique calculée en tâche C.2.</li>
+</ul>
+</li>
+<li>
+<p>Pour la main (1,2), produire un graphe comprenant :</p>
+</li>
+<li>
+<ul>
+<li>un nuage de points <code>(n, P_approx_1(1,2,n))</code>, pour <code>n</code> allant de 1 à <code>N = 100000</code>,</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>une droite horizontale d'équation <code>y = P( (C^1_1,C^1_2)=(1,2))</code>, dont la valeur a été calculée en tâche C.2.</li>
+</ul>
+</li>
+<li>
+<p>Quelle analyse faites-vous de ces histogrammes et de ce graphe ?</p>
+</li>
+<li>
+<p>Quel résultat théorique permet-il d'anticiper ces analyses ?</p>
+</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.4 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.5 - Etude théorique de la main de J2, conditionnellement à la main de J1 (Mobiliser des connaissances pour diagnostiquer et modéliser)</h2>
+      <ul>
+<li>Pour tous les couples de mains <code>(i,j), (i',j')</code>, calculer <code>P( (C^2_1,C^2_2)=(i',j') | (C^1_1,C^1_2)=(i,j) )</code>.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.5 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.6 - Etude empirique de la main de J2, conditionnellement à la main de J1 (Concevoir des modèles et des solutions techniques adaptées)</h2>
+      <ul>
+<li>Implémenter une fonction <code>main_J2(i,j)</code> prenant en argument la main <code>(i,j)</code> de <code>J1</code>, et simulant la distribution des cartes à <code>J2</code>.</li>
+<li>Utiliser la fonction <code>main_J2(i,j)</code> pour implémenter une fonction <code>P_approx_2_1(i',j',i,j,n)</code> retournant la proportion de mains (i',j') obtenues par <code>J2</code> lors de <code>n</code> distributions indépendantes de la main de <code>J2</code>, conditionnellement à <code>(C^1_1,C^1_2)=(i,j)</code>.</li>
+<li>Utiliser la fonction <code>main_J2(i,j)</code> pour implémenter une fonction <code>P_approx_2_1(i,j,n)</code> retournant, pour chaque main (i',j'), la proportion de telles mains obtenues par <code>J2</code> lors de <code>n</code> distributions indépendantes de la main de <code>J2</code>, conditionnellement à <code>(C^1_1,C^1_2)=(i,j)</code>.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.6 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.7 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)</h2>
+      <ul>
+<li>
+<p>Supposons que J1 a obtenu la main (1,2).</p>
+</li>
+<li>
+<ul>
+<li>En utilisant la fonction <code>P_approx_2_1(1,2,n)</code> (avec <code>n</code> grand) de la tâche C.6, tracer un histogramme de la loi empirique de <code>(C^2_1,C^2_2)</code>, conditionnellement à <code>(C^1_1,C^1_2) = (1,2)</code>.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Lui superposer un histogramme de la loi théorique calculée en tâche C.5.</li>
+</ul>
+</li>
+<li>
+<p>Produire un graphe comprenant :</p>
+</li>
+<li>
+<ul>
+<li>un nuage de points <code>(n, P_approx(2,3,1,2,n))</code>, pour <code>n</code> allant de 1 à <code>N = 100000</code>,</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>une droite horizontale d'équation <code>y = P( (C^2_1,C^2_2) = (2,3) | (C^1_1,C^1_2)=(1,2) )</code>, dont la valeur a été calculée en tâche C.5.</li>
+</ul>
+</li>
+<li>
+<p>Quelle analyse faites-vous de ces histogrammes et de ce graphe ?</p>
+</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.7 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.8 - Etude théorique de la main de J2 (Mobiliser des connaissances pour diagnostiquer et modéliser)</h2>
+      <ul>
+<li>En utilisant les résultats obtenus en tâche C.5, calculer, pour toute main <code>(i,j)</code>, <code>P( (C^2_1,C^2_2) = (i,j) )</code>.</li>
+<li>Quel résultat théorique vous permet-il d'effectuer ce calcul ?</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.8 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.9 - Etude empirique de la main de J2 (Concevoir des modèles et des solutions techniques adaptées)</h2>
+      <ul>
+<li>En utilisant les fonctions <code>main_J1</code> et <code>main_J2(i,j)</code>, implémenter une fonction <code>main_J2</code> simulant la distribution des cartes à <code>J2</code>.</li>
+<li>Utiliser la fonction <code>main_J2</code> pour implémenter une fonction <code>P_approx_2(i',j',n)</code> retournant la proportion de mains (i',j') obtenues par J2 lors de n distributions indépendantes de la main de <code>J2</code>.</li>
+<li>Utiliser la fonction <code>main_J2</code> pour implémenter une fonction <code>P_approx_2(n)</code> retournant, pour chaque main (i',j'), la proportion de telles mains obtenues par <code>J2</code> lors de n distributions indépendantes de la main de <code>J2</code>.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.9 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.10 - Etude empirique alternative de la main de J2 (Concevoir des modèles et des solutions techniques adaptées)</h2>
+      <ul>
+<li>En utilisant les fonctions <code>P_approx_1(i,j,n)</code> (de la tâche C.3) et <code>P_approx_2_1(i',j',i,j,n)</code> (de la tâche C.6), ainsi que la formule des probabilités totales, implémenter une fonction <code>P_approx_2_1_alter(i',j',n)</code> retournant la proportion de telles mains obtenues par <code>J2</code>.</li>
+<li>En utilisant la fonction <code>P_approx_2_1(i,j,n)</code> de la tâche C.6 et la formule des probabilités totales, implémenter une fonction <code>P_approx_2_alter(n)</code> retournant, pour chaque main <code>(i',j')</code>, la proportion de telles mains obtenues par <code>J2</code>.</li>
+<li>Comparer les résultats obtenus avec <code>P_approx_2(n)</code> et <code>P_approx_2_alter(n)</code>. Pour le même <code>n</code>, pensez-vous que l'une est plus précise que l'autre ?</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.10 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.11 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)</h2>
+      <ul>
+<li>
+<ul>
+<li>En utilisant les fonctions <code>P_approx_2(n)</code> et <code>P_approx_2_alter(n)</code> (avec le même <code>n</code> grand) des tâches C.9 et C.10, tracer deux histogrammes superposés de la loi empirique de <code>(C^2_1,C^2_2)</code>.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Leur superposer un histogramme de la loi théorique calculée en tâche C.8.</li>
+</ul>
+</li>
+<li>
+<p>Produire un graphe comprenant :</p>
+</li>
+<li>
+<ul>
+<li>un nuage de points <code>(n, P_approx_2(2,3,n))</code>, pour <code>n</code> allant de 1 à <code>N = 100000</code>,</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>un nuage de points <code>(n, P_approx_2_alter(2,3,n))</code>, pour <code>n</code> allant de 1 à <code>N = 100000</code>,</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>une droite horizontale d'équation <code>y = P( (C^2_1,C^2_2) = (2,3) )</code>, dont la valeur a été calculée théoriquement en tâche C.8.</li>
+</ul>
+</li>
+<li>
+<p>Quelle analyse faites-vous de ces histogrammes et de ce graphe ?</p>
+</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.11 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche C.12 - Calculs supplémentaires (Mobiliser des connaissances pour diagnostiquer et modéliser)</h2>
+      <ul>
+<li>Calculer la loi jointe de <code>( (C^1_1,C^1_2), (C^2_1,C^2_2) )</code>.</li>
+<li>En déduire <code>P( C^1_2 ≥  C^2_2 )</code>.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.12 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
+            <h1>Lot D - Reproduction d'expérience (Recherche)</h1>
+      <p>Pour ce travail vous allez simuler un travail de recherche. Sa reproductibilité est simulée dans le lot G.</p>
+<p>Le travail devra repartir du dernier commit de la branche lot_B de votre dépôt. Vous ne devez pas commencer ce lot sans avoir eu une validation orale ou écrite de votre chargé(e) de projet. Attention cependant, vous ne devez pas déplacer la branche lot_B, vous devrez créer une nouvelle branche et vous y rattacher.</p>
+<p>Ce lot contient seulement deux tâches. Le lot G contient deux autres tâches. Répartissez vous les tâches de ces deux lots entre les membres du groupe.</p>
+  Attribuez chacune des tâches suivantes à une (et une seule) personne de votre groupe. Rappelez vous que chaque personne doit travailler sur au moins 1 tâche sur les lots de types Recherche.
+
+            <h2>Tâche D.1 - Développement</h2>
+      <p>Vous devez développer une des trois méthodes <code>miroir</code>, <code>antimiroir</code>, <code>probabiliste</code> indiquée dans le sujet, en fonction de votre numéro de groupe. </p>
+<ul>
+<li>créez une branche <code>lot_d</code> partant du dernier commit du lot B (donc de la branche <code>lot_b</code>). </li>
+<li>préparez un dossier <code>research_XX</code> où <code>XX</code> est le numéro de votre groupe avec 2 chiffres. </li>
+<li>ajoutez-y un sous-dossier <code>experiments/</code> et un sous-dossier <code>reproduction/</code></li>
+<li>placez vous dans le dossier <code>research_XX/experiments/</code></li>
+<li>ajoutez à ce dossier un fichier <code>mirroir.h</code>, <code>antimirroir.h</code> ou <code>probabiliste.h</code> selon la méthode que vous devez coder. Ajoutez à ce fichier une seule signature de fonction portant le nom de la méthode. </li>
+<li>L'entrée et la sortie de votre algorithme est libre. Vous pouvez en profiter pour prendre en entrée des paramètres pour manipuler l'entrée. Par exemple une distribution de probabilité qui augmente les chances d'avoir un certain type de carte en main, le nombre d'équipes, le nombre de cartes jouées chaque tour, ... Commentez votre fichier <code>.h</code> pour expliquer ce qui est donné en entrée et ce qui est renvoyé par la fonction.</li>
+<li>ajoutez à ce dossier un fichier <code>mirroir.c</code>, <code>antimirroir.c</code> ou <code>probabiliste.c</code> selon la méthode que vous devez coder. Ce fichier ne doit contenir aucune fonction autre que des fonctions internes nécessaires pour coder votre algorithme et la méthode agressive. Il ne doit donc pas contenir de fonction <code>main</code> ou d'autres fonctions utilisant votre algorithme. Il peut contenir par exemple une fonction principale <code>mirroir</code> et des sous-fonctions internes permettant de la coder, ainsi qu'une autre fonction <code>agressive</code>. </li>
+<li><strong>Le code de votre algorithme ne doit pas utiliser d'autre fonctions externes que celles qui ont été définies dans les fichiers <code>board.h</code>, <code>player.h</code> ou <code>card.h</code> du lot A.</strong> (Bien entendu les bibliothèques standards sont acceptées).</li>
+<li>ajoutez à votre makefile une règle pour compiler votre fichier.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche D.1 sur la branche <code>lot_d</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche D.2 - Évaluation, rapport d'évaluation</h2>
+      <p>Vous devez développer une série d'expériences sur la méthode développée par votre groupe. Vous devez travailler dans la branche <code>lot_d</code> de votre dépot. </p>
+<ul>
+<li>
+<p>placez vous dans le dossier <code>research_XX/experiments/</code> où <code>XX</code> est le numéro de votre groupe avec 2 chiffres. </p>
+</li>
+<li>
+<p>ajoutez librement des fichiers au choix pour lancer une série d'expériences pour mesurer ce qui vous semble intéressant. A minima, vos expériences doivent mesurer le temps de calcul et un score de l'algorithme évalué à définir. Ces temps et scores doivent être mesurés sur un nombre raisonnable d'instances variées. Vous pouvez faire varier la taille du plateau, le nombre de pièces en entrée, le type de pièces en entrée, ...  Inutile de faire trop d'expériences, deux ou trois suffiront, mais chaque expérience doit être validée sur au moins une dizaine de classes d'instances. Travaillez de concert avec la personne en charge de la tâche D.1 pour pouvoir mettre en place votre code, mais vous ne devez pas coder dans le même fichier que cette personne.<br />
+Par exemple : </p>
+<ul>
+<li>Créez 20 parties avec 2 équipes mais qui se jouent en n tours au lieu de 3 pour n variant de 3 à 20. Les cartes en jeu sont toutes des 1 et des 2. </li>
+<li>Appliquez la méthode sur ces 20 parties. </li>
+<li>Une joueuse utilise la méthode codée dans la tâche D.1</li>
+<li>Toutes les autres utilisent la méthode aggressive. </li>
+<li>Mesurez le temps de calcul et le nombre de victoires de l'équipe qui utilise la méthode.</li>
+<li>Produisez une courbe ou un tableau pour visualiser le résultat de ces mesures. </li>
+</ul>
+</li>
+<li>
+<p>ajoutez à votre makefile une ligne pour compiler vos fichiers d'expériences</p>
+</li>
+<li>
+<p>ajoutez un README permettant à votre chargé(e) de projet de savoir comment lancer vos expériences</p>
+</li>
+<li>
+<p>exécutez vos expériences</p>
+</li>
+<li>
+<p>ajoutez un rapport <code>experience.pdf</code> d'une page ou deux <strong>maximum</strong> décrivant précisément les expériences réalisées et les résulats obtenus. Votre rapport doit être indépendant du code, il ne doit pas écrire comment exécuter le code ou donner le code directement dans le pdf. Vos expériences doivent être décrites suffisamment précisément pour être reproduites : mettez vous à la place d'une personne qui ne dispose pas du code que vous avez produit. En particulier, cette personne a besoin de connaître l'algorithme que vous avez implanté, ce qui lui a été donné en entrée et ce qui a été mesuré en sortie.</p>
+</li>
+<li>
+<p>créez une archive <code>research_XX.tar.gz</code> contenant</p>
+<ul>
+<li>les fichiers <code>miroir.c</code> et <code>miroir.h</code> ; ou <code>antimiroir.c</code> et <code>antimiroir.h</code> , ou <code>probabiliste.c</code> et <code>probabiliste.h</code></li>
+<li>le rapport <code>experience.pdf</code></li>
+<li><strong>aucun autre fichier</strong></li>
+</ul>
+</li>
+<li>
+<p>Déposez cette archive sur <a href="http://exam.ensiie.fr">http://exam.ensiie.fr</a> dans le dépôt nommé <strong>prim-lot-d</strong>.</p>
+</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche D.2 sur la branche <code>lot_d</code> (en plus d’un message décrivant le commit).</p>        
+            <h1>Lot E - Jeu avancé (Info)</h1>
+      <p>Cette partie du projet se concentre sur la partie avancée du jeu. Contrairement aux lots A et B où vous étiez en charge de fichiers indépendants du projet, vous serez ici en charge d'une fonctionnalité et serez possiblement amené à travailler sur plusieurs fichiers en même temps.</p>
+<p>Le travail devra repartir du dernier commit de la branche lot_B de votre dépôt. Vous ne devez pas commencer ce lot sans avoir eu une validation orale ou écrite de votre chargé(e) de projet. Attention cependant, vous ne devez pas déplacer la branche lot_B, vous devrez créer une nouvelle branche et vous y rattacher.</p>
+  Attribuez chacune des tâches suivantes à une (et une seule) personne de votre groupe. Rappelez vous que chaque personne doit travailler sur au moins 3 tâches sur les lots de types Info.
+
+            <h2>Tâche E.1 - Réorganisation et tests</h2>
+      <ul>
+<li>Créez une nouvelle branche <code>lot_e</code> qui démarre au dernier commit du Lot B (donc de la branche <code>lot_b</code>) et une branhce <code>lot_e_test</code></li>
+<li>Ajoutez un dossier de <code>test</code> et mettez en place un ou plusieurs fichiers de tests. Effectuez les sur la branche <code>lot_e_test</code> pour ne pas aﬀecter le code du lot_e (voir ci-dessous pour plus de détails sur les tests)</li>
+<li>mettez à jour votre <code>makefile</code> premièrement pour inclure les nouveaux fichiers du lot (s'il y en a) dans la chaîne de compilation ; et secondement pour permettre de compiler les fichiers de tests.</li>
+</ul>
+<p><strong>Plus de détails sur les tests :</strong></p>
+<p>N’hésitez par à modiﬁer le code des autres et à commiter, il n’y a pas de risque, vous<br />
+êtes sur une autre branche.</p>
+<p>Vous pouvez utiliser CUnit si vous le souhaitez.</p>
+<p>Eﬀectuez les tests des nouvelles fonctionnalités de l’exécutable. Remontez les bugs aux membres du groupe pour déterminer qui doit corriger ce bug. Vous pouvez par exemple commiter sur lot_e_test<br />
+un code qui démontre le bug. Pensez à garder une trace écrite de vos tests, en<br />
+particulier si le bug est visuel, s’il n’aﬀecte pas le fonctionnement du jeu, s’il n’est pas<br />
+codable, vous pouvez simplement décrire le bug dans un ﬁchier texte que vous<br />
+commiterez. Corrigez ou faites corriger ce bug sur la branche lot_e. Puis fusionnez les<br />
+deux branches et recommencez.</p>
+<p>Vos tests doivent inclure (au moins) les nouvelles règles du jeu. Par exemple :</p>
+<ul>
+<li>Perte des jetons temporairement après la mise</li>
+<li>Gain en cas de pari réussi</li>
+<li>Perte en cas de pari raté</li>
+<li>Mises (affichage)</li>
+<li>Equilibre des cartes rouge/noir en début de partie</li>
+<li>Test de la réussite des paris en fonction des couleurs pariées</li>
+<li>Paris colorés (affichage)</li>
+<li>Placement d'une carte spéciale en main</li>
+<li>Test de l'ordre d'activation des cartes</li>
+<li>Test des cartes <code>Thuy Vo</code>, <code>Fetia Bannour</code> et <code>Lawanda Gaydu</code></li>
+<li>Tout autre test qui vous vienne à l'esprit.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche E.1 sur la branche <code>lot_e</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche E.2 - Couleurs et constantes</h2>
+      <ul>
+<li>Modifiez les fichiers <code>card.h</code>, <code>player.h</code>, <code>board.h</code>, <code>interface.h</code>, <code>card.c</code>, <code>board.c</code>, <code>player.c</code>, <code>interface.c</code> et <code>main.c</code> pour intégrer l'ajout des couleurs dans les cartes du jeu.</li>
+<li>Ajoutez un fichier <code>constantes.h</code> contenant des constantes qui pourront être utilisées dans le jeu pour éviter d'écrire ces constantes en dur partout dans le code. Par exemple la taille de la grille, le nombre de pièces dans le sac ou dans la réserve, ...</li>
+</ul>
+<p><strong>Pour faciliter la correction, indiquez explicitement  dans les commentaires toute fonction ou tout type qui a été ajouté dans les fichiers <code>.h</code> et <code>.c</code> pour mettre en place la nouvelle fonctionnalité. </strong></p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche E.2 sur la branche <code>lot_e</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche E.3 - Mises</h2>
+      <p>Modifiez les fichiers <code>card.h</code>, <code>player.h</code>, <code>board.h</code>, <code>interface.h</code>, <code>card.c</code>, <code>board.c</code>, <code>player.c</code>, <code>interface.c</code> et <code>main.c</code> pour intégrer l'ajout des mises pendant les tours de jeu.</p>
+<p><strong>Pour faciliter la correction, indiquez explicitement  dans les commentaires toute fonction ou tout type qui a été ajouté dans les fichiers <code>.h</code> et <code>.c</code> pour mettre en place la nouvelle fonctionnalité. </strong></p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche E.3 sur la branche <code>lot_e</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche E.4 - Cartes spéciales</h2>
+      <ul>
+<li>Modifiez <code>card.h</code> pour permettre de manipuler les cartes spéciales (mais pas leur effet) : création d'une carte spéciale, récupérer la description ou le nom d'une carte, libération de la mémoire, ...</li>
+<li>Mettez à jour le fichier <code>card.c</code> en conséquence.</li>
+<li>Ajoutez au fichier <code>board.h</code> des fonctions pour appliquer l'effet d'une carte. Vous n'avez pas besoin de coder toutes les cartes. Plus vous en codez, meilleure sera votre note de tâche.</li>
+<li>Modifiez les fichiers <code>player.h</code>, <code>player.c</code>, <code>board.c</code>, <code>interface.h</code>, <code>interface.c</code> et <code>main.c</code> pour intégrer les effets des cartes.</li>
+</ul>
+<p><strong>Pour faciliter la correction, indiquez explicitement  dans les commentaires toute fonction ou tout type qui a été ajouté dans les fichiers <code>.h</code> et <code>.c</code> pour mettre en place la nouvelle fonctionnalité. </strong></p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche E.4 sur la branche <code>lot_e</code> (en plus d’un message décrivant le commit).</p>        
+            <h1>Lot F - Etude théorique - La première manche (Math)</h1>
+      <p>Ce lot s'inscrit dans la continuité du lot C, dans lequel le jeu simplifié que l'on étudie est présenté. Le lot C s'est intéressé aux propriétés probabilistes des mains des joueurs. Dans ce lot, nous nous intéressons aux propriétés probabilistes liées à la première manche du jeu.</p>
+<p>Nous faisons l'hypothèse additionnelle suivante sur le comportement des joueuses :<br />
+<strong>Si une joueuse parie (V), elle joue la carte de plus haute valeur dont elle dispose.<br />
+Inversement, si une joueuse parie (D), elle joue la carte de valeur la plus basse dont elle dispose.</strong></p>
+<p>On notera <code>G^1_1</code> le nombre de points obtenus par <code>J1</code> après la première manche, <code>G^2_1</code> le nombre de points obtenus par <code>J2</code> après la première manche.</p>
+  Attribuez chacune des tâches suivantes à une (et une seule) personne de votre groupe. Rappelez vous que chaque personne doit travailler sur au moins 5 tâches sur les lots de types Math.
+
+            <h2>Tâche F.1 - Initialisation du lot (Appliquer des normes et référentiels de qualité, Coordonner une équipe projet)</h2>
+      <p>Créez une branche <code>lot_f</code> partant du dernier commit du lot c (donc de la branche <code>lot_c</code>).</p>
+<p>Codez le dossier <code>theoretical_study</code> dans lequel vous placerez vos réponses (texte ou code permettant de répondre à chaque question).</p>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche F.1 sur la branche <code>lot_f</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche F.2 - Etude théorique des gains en première manche, stratégies pures (Mobiliser des connaissances pour diagnostiquer et modéliser)</h2>
+      <p>On suppose que <code>J1</code> a la main (1,2) et parie <strong>(V)</strong>. On suppose que <code>J2</code> parie <strong>(D)</strong>.<br />
+Etant donnée la loi conditionnelle de la main de <code>J2</code> calculée en tâche C.5 :</p>
+<ul>
+<li>Calculer la loi de <code>(G^1_1,G^2_1)</code>.</li>
+<li>En déduire les lois marginales de <code>G^1_1</code> et de <code>G^2_1</code>.</li>
+<li>Quelles sont les espérances de gains des deux joueuses ?</li>
+</ul>        
+            <h2>Tâche F.3 - Etude empirique des gains en première manche, stratégies pures (Concevoir des modèles et des solutions techniques adaptées)</h2>
+      <p>En utilisant la fonction <code>main_J2(i,j)</code> implémentée en tâche C.6, implémenter une fonction <code>manche_1(i,j, p_1, q_1)</code> :</p>
+<ul>
+<li>prenant en argument la main (i,j) de <code>J1</code> et les paris <code>p_1</code> et <code>q_1</code> des deux joueuses</li>
+<li>
+<ul>
+<li><code>p_1 = 1</code> signifie que la première joueuse parie <strong>(V)</strong>, <code>p_1 = 0</code> signifie que la première joueuse parie <strong>(D)</strong>,</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>q_1 = 1</code> signifie que la deuxième joueuse parie <strong>(V)</strong>, <code>q_1 = 0</code> signifie que la deuxième joueuse parie <strong>(D)</strong>,</li>
+</ul>
+</li>
+<li>simulant la première manche,</li>
+<li>et retournant les gains des deux joueuses.</li>
+</ul>
+<p>Implémenter une fonction <code>P_approx_G1(i,j,p_1,q_1,n)</code> retournant la proportion de gains <code>(G^1_1,G^1_2)=(a,b)</code> pour toutes les combinaisons de gains <code>(a,b)</code> possibles, lors de <code>n</code> simulations indépendantes de la manche 1, conditionnées à la main <code>(i,j)</code> de <code>J1</code> et aux paris <code>p_1</code> et <code>q_1</code> des deux joueuses.</p>
+<p>En déduire deux fonctions <code>E_approx_G1_J1(i,j,p_1,q_1,n)</code> et <code>E_approx_G1_J2(i,j,p_1,q_1,n)</code> retournant les gains moyens des deux joueuses lors de <code>n</code> simulations indépendantes de la manche 1.</p>        
+            <h2>Tâche F.4 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)</h2>
+      <ul>
+<li>En utilisant la fonction <code>P_approx_G1(i,j,p_1,q_1,n)</code> (avec <code>n</code> grand) de la tâche F.3, tracer un histogramme de la loi empirique de <code>(G^1_1,G^2_1)</code>, conditionnellement à ce que <code>J1</code> ait la main <code>(1,2)</code>, que <code>J1</code> parie <strong>(V)</strong> et que <code>J2</code> parie <strong>(D)</strong>.</li>
+<li>Lui superposer un histogramme de la loi théorique calculée en tâche F.2.</li>
+<li>On ajoutera un intervalle de confiance autour des probabilités estimées.</li>
+</ul>        
+            <h2>Tâche F.5 - Etude théorique des gains en première manche, stratégies mixtes (Mobiliser des connaissances pour diagnostiquer et modéliser)</h2>
+      <p>On suppose maintenant que <code>J1</code> a la main <code>(2,3)</code>, que <code>J1</code> parie <strong>(V)</strong> avec probabilité <code>p_1</code> et que <code>J2</code> parie <strong>(V)</strong> avec probabilité <code>q_1</code>, quelle que soit sa main. On dira que <code>J1</code> joue la stratégie <code>p_1</code> et que <code>J2</code> joue la stratégie <code>q_1</code>. On suppose que les paris de <code>J1</code> et de <code>J2</code> sont indépendants.</p>
+<ul>
+<li>Calculer la loi de <code>(G^1_1,G^2_1)</code>.</li>
+<li>En déduire l'espérance des gains de chaque joueur, en fonction de <code>p_1</code> et de <code>q_1</code>.</li>
+</ul>        
+            <h2>Tâche F.6 - Etude théorique des stratégies mixtes en première manche (Mobiliser des connaissances pour diagnostiquer et modéliser)</h2>
+      <ul>
+<li>Pour toute stratégie <code>q_1</code> de <code>J2</code>, trouver la <strong>meilleure réponse</strong> de <code>J1</code> si <code>J2</code> joue la stratégie <code>q_1</code>, c'est à dire la stratégie <code>p_1(q_1)</code> de <code>J1</code> permettant de maximiser son espérance de gains.</li>
+<li>Pour toute stratégie <code>p_1</code> de <code>J1</code>, trouver la <strong>meilleure réponse</strong> de <code>J2</code> si <code>J1</code> joue la stratégie <code>p_1</code>, c'est à dire la stratégie <code>q_1(p_1)</code> de <code>J2</code> permettant de maximiser son espérance de gains.</li>
+<li>Déterminer s'il existe un couple <code>(p_1^*, q_1^*)</code> tel que <code>p_1^*</code> soit la meilleure réponse de <code>J1</code> si <code>J2</code> joue la stratégie <code>q_1^*</code>, et tel que <code>q_1^*</code> soit la meilleure réponse de <code>J2</code> si <code>J1</code> joue la stratégie <code>p_1^*</code>. On appelle un tel couple un <strong>Equilibre de Nash</strong>.</li>
+</ul>        
+            <h2>Tâche F.7 - Etude empirique des gains en première manche, stratégies mixtes (Concevoir des modèles et des solutions techniques adaptées)</h2>
+      <p>En utilisant la fonction <code>main_J2(i,j)</code> implémentée en tâche C.6, implémenter une fonction <code>manche_1_mixte(i,j, p_1, q_1)</code>, prenant en argument la main (i,j) de <code>J1</code> et les stratégies <code>p_1</code> et <code>q_1</code>des deux joueuses, simulant la première manche, et retournant les gains des deux joueuses.</p>
+<p>Implémenter une fonction <code>P_approx_G1_mixte(i,j,p_1,q_1,n)</code> retournant la proportion de gains <code>(G^1_1,G^1_2)=(a,b)</code> pour toutes les combinaisons de gains <code>(a,b)</code> possibles, lors de <code>n</code> simulations de la manche 1, conditionnées à la main <code>(i,j)</code> de <code>J1</code> et aux paris <code>p_1</code> et <code>q_1</code> des deux joueuses.</p>
+<p>En déduire deux fonctions <code>E_approx_G1_J1_mixte(i,j,p_1,q_1,n)</code> et <code>E_approx_G1_J2_mlixte(i,j,p_1,q_1,n)</code> retournant les gains moyens des deux joueuses lors de <code>n</code> simulations indépendantes de la manche 1.</p>        
+            <h2>Tâche F.8 - Etude empirique des stratégies mixtes (Concevoir des modèles et des solutions techniques adaptées)</h2>
+      <p>Etant donnée la main <code>(i,j)</code> de <code>J1</code> et les stratégies <code>p_1</code> et <code>q_1</code> des deux joueuses,</p>
+<ul>
+<li>Implémenter deux fonctions <code>E_G1_J1_mixte(i,j,p_1,q_1)</code> et <code>P_G1_J2_mixte(i,j,p_1,q_1)</code> retournant l'espérance théorique des gains des deux joueuses après la première manche, telles que calculées en tâche F.5.</li>
+<li>Implémenter une fonction <code>best_response_J1(i,j,q_1)</code>  retournant la meilleur réponse de <code>J1</code> étant donnée la stratégie de <code>J2</code>, en maximisant la fonction <code>E_G1_J1_mixte(i,j,p_1,q_1)</code> par rapport à <code>p_1</code>.</li>
+<li>Implémenter une fonction <code>best_response_J2(i,j,p_1)</code>  retournant la meilleur réponse de <code>J2</code> étant donnée la stratégie de <code>J1</code>, en maximisant la fonction <code>E_G1_J2_mixte(i,j,p_1,q_1)</code> par rapport à <code>q_1</code>.</li>
+<li>Implémenter une fonction <code>Nash(i,j)</code> retournant un équilibre de Nash, de cette façon. On part d'une stratégie <code>p_1(0), q_1(0)</code> arbitraire, puis l'on définit <code>p_1(1)</code> comme la meilleure réponse à <code>q_1(0)</code>, puis <code>q_1(1)</code> comme la meilleure réponse à <code>p_1(1)</code>, et ainsi de suite : si <code>p_1(k)</code> et <code>q_1(k)</code> sont définis, on définit alors <code>p_1(k+1)</code> comme la meilleure réponse à <code>q_1(k)</code>, puis <code>q_1(k_1)</code> comme la meilleure réponse à <code>p_1(k+1)</code>.</li>
+<li>Discuter la convergence (en fonction du point de départ <code>p_1(0),q_1(0)</code>, et en fonction du calcul théorique de l'équilibre de Nash en F.6).</li>
+</ul>        
+            <h1>Lot G - Recherche, reproduction (Recherche)</h1>
+      <p>Pour ce travail vous allez simuler un travail de reproductibilité de recherche suite au travail effectué dans le lot D.</p>
+<p>Le travail devra repartir du dernier commit de la branche lot_D de votre dépôt. Vous ne devez pas commencer ce lot sans avoir eu une validation orale ou écrite de votre chargé(e) de projet. Attention cependant, vous ne devez pas déplacer la branche lot_D, vous devrez créer une nouvelle branche et vous y rattacher.</p>
+<p>Ce lot contient seulement deux tâches. Le lot D contient deux autres tâches. Répartissez vous les tâches de ces deux lots entre les membres du groupe.</p>
+  Attribuez chacune des tâches suivantes à une (et une seule) personne de votre groupe. Rappelez vous que chaque personne doit travailler sur au moins 1 tâche sur les lots de types Recherche.
+
+            <h2>Tâche G.1 - Reproduction</h2>
+      <p>Vous devez récupérer le code et le rapport d'expérience d'un autre groupe et le mettre en place. Vous ne recevez que le code de la méthode développée par l'autre groupe, pas le code des évaluations. </p>
+<ul>
+<li>créez une branche lot_g partant du dernier commit du lot D (donc de la branche lot_d).</li>
+<li>placez vous dans le dossier <code>research_XX/reproduction/</code> où <code>XX</code> est le numéro de votre groupe avec 2 chiffres. </li>
+<li>Ajoutez le code et le rapport de l'autre groupe au dossier. </li>
+<li>Lisez le rapport d'expérience pour comprendre quelles expériences ont été réalisées</li>
+<li>Reproduisez ces expériences dans la mesure du possible. </li>
+<li>Ajoutez à votre makefile une ligne pour compiler vos nouveaux fichiers</li>
+<li>Ajoutez un README pour expliquer à votre chargé(e) de projet comment exécuter cette reproduction.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche G.1 sur la branche <code>lot_g</code> (en plus d’un message décrivant le commit).</p>        
+            <h2>Tâche G.2 - Rapport de Reproductibilité</h2>
+      <p>Votre groupe a reçu un rapport d'expérience qui décrit des évaluations d'une méthode d'un autre groupe ; et a reproduit ces expériences. Vous devez travailler avec la branche <code>lot_d</code> de votre dépôt. </p>
+<ul>
+<li>Placez vous dans le dossier <code>research_XX/reproduction/</code> où <code>XX</code> est votre numéro de groupe.</li>
+<li>Ajoutez un rapport <code>reproduction.pdf</code> d'une ou deux pages <strong>maximum</strong> qui expliquent si les expériences produites par votre groupe confirment ou infirment le résultat de l'autre groupe ; ou si aucune conclusion ne peut être tirée de la reproduction de votre groupe. Argumentez vos propos.</li>
+</ul>
+<p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail. Vos commits doivent avoir l’indication Tâche G.2 sur la branche <code>lot_g</code> (en plus d’un message décrivant le commit).</p>        
+            <h1>Lot H - Libre (Info)</h1>
+      <p>Ce lot est complètement libre. Rédigez un petit rapport ou présentez oralement votre projet au chargé de projet, selon ce que vous et lui préférez. Il n'est pas facultatif mais son exécution n'est pas nécessaire pour valider le projet. Pensez à créer une branche <code>lot_h</code> qui repartira du commit adapté. </p>
+<p>Voici quelques idées :</p>
+<ul>
+<li>Vous pouvez tenter de mesurer l’impact environnemental de votre code. Par<br />
+exemple en observant sa consommation mémoire avec top ou valgrind, le temps<br />
+CPU utilisé avec time, ou les lectures écritures sur le disque avec l’outil iotop.<br />
+Vous pouvez aller à fond et regarder la consommation électrique de la machine<br />
+pendant l’exécution du jeu, mais il vous faut un wattmètre.</li>
+<li>Vous pouvez utiliser une bibliothèque d’interface graphique pour passer d’un jeu<br />
+en console à un jeu graphique.</li>
+<li>Vous pouvez passer le jeu à un jeu en réseau</li>
+<li>Vous pouvez changer des règles. Par exemple créez des nouvelles cartes, ajouter<br />
+des joueurs, ... Les changements doivent être drastiques. Une modiﬁcation<br />
+mineure ne sera pas une contribution très intéressante.<br />
+Organisez votre Lot en tâches, répartissez les tâches comme dans les autres lots.<br />
+Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre<br />
+travail.</li>
+</ul>
+  Attribuez chacune des tâches suivantes à une (et une seule) personne de votre groupe. Rappelez vous que chaque personne doit travailler sur au moins 3 tâches sur les lots de types Info.
+
+            <h2>Tâche H.1 - Libre</h2>
+              
+            <h2>Tâche H.2 - Libre</h2>
+              
+            <h2>Tâche H.3 - Libre</h2>
+              
+            <h2>Tâche H.4 - Libre</h2>
+              
+            <h1>Lot I - Libre (Math)</h1>
+      <p>Ce lot vous permet de continuer l'étude du jeu simplifié, d'un point de vue mathématique, de façon plus libre. Quelques recommandations / idées d'études :</p>
+<ul>
+<li>Etude des stratégies mixtes lors de la première manche du jeu, mais lorsque <code>J2</code> est autorisé à avoir une stratégie différente selon la main qu'il a : étant donnée que <code>J1</code> a la main <code>(i,j)</code>, que <code>J1</code> joue la stratégie <code>p_1</code> et que <code>J2</code> joue la stratégie <code>q_1(C^2_1,C^2_2)</code>, discuter théoriquement et/ou empiriquement les équilibres de Nash.</li>
+<li>Etude des stratégies mixtes lors de la première manche du jeu, mais lorsque la main de <code>J1</code> n'est plus fixée. Une stratégie de <code>J1</code> est alors <code>p_1(C^1_1,C^1_2)</code>, et une stratégie de <code>J2</code> est <code>q_1(C^2_1,C^2_2)</code>. </li>
+<li>Etude de la seconde manche du jeu, avec des stratégies mixtes et pures. A vous de penser à des questions auxquelles répondre. Evidemment, les questions seront similaires à ce qui a été fait en lot F.</li>
+</ul>
+  Attribuez chacune des tâches suivantes à une (et une seule) personne de votre groupe. Rappelez vous que chaque personne doit travailler sur au moins 5 tâches sur les lots de types Math.
+
+            <h2>Tâche I.1 Libre</h2>
+              
+            <h2>Tâche I.2 Libre</h2>
+              
+            <h2>Tâche I.3 Libre</h2>
+              
+            <h2>Tâche I.4 Libre</h2>
+              
+        </div>
+
+<hr/>
+
+<div class="copyright">Copyright © 2021, Dimitri Watel</div>
+</body>
+</html>
+
+<!-- LICENSES DES BIBLIOTHEQUES EXTERNES UTILISEES POUR CE SITE WEB -->
+
+<!-- 
+
+  ##### Bibliothèque Parsedown #####
+
+Source : https://github.com/erusev/parsedown
+License: 
+
+
+The MIT License (MIT)
+
+Copyright (c) 2013-2018 Emanuil Rusev, erusev.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+  -->
+

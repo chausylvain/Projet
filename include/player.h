@@ -10,6 +10,10 @@
  */
 typedef struct player_s *player;
 
+void reset_player_id_counter();
+
+void reset_global_array1();
+
 /**
  *  \brief Renvoie un player sans carte en main initialement sans carte en main, sans carte posée sur la table et avec une ardoise vide 
  *  \detail La joueuse a un identifiant unique

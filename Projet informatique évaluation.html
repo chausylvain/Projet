@@ -1,0 +1,3307 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Projet informatique</title>
+  <meta name="description" content="Projet informatique">
+  <meta name="author" content="Dimitri Watel">
+  
+  <link rel="stylesheet" href="/static/main.css">
+  
+</head>
+
+<body>
+
+  <div class="title">
+    PROJET INFORMATIQUE -  Evaluation  </div>
+  <div class="person-information"> Ewen Expuesto (FISE) - APPRENANT</div>
+
+  <hr class="separator" />
+  
+  <div class="menu">
+    <a href="/subject"><div class="menu-link">Sujet</div></a>
+    <a href="/groups"><div class="menu-link">Les groupes</div></a>
+    <a href="/notes"><div class="menu-link active-menu-link">Évaluation du projet</div></a>
+          </div>
+
+<hr class="separator" /> 
+  <div class="main"> 
+
+  <h4>Vos notes et celle de votre groupe</h4>
+
+<p>
+Vous trouverez sur cette page, pour chaque lot et chaque tâche, la liste des éléments qui sont évalués par votre chargé(e) de projet. À chaque élément est associé une petite explication pour que vous puissiez bien comprendre ce qui est attendu, ainsi que le résultat de l'évaluation par votre chargé(e) de projet. Vous pourrez ainsi discuter avec lui ou elle de ce que vous pouvez améliorer dans votre projet. <strong>Soyez vigilants, pensez à venir voir cette page au moins une fois par séance et, si ce n'est pas fait, à inciter vigoureusement votre chargé(e) à vous noter quand vous avez rendu votre travail.</strong> 
+</p>
+
+<p>
+Il est important de comprendre que votre note comprend à la fois <strong>une note commune</strong> et <strong>une note individuelle</strong>. Chaque tâche est associée à un <strong>responsable</strong> que vous et votre groupe désignerez. La qualité du résultat du projet profite à tout le groupe, la qualité du code et de la gestion du projet de chaque tâche ne profite qu'au responsable de la tâche en question. Il est bien entendu autorisé d'aider les autres pour leurs tâches, mais vous ne serez récompensé pour cela qu'à travers la note commune. Aussi, si votre encadrant remarque que une tâche dont vous êtes responsable a été faite par d'autres personnes, il peut tout à fait ne pas vous attribuer de point pour ce travail. 
+<p>
+
+<h4>Utilisation de git</h4>
+
+<p>
+Votre travail doit être rendu avec l'outil de versionnement <strong>git</strong>. <strong>Afin de faciliter la correction, chaque message de commit doit être sous la forme "Lot X Tache Y Description du travail effectué". Sans quoi le chargé de projet n’est pas tenu de faire un effort. </strong>
+</p>
+
+<h4>Utilisation de GanttProject</h4>
+
+<p>
+La répartition des tâches se fera avec l'outil <strong>GanttProject</strong>. Vous devez indiquer avec cet outil qui est chargé de faire quoi.
+</p>
+
+
+<h4>Autres outils</h4>
+
+<p>
+Certains outils sont facultatif (par exemple les commentaires avec <strong>Doxygen</strong> ou les tests avec <strong>CUNIT</strong>). 
+</p>
+
+<h4>Barême</h4>
+
+<p>
+Un barème est précisé à la toute fin de cette page, il est suivi du calcul de votre note. Quelques <strong>indications très importantes</strong> sont rappelées ici :
+	<ul>
+  <li>Si vous n'avez pas été nommé <em>responsable</em> d'au moins 3 tâches de type Info, 5 tâches de type Math et 1 tâches de type Recherche, vous avez 0/20. Tout le monde doit participer au projet et toute personne cherchant à profiter de ses camarades n'est pas la bienvenue.</li>
+  <li>Vous êtes <em>responsable</em> d'une tâche si vous avez été noté responsable dans l'outil GanttProject et si vous avez commité la majorité de votre tâche sur le dépot git.</li>
+  <li>Certaines tâches sont plus difficiles que d'autres. C'est comme ça. Répartissez-vous le travail en fonction de vos compétences.</li>
+  <li>Votre code doit être commenté.</li>
+  <li>Un fichier c qui ne compile pas avec la commande <tt>gcc -Wall -Wextra -std=c99 -c fichier.c -o fichier.o</tt> ou qui manifestement n'a pas été testé (<em>i.e.</em> qui plante au démarage) se voit attribuer la note de 0. Plus exactement la tâche associée au code ne rapporte aucun point à son responsable. Par contre la personne est tout de même nommée responsable de la tâche et celle-ci compte dans le total des tâches à effectuer.</li>
+  <li>On ne vous demande pas d'être parfait, vous avez le droit à l'erreur. Vous devez effectuer le travail sérieusement, c'est tout.</li>
+  <li>Inversement, ce n'est pas parce que vous respectez ces 3 points que vous aurez plus de 10/20 au projet, c'est le minimum syndical, il ne veut pas dire que votre travail est bien fait. Sachez toutefois que la magnanimité de votre responsable d'UE n'a aucune limite. Un mauvais résultat peut s'expliquer de moult manières que le système d'évaluation ici présent ne peut capturer. Il est toujours possible de discuter et si vous avez travaillé sérieusement, vous aurez sans doute la moyenne au projet moyennant possiblement un petit travail pour remonter votre note.</li>
+  </ul>
+</p>
+
+<p>
+Dernier point important : <strong>Aucun rapport ni aucune soutenance</strong> ne sont exigés par défaut pour ce projet, sauf si cela est explicitement demandé dans les évaluations ci-dessous. Toutefois, des points réguliers (à chaque séance) sont à faire avec vos chargés de projet. Vous devez être capable de dire où vous en êtes, d’indiquer les problèmes que vous rencontrez, ... La présence en séance est obligatoire. Une petite présentation de votre projet (sous forme de démonstration, de rapport ou de soutenance) peut être un plus et permet de donner un peu plus de crédit à votre travail, un sentiment d’accomplissement mais cela ne doit pas se faire au détriment de votre travail. 
+</p>
+
+<h4>Améliorer votre note après correction, hors délai</h4>
+
+<p>
+Chaque lot est associé à une date de rendu. Cette date est indicative, mais la respecter rapporte quelques points à tout le groupe. 
+</p>
+
+<p>
+Lorsque votre lot est rendu à l'heure et a été évalué par votre encadrant(e), vous avez 3 possibilités : 
+<ul>
+  <li>Ne rien changer, votre note et votre lot ne changent pas.</li>
+  <li>Committer du code et demander une nouvelle correction, si la date de rendu est dépassée, vous perdez les points de rendu du lot à l'heure, mais vous améliorez possiblement la qualité de votre rendu. Les notes de votre lot et de vos tâches peuvent augmenter.</li>
+  <li>Committer du code et mais ne pas demander une nouvelle correction, la note de votre lot ne change pas, mais la qualité de votre lot augmente. Ceci peut être nécessaire pour démarrer un lot ultérieur sur une bonne base.</li>
+</ul>
+<strong>Pensez à en discuter avec votre chargé(e) de projet</strong>
+
+ 
+
+   <hr/>
+  <h4>Evaluation du groupe 23</h4>
+    
+    Raccourcis:
+    <ul>
+	  <li><a href="#eval-0">Evaluation du lot A - Base Mise en place (Info)</a></li>
+	  <li><a href="#eval-1">Evaluation du lot B - Base Code (Info)</a></li>
+	  <li><a href="#eval-4">Evaluation du lot C - Etude d'un jeu simplifié - Les mains (Math)</a></li>
+	  <li><a href="#eval-5">Evaluation du lot D - Reproduction d'expérience (Recherche)</a></li>
+	  <li><a href="#eval-6">Evaluation du lot E - Jeu avancé (Info)</a></li>
+	  <li><a href="#eval-8">Evaluation du lot F - Etude théorique - La première manche (Math)</a></li>
+	  <li><a href="#eval-9">Evaluation du lot G - Recherche, reproduction (Recherche)</a></li>
+	  <li><a href="#eval-10">Evaluation du lot H - Libre (Info)</a></li>
+	  <li><a href="#eval-11">Evaluation du lot I - Libre (Math)</a></li>
+		<li><a href="#eval-group-input">Bas du formulaire</a></li>
+    </ul>
+
+    <table class="eval-table unstyle-table-color-tr unstyle-table-border-tr">
+        
+            
+      <tr class="eval-even">
+        <th class="eval-desc-cell" id="eval-0">Lot A - Base Mise en place (Info)</th>
+        <th class="eval-evaluation-cell"></th>
+        <th class="eval-help-cell"></th> 
+      </tr>
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur le lot</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur le lot.</td>
+        </tr>
+         
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Date du dernier commit</td>
+          <td class="eval-evaluation-cell">Non reporté</td>
+      <td class="eval-help-cell">Votre dernier commit sur ce lot doit dater, au plus tard, du Friday 28 February 2025. Vous avez le choix de commiter après cette date ou non. Dans le second cas, quelques points vous sont attribués pour un lot rendu à l'heure.</td>
+      </tr>
+   
+
+
+       
+      
+
+       
+
+                    
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-0-0">Tâche A.1 - git, ganttproject, organisation</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Mise en place du git</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place un nouveau dépot git pour votre projet sur https://gitlab.pedago.ensiie.fr .</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Branche lot_a</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une branche nommée lot_a sur votre dépôt. Tout le monde doit ensuite effectuer ses commits relatifs au lot A sur cette branche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Invitation des membres</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez inviter tous les membres de votre groupe sur le dépôt (en tant que developer). Vous devez aussi inviter votre chargé(e) de projet en tant que reporter.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache A.1&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">GanttProject sur le dépôt</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter le fichier de sauvegarde GanttProject (fichier .xml ou .gan) sur votre dépôt.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Tâches du projet sur le diagramme</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter toutes les tâches du projet sur le fichier GanttProject. Regroupez les tâches d'un même lot en une super-tâche. Ordonnez les.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Attribution des ressources</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez assigner chaque tâche du projet (tous les lots) à un membre du groupe dans le fichier ganttproject. Vous pourrez changer cette assignation dans les futurs lots sur nécessaire, mais il faudra le préciser à votre chargé de projet. Attention au nombre de tâche à attribuer à chaque personne.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Organisation des dossiers</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer et commiter 4 dossiers `src`, `obj`, `bin` et `include` pour ranger respectivement les ﬁchier source `.c`, les ﬁchiers objets `.o`, les ﬁchiers exécutables et les ﬁchiers headers `.h`.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Makefile</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter un fichier makefile à votre projet.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Makefile sans erreur</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Votre makefile doit être rédigé sans erreur. Attention, ce point ne concerne pas le fait que le projet compile mais que le makefile est syntaxiquement correct. Vous pouvez utiliser la commande &quot; make -n &quot; pour vous en assurer ou vérifier le code de retour de la commande avec &quot; echo $? &quot;.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Makeﬁle fonctionnel</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Votre makeﬁle doit permettre de compiler le résultat du Lot B en un exécutable avec la commande make. Puisque le Lot B n'est pas encore produit, utilisez `make -n` pour vérifier les commandes qui seront exécutées par votre makefile. Attention à respecter les consignes sur les options de compilation.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-0-3">Tâche A.2 - board.h</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache A.2&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Création board.h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `board.h` et le placer dans le dossier `include`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Type board</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Créez un type **abstrait** `board`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fonction de board.h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer les signatures des fonctions du fichier `board.h` telles que décrite le lot A.2 du le sujet. Attention à bien respecter les types d'entrée et de sortie. Pensez à commenter toutes vos fonctions.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-0-4">Tâche A.3 - player.h</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache A.3&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Création player.h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `player.h` et le placer dans le dossier `include`.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Type player</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Créez un type **abstrait** `player`.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fonction de player.h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer les signatures des fonctions du fichier `player.h` telles que décrite le lot A.3 du le sujet. Attention à bien respecter les types d'entrée et de sortie. Pensez à commenter toutes vos fonctions.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-0-5">Tâche A.4 - interface.h et card.h</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache A.4&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Création interface.h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `interface.h` et le placer dans le dossier `include`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Création card.h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `card.h` et le placer dans le dossier `include`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Type card</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Créez un type **abstrait** `card`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fonction de interface.h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer les signatures des fonctions du fichier `interface.h` telles que décrite le lot A.4 du le sujet. Attention à bien respecter les types d'entrée et de sortie. Pensez à commenter toutes vos fonctions.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fonction de card.h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer les signatures des fonctions du fichier `card.h` telles que décrite le lot A.4 du le sujet. Attention à bien respecter les types d'entrée et de sortie. Pensez à commenter toutes vos fonctions.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+                
+            
+      <tr class="eval-odd">
+        <th class="eval-desc-cell eval-lot-row" id="eval-1">Lot B - Base Code (Info)</th>
+        <th class="eval-evaluation-cell eval-lot-row"></th>
+        <th class="eval-help-cell eval-lot-row"></th> 
+      </tr>
+
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur le lot</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur le lot.</td>
+        </tr>
+         
+
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Date du dernier commit</td>
+          <td class="eval-evaluation-cell">Non reporté</td>
+      <td class="eval-help-cell">Votre dernier commit sur ce lot doit dater, au plus tard, du Friday 21 March 2025. Vous avez le choix de commiter après cette date ou non. Dans le second cas, quelques points vous sont attribués pour un lot rendu à l'heure.</td>
+      </tr>
+   
+
+
+       
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Lancement et fonctionnement du logiciel</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Le lot doit être suffisamment terminé pour qu'une partie puisse être lancée et jouée jusqu'à son terme.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+
+
+       
+
+                    
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-1-2">Tâche B.1 - main.c</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Tâche testée au moins un minimum</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous vos programmes/rendus doivent avoir été testés un minimum. Le programme ne doit pas planter au démarage. Il ne doit pas y avoir d'erreur triviale dans votre programme. Bref, votre code ne doit pas être baclé. Si de tels problèmes existent dans votre code, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code. Bien entendu, si votre programme n'est pas testable du fait de causes extérieures, votre encadrant sera compréhensif. </td>
+      </tr>
+   
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Branche lot_b</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une branche nommée lot_b sur votre dépôt. Tout le monde doit ensuite effectuer ses commits relatifs au lot B sur cette branche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache B.1&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Création main.c</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `main.c` et le placer dans le dossier `src`.</td>
+      </tr>
+    <tr class="eval-even">
+          <td class="eval-desc-cell" rowspan="4">Implantation</td>
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Noms de variables et fonctions lisibles</label>
+      </td>
+              <td class="eval-help-cell" rowspan="4">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Fonctions pas trop grandes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Commentaires internes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Pas de code stupide</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+    <td class="eval-desc-cell">Pas de code inutile</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Le fichier `main.c` ne doit pas contenir de `printf` ou de `scanf` (géré par `interface.h`), ce fichier ne doit pas contenir de `struct`,  enﬁn il ne doit pas contenir de code autre que du code utilisé pour la logique générale de la boucle de jeu (typiquement pas de code qui fait ce que fait une fonction codée dans les autres tâches).</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Pas de fonctions additionnelle</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Le fichier `main.c` ne doit utiliser que des fonctions internes ou les fonctions demandées par le Lot A.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-1-6">Tâche B.2 - board.c</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache B.2&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Création board.c</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `board.c` et le placer dans le dossier `src`.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Type board</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une structure adaptée pour implanter votre type abstrait `board`.</td>
+      </tr>
+    <tr class="eval-odd">
+          <td class="eval-desc-cell" rowspan="4">Implantation</td>
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Noms de variables et fonctions lisibles</label>
+      </td>
+              <td class="eval-help-cell" rowspan="4">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Fonctions pas trop grandes</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Commentaires internes</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Pas de code stupide</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-1-7">Tâche B.3 - player.c et card.c</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache B.3&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Création player.c</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `player.c` et le placer dans le dossier `src`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Type player</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une structure adaptée pour implanter votre type abstrait `player`.</td>
+      </tr>
+    <tr class="eval-even">
+          <td class="eval-desc-cell" rowspan="4">Implantation dans player.c</td>
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Noms de variables et fonctions lisibles</label>
+      </td>
+              <td class="eval-help-cell" rowspan="4">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Fonctions pas trop grandes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Commentaires internes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Pas de code stupide</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+    <td class="eval-desc-cell">Création card.c</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `card.c` et le placer dans le dossier `src`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Type card</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une structure adaptée pour implanter votre type abstrait `card`.</td>
+      </tr>
+    <tr class="eval-even">
+          <td class="eval-desc-cell" rowspan="4">Implantation dans card.c</td>
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Noms de variables et fonctions lisibles</label>
+      </td>
+              <td class="eval-help-cell" rowspan="4">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Fonctions pas trop grandes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Commentaires internes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Pas de code stupide</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-1-8">Tâche B.4 - interface.c</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache B.4&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Création interface.c</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `interface.c` et le placer dans le dossier `src`.</td>
+      </tr>
+    <tr class="eval-odd">
+          <td class="eval-desc-cell" rowspan="4">Implantation</td>
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Noms de variables et fonctions lisibles</label>
+      </td>
+              <td class="eval-help-cell" rowspan="4">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Fonctions pas trop grandes</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Commentaires internes</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Pas de code stupide</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+    <td class="eval-desc-cell">Qualité graphique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Votre interface graphique doit être un minimum lisible et doit surtout contenir toutes les informations nécessaires. Inutile de faire d'énormes efforts pour cette qualité, commencez par quelque chose de simple. Les interfaces travaillées seront bien entendu récompensées.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+                
+            
+      <tr class="eval-even">
+        <th class="eval-desc-cell eval-lot-row" id="eval-4">Lot C - Etude d'un jeu simplifié - Les mains (Math)</th>
+        <th class="eval-evaluation-cell eval-lot-row"></th>
+        <th class="eval-help-cell eval-lot-row"></th> 
+      </tr>
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur le lot</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur le lot.</td>
+        </tr>
+         
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Date du dernier commit</td>
+          <td class="eval-evaluation-cell">Non reporté</td>
+      <td class="eval-help-cell">Votre dernier commit sur ce lot doit dater, au plus tard, du Sunday 28 April 2024. Vous avez le choix de commiter après cette date ou non. Dans le second cas, quelques points vous sont attribués pour un lot rendu à l'heure.</td>
+      </tr>
+   
+
+
+       
+      
+
+       
+
+                    
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-25">Tâche C.1 - Initialisation du lot (Appliquer des normes et référentiels de qualité, Coordonner une équipe projet)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Branche lot_c</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une branche nommée lot_c sur votre dépôt. Tout le monde doit ensuite effectuer ses commits relatifs au lot C sur cette branche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Dossier theoretical_study</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer un dossier theoretical_study, dans lequel les résultats des lots mathématiques se trouvreront.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.1&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-26">Tâche C.2 - Etude théorique de la main de J1 (Mobiliser des connaissances pour diagnostiquer et modéliser)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Liste des mains possibles</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez lister toutes les mains possibles pour J1.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Calcul des probabilités</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Pour chaque main (i,j), vous devez calculer la probabilité que J1 tire cette main.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.2&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-27">Tâche C.3 - Etude empirique de la main de J1 (Concevoir des modèles et des solutions techniques adaptées)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Fonction distrib</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez implémenter une fonction distrib(pioche), prenant en argument un vecteur pioche contenant les valeurs des cartes disponibles dans la pioche, et retournant 2 cartes de la pioche, aléatoirement et uniformément choisies.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fonction main_J1</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez implémenter une fonction main_J1 simulant la distribution des cartes à J1.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fonction P_approx_1(i,j,n)</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez implémenter une fonction P_approx_1(i,j,n) retournant la proportion de mains (i,j) obtenues par J1 lors de n distributions indépendantes.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fonction P_approx_1(n)</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez implémenter une fonction P_approx_1(n) retournant, pour chaque main (i,j), la proportion de telles mains obtenues par J1 lors de n distributions indépendantes.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.3&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-28">Tâche C.4 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.4&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Diagramme empirique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Tracer un diagramme en bâtons représentant la loi de la main de J1 obtenue avec P_approx_1(n) avec n grand.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Diagramme théorique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez produire un diagramme en bâtons représentant la loi théorique de la main de J1.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Nuage de points</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez produire un graphe représentant le nuage de points (n, P_approx_1(1,2,n))</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Limite théorique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez représenter graphiquement la droite horizontale d'équation y = P( (C^1_1,C^1_2)=(1,2))</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Analyse</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Quelle analyse tirez-vous des diagrammes et graphes ?</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Justification théorique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Quels résultats théoriques permettent de justifier l'analyse ?</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-49">Tâche C.5 - Etude théorique de la main de J2, conditionnellement à la main de J1 (Mobiliser des connaissances pour diagnostiquer et modéliser)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.5&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Calculs de probabilités conditionnelles</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Pour tous les couples de mains (i,j), (i',j'), calculer P( (C^2_1,C^2_2)=(i',j') | (C^1_1,C^1_2)=(i,j) ).</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-50">Tâche C.6 - Etude empirique de la main de J2, conditionnellement à la main de J1 (Concevoir des modèles et des solutions techniques adaptées)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.6&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fonction main_J2</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Implémenter une fonction main_J2(i,j) prenant en argument la main (i,j) de J1, et simulant la distribution des cartes à J2.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fonction P_approx_2_1(i',j',i,j,n)</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Implémenter une fonction P_approx_2_1(i',j',i,j,n) retournant la proportion de mains (i',j') obtenues par J2 lors de n distributions indépendantes de la main de J2, conditionnellement à (C^1_1,C^1_2)=(i,j).</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fonction P_approx_2_1(i,j,n)</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Implémenter une fonction P_approx_2_1(i,j,n) retournant, pour chaque main (i',j'), la proportion de telles mains obtenues par J2 lors de n distributions indépendantes de la main de J2, conditionnellement à (C^1_1,C^1_2)=(i,j).</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-51">Tâche C.7 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.7&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Diagramme empirique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Tracer un diagramme en bâtons représentant la loi de la main de J2 obtenue avec P_approx_2_1(1,2,n) avec n grand.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Diagramme théorique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez produire un diagramme en bâtons représentant la loi théorique de la main de J2, conditionnellement à la main (1,2) de J1.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Nuage de points</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez produire un graphe représentant le nuage de points (n, P_approx_1(2,3,1,2,n))</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Limite théorique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez représenter graphiquement la droite horizontale d'équation y = P( (C^2_1,C^2_2)=(2,3)|(C^1_1,C^1_2)=(1,2))</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Analyse</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Quelle analyse tirez-vous des diagrammes et graphes ?</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-52">Tâche C.8 - Etude théorique de la main de J2 (Mobiliser des connaissances pour diagnostiquer et modéliser)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.8&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Calcul des probabilités</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Pour chaque main (i',j'), vous devez calculer la probabilité que J2 tire cette main.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Justification théorique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Quel résultat théorique permet de justifier les calculs ?</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-53">Tâche C.9 - Etude empirique de la main de J2 (Concevoir des modèles et des solutions techniques adaptées)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.9&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fonction main_J2</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Implémenter une fonction main_J2 simulant la distribution des cartes à J2.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fonction P_approx_2(i',j',n)</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Implémenter une fonction P_approx_2(i',j',n) retournant la proportion de mains (i',j') obtenues par J2 lors de n distributions indépendantes de la main de J2.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fonction P_approx_2(n)</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Implémenter une fonction P_approx_2(n) retournant, pour chaque main (i',j'), la proportion de telles mains obtenues par J2 lors de n distributions indépendantes de la main de J2.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-54">Tâche C.10 - Etude empirique alternative de la main de J2 (Concevoir des modèles et des solutions techniques adaptées)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.10&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fonction P_approx_2_1_alter(i',j',n)</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Implémenter une fonction P_approx_2_1_alter(i',j',n) retournant la proportion de telles mains obtenues par J2.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fonction P_approx_2_alter(n)</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Implémenter une fonction P_approx_2_alter(n) retournant, pour chaque main (i',j'), la proportion de telles mains obtenues par J2.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Comparaison P_approx_2(n) et P_approx_2_alter(n)</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Comparer les résultats obtenus par les deux fonctions.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-55">Tâche C.11 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.11&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Diagramme empirique 1</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Tracer un diagramme en bâtons représentant la loi de la main de J1 obtenue avec P_approx_2(n) avec n grand.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Diagramme empirique 2</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Tracer un diagramme en bâtons représentant la loi de la main de J1 obtenue avec P_approx_2_alter(n) avec n grand.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Diagramme théorique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez produire un diagramme en bâtons représentant la loi théorique de la main de J2.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Nuage de points 1</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez produire un graphe représentant le nuage de points (n, P_approx_2(2,3,n))</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Nuage de points 2</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez produire un graphe représentant le nuage de points (n, P_approx_2_alter(2,3,n))</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Limite théorique</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez représenter graphiquement la droite horizontale d'équation y = P( (C^2_1,C^2_2) = (2,3) )</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Analyse</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Quelle analyse tirez-vous des diagrammes et graphes ?</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-4-56">Tâche C.12 - Calculs supplémentaires (Mobiliser des connaissances pour diagnostiquer et modéliser)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache C.12&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Loi jointe</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Calculer la loi jointe de ( (C^1_1,C^1_2), (C^2_1,C^2_2) ).</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Calcul de probabilités</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Calcul de P( C^1_2 ≥ C^2_2 ).</td>
+      </tr>
+                
+            
+      <tr class="eval-odd">
+        <th class="eval-desc-cell eval-lot-row" id="eval-5">Lot D - Reproduction d'expérience (Recherche)</th>
+        <th class="eval-evaluation-cell eval-lot-row"></th>
+        <th class="eval-help-cell eval-lot-row"></th> 
+      </tr>
+
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur le lot</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur le lot.</td>
+        </tr>
+         
+
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Date du dernier commit</td>
+          <td class="eval-evaluation-cell">Non reporté</td>
+      <td class="eval-help-cell">Votre dernier commit sur ce lot doit dater, au plus tard, du Friday 11 April 2025. Vous avez le choix de commiter après cette date ou non. Dans le second cas, quelques points vous sont attribués pour un lot rendu à l'heure.</td>
+      </tr>
+   
+
+
+       
+      
+
+       
+
+                    
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-5-21">Tâche D.1 - Développement</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Branche lot_d</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une branche nommée lot_d sur votre dépôt. Tout le monde doit ensuite effectuer ses commits relatifs au lot D sur cette branche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache D.1&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Organisation des dossiers</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer et commiter 1 dossier `research_XX` où XX est le numéro de votre groupe avec 2 chiffres pour ranger les fichiers de recherche. Ce dossier doit contenir un sous-dossier `experiments` et un sous-dossier `reproduction`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Création fichier .h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `mirroir.h`, `antimirroir.h` ou `probabiliste.h` et le placer dans le sous-dossier `experiments`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fonction principale commentée</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer la signature d'une fonction portant le nom de la méthode à implanter. La signature est libre. Commentez cette fonction pour expliquer ses entrées et sorties.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Création fichier .c</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer le fichier `mirroir.c`, `antimirroir.c` ou `probabiliste.c` et le placer dans le sous-dossier `experiments`.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Pas de main ou équivalent</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Votre fichier ne doit pas contenir de fonction main ou aucune autre fonction pour appeler la fonction principale de la méthode à implanter.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Includes pertinents</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Votre fichier ne doit pas inclure d'autre fichier `.h` que `board.h`, `player.h` et `card.h` et des bibliothèques standards.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Mise à jour du makefile</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre à jour le makefile tel qu'indiqué dans le sujet.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Implantation</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-5-22">Tâche D.2 - Évaluation, rapport d'évaluation</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache D.2&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fichiers d'expériences</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer des fichiers pour lancer vos expériences dans le dossier `experiments`.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Mise à jour du makefile</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre à jour le makefile tel qu'indiqué dans le sujet.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Implantation</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fichier README</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter un README pour expliquer à votre chargé(e) de projet comment lancer vos expériences.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fichier experiments.pdf</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter un rapport experiments.pdf contenant les résultats de vos expériences. Le rapport doit être indépendant du code. Il doit expliquer les données qui ont été données en entrée de l'algorithme, ce que vous avez mesuré en sortie et des courbes ou des tableaux pour conclure.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+                
+            
+      <tr class="eval-even">
+        <th class="eval-desc-cell eval-lot-row" id="eval-6">Lot E - Jeu avancé (Info)</th>
+        <th class="eval-evaluation-cell eval-lot-row"></th>
+        <th class="eval-help-cell eval-lot-row"></th> 
+      </tr>
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur le lot</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur le lot.</td>
+        </tr>
+         
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Date du dernier commit</td>
+          <td class="eval-evaluation-cell">Non reporté</td>
+      <td class="eval-help-cell">Votre dernier commit sur ce lot doit dater, au plus tard, du Friday 16 May 2025. Vous avez le choix de commiter après cette date ou non. Dans le second cas, quelques points vous sont attribués pour un lot rendu à l'heure.</td>
+      </tr>
+   
+
+
+       
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Lancement et fonctionnement du logiciel</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Le lot doit être suffisamment terminé pour être évaluable.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+
+
+       
+
+                    
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-6-17">Tâche E.1 - Réorganisation et tests</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Branche lot_e</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une branche nommée lot_e sur votre dépôt. Tout le monde doit ensuite effectuer ses commits relatifs au lot E sur cette branche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache E.1&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Branche lot_e_test</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une branche nommée lot_e sur votre dépôt. Tout le monde doit ensuite effectuer ses commits relatifs aux tests du lot E sur cette branche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Organisation des dossiers</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer et commiter 1 dossier `test` pour ranger les fichiers de tests.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Création fichiers de tests</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer un ou plusieurs fichiers de tests et les placer dans le dossier `test`.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Tests non codables</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez expliquer dans un ﬁchier les tests non codables que vous avez eﬀectués (par exemple des tests d'interface graphique).</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Mise à jour du makefile</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre à jour le makefile tel qu'indiqué dans le sujet.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Makefile sans erreur</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Votre makefile doit être rédigé sans erreur. Attention, ce point ne concerne pas le fait que le projet compile mais que le makefile est syntaxiquement correct. Vous pouvez utiliser la commande &quot; make -n &quot; pour vous en assurer ou vérifier le code de retour de la commande avec &quot; echo $? &quot;.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Makeﬁle fonctionnel</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Votre makeﬁle doit permettre de compiler le résultat du Lot E et les tests en un exécutable avec la commande make. Puisque le Lot E n'est pas encore produit, utilisez `make -n` pour vérifier les commandes qui seront exécutées par votre makefile. Attention à respecter les consignes sur les options de compilation.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Pas de problèmes mémoires</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Corrigez vos fuites mémoires. Vous pouvez utiliser valgrind pour cela.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Utilisation de CUNIT</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous pouvez utiliser CUnit pour effectuer vos tests.</td>
+      </tr>
+    <tr class="eval-odd">
+          <td class="eval-desc-cell" rowspan="12">Tests effectués</td>
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Perte des jetons temporairement après la mise</label>
+      </td>
+              <td class="eval-help-cell" rowspan="12">Effectuez les tests demandés par le sujet.</td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Gain en cas de pari réussi</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Perte en cas de pari raté</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Mises (affichage)</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Equilibre des cartes rouge/noir en début de partie</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Test de la réussite des paris en fonction des couleurs pariées</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Paris colorés (affichage)</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Placement d'une carte spéciale en main</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Test de l'ordre d'activation des cartes</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Test de la carte Thuy Vo</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Test de la carte Fetia Bannour</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Test de la carte Lawanda Gaydu</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+    <td class="eval-desc-cell">Autres tests</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous pouvez effectuer d'autres tests pertinents.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-6-18">Tâche E.2 - Couleurs et constantes</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Tâche testée au moins un minimum</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous vos programmes/rendus doivent avoir été testés un minimum. Le programme ne doit pas planter au démarage. Il ne doit pas y avoir d'erreur triviale dans votre programme. Bref, votre code ne doit pas être baclé. Si de tels problèmes existent dans votre code, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code. Bien entendu, si votre programme n'est pas testable du fait de causes extérieures, votre encadrant sera compréhensif. </td>
+      </tr>
+   
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache E.2&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Création d'un fichier constantes.h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez créer un fichier `constantes.h` pour y placer toutes les constantes.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Constantes choisies</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Choisissez des constantes adaptées au jeu : taille de la grille, taille du sac, taille de la réserve, emplacement des cartes sur le plateau, nombre de pièces supprimées par le carte Anne-Laure Ligozat, ...</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Noms choisis corrects</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez nommer correctement vos constantes pour qu'on comprenne rapidement à quoi elles servent.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Nouvelle fonctionnalité</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre à jour les fichiers du projet pour intégrer la fonctionnalité de couleurs de cartes dans le jeu?</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Interfaces</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter des nouvelles fonctions et éventuellement des nouveaux types dans les fichiers d'interface pour mettre en place cette nouvelle fonctionalité.</td>
+      </tr>
+    <tr class="eval-even">
+          <td class="eval-desc-cell" rowspan="4">Implantation</td>
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Noms de variables et fonctions lisibles</label>
+      </td>
+              <td class="eval-help-cell" rowspan="4">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Fonctions pas trop grandes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Commentaires internes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Pas de code stupide</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-6-19">Tâche E.3 - Mises</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Tâche testée au moins un minimum</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous vos programmes/rendus doivent avoir été testés un minimum. Le programme ne doit pas planter au démarage. Il ne doit pas y avoir d'erreur triviale dans votre programme. Bref, votre code ne doit pas être baclé. Si de tels problèmes existent dans votre code, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code. Bien entendu, si votre programme n'est pas testable du fait de causes extérieures, votre encadrant sera compréhensif. </td>
+      </tr>
+   
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache E.3&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Nouvelle fonctionnalité</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre à jour les fichiers du projet pour intégrer la fonctionnalité de mises dans le jeu?</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Interfaces</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter des nouvelles fonctions et éventuellement des nouveaux types dans les fichiers d'interface pour mettre en place cette nouvelle fonctionalité.</td>
+      </tr>
+    <tr class="eval-odd">
+          <td class="eval-desc-cell" rowspan="4">Implantation</td>
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Noms de variables et fonctions lisibles</label>
+      </td>
+              <td class="eval-help-cell" rowspan="4">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Fonctions pas trop grandes</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Commentaires internes</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Pas de code stupide</label>
+      </td>
+            </tr>
+    <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-6-20">Tâche E.4 - Cartes spéciales</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Tâche testée au moins un minimum</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous vos programmes/rendus doivent avoir été testés un minimum. Le programme ne doit pas planter au démarage. Il ne doit pas y avoir d'erreur triviale dans votre programme. Bref, votre code ne doit pas être baclé. Si de tels problèmes existent dans votre code, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code. Bien entendu, si votre programme n'est pas testable du fait de causes extérieures, votre encadrant sera compréhensif. </td>
+      </tr>
+   
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache E.4&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Nouvelle fonctionnalité</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre à jour les fichiers du projet pour intégrer la fonctionnalité de cartes spéciales dans le jeu?</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Interfaces</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter des nouvelles fonctions et éventuellement des nouveaux types dans les fichiers d'interface pour mettre en place cette nouvelle fonctionalité.</td>
+      </tr>
+    <tr class="eval-even">
+          <td class="eval-desc-cell" rowspan="4">Implantation</td>
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Noms de variables et fonctions lisibles</label>
+      </td>
+              <td class="eval-help-cell" rowspan="4">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Fonctions pas trop grandes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Commentaires internes</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+              <td class="eval-evaluation-cell">
+        <input type="checkbox"  disabled/>
+        <label>Pas de code stupide</label>
+      </td>
+            </tr>
+    <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+                
+            
+      <tr class="eval-odd">
+        <th class="eval-desc-cell eval-lot-row" id="eval-8">Lot F - Etude théorique - La première manche (Math)</th>
+        <th class="eval-evaluation-cell eval-lot-row"></th>
+        <th class="eval-help-cell eval-lot-row"></th> 
+      </tr>
+
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur le lot</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur le lot.</td>
+        </tr>
+         
+
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Date du dernier commit</td>
+          <td class="eval-evaluation-cell">Non reporté</td>
+      <td class="eval-help-cell">Votre dernier commit sur ce lot doit dater, au plus tard, du Sunday 19 May 2024. Vous avez le choix de commiter après cette date ou non. Dans le second cas, quelques points vous sont attribués pour un lot rendu à l'heure.</td>
+      </tr>
+   
+
+
+       
+      
+
+       
+
+                    
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-8-29">Tâche F.1 - Initialisation du lot (Appliquer des normes et référentiels de qualité, Coordonner une équipe projet)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache F.1&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-8-30">Tâche F.2 - Etude théorique des gains en première manche, stratégies pures (Mobiliser des connaissances pour diagnostiquer et modéliser)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache F.2&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-8-31">Tâche F.3 - Etude empirique des gains en première manche, stratégies pures (Concevoir des modèles et des solutions techniques adaptées)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache F.3&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-8-32">Tâche F.4 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache F.4&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-8-33">Tâche F.5 - Etude théorique des gains en première manche, stratégies mixtes (Mobiliser des connaissances pour diagnostiquer et modéliser)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache F.5&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-8-34">Tâche F.6 - Etude théorique des stratégies mixtes en première manche (Mobiliser des connaissances pour diagnostiquer et modéliser)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache F.6&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-8-35">Tâche F.7 - Etude empirique des gains en première manche, stratégies mixtes (Concevoir des modèles et des solutions techniques adaptées)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache F.7&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-8-36">Tâche F.8 - Etude empirique des stratégies mixtes (Concevoir des modèles et des solutions techniques adaptées)</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache F.8&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+                
+            
+      <tr class="eval-even">
+        <th class="eval-desc-cell eval-lot-row" id="eval-9">Lot G - Recherche, reproduction (Recherche)</th>
+        <th class="eval-evaluation-cell eval-lot-row"></th>
+        <th class="eval-help-cell eval-lot-row"></th> 
+      </tr>
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur le lot</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur le lot.</td>
+        </tr>
+         
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Date du dernier commit</td>
+          <td class="eval-evaluation-cell">Non reporté</td>
+      <td class="eval-help-cell">Votre dernier commit sur ce lot doit dater, au plus tard, du Friday 25 April 2025. Vous avez le choix de commiter après cette date ou non. Dans le second cas, quelques points vous sont attribués pour un lot rendu à l'heure.</td>
+      </tr>
+   
+
+
+       
+      
+
+       
+
+                    
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-9-37">Tâche G.1 - Reproduction</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Compilation</td>
+          <td class="eval-evaluation-cell">Non évalué</td>
+      <td class="eval-help-cell">Pour rappel, tous les fichiers <tt>.c</tt> de cette tâche <strong>DOIVENT</strong> compiler avec la commande <tt>gcc -Wall -Wextra -c fichier.c -o fichier.o</tt> sans erreur ni warning à l'exception des warnings de type variable ou fonction non utilisées. S'il ne compile pas, la note de cette tâche se verra attribuée la note de 0, sans tenir compte de la qualité, possiblement très bonne, du code.</td>
+      </tr>
+   
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache D.3&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fichiers de l'autre groupe</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter les fichiers de l'autre groupe dans le dossier `reproduction`.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Reproduction des expériences</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez reproduire dans la mesure du possible les expériences de l'autre groupe. Ajoutez un ou plusieurs fichiers pour cela dans le dossier `reproduction`.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Mise à jour du makefile</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre à jour le makefile tel qu'indiqué dans le sujet.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Implantation</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez coder proprement vos fonctions dans votre fichier c : vos noms de variables et de fonctions internes  (si besoin) doivent avoir des noms compréhensibles, vous devez couper vos fonctions en sous-fonctions si elles sont trop longues ou si du code se répète, vous devez mettre quelques commentaires internes pour expliquer des détails de code, et vous ne devez pas utiliser de code naïf (par exemple `if(true) return true;`)</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Fichier README</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter un README pour expliquer à votre chargé(e) de projet comment lancer vos reproductions.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-9-38">Tâche G.2 - Rapport de Reproductibilité</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Messages de commit</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez commiter votre travail avec des messages clairs et commençant par &quot;Tache D.4&quot;. Pour rappel si vous n'avez pas commité majoritairement, vous ne pouvez pas être déclaré responsable de la tâche.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Fichier reproduction.pdf</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez ajouter un rapport reproduction.pdf contenant les résultats de vos reproduction. Il doit expliquer les expériences qui ont été reproduites et si vos résultats confirment, infirment ou ne permettent pas de conclure sur les résultats des expériences reproduites.</td>
+      </tr>
+  <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+                
+            
+      <tr class="eval-odd">
+        <th class="eval-desc-cell eval-lot-row" id="eval-10">Lot H - Libre (Info)</th>
+        <th class="eval-evaluation-cell eval-lot-row"></th>
+        <th class="eval-help-cell eval-lot-row"></th> 
+      </tr>
+
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur le lot</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur le lot.</td>
+        </tr>
+         
+
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Date du dernier commit</td>
+          <td class="eval-evaluation-cell">Non reporté</td>
+      <td class="eval-help-cell">Votre dernier commit sur ce lot doit dater, au plus tard, du . Vous avez le choix de commiter après cette date ou non. Dans le second cas, quelques points vous sont attribués pour un lot rendu à l'heure.</td>
+      </tr>
+   
+
+
+       
+        <tr class="eval-odd">
+    <td class="eval-desc-cell">Branche lot_h</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez mettre en place une branche nommée lot_h sur votre dépôt. Tout le monde doit ensuite effectuer ses commits relatifs au lot F sur cette branche.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Tâches du Lot</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Modifiez ou ajoutez les tâches du Lot à votre diagramme de gantt et ordonnez les.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Répartition du travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez répartir équitablement le travail entre les membres du groupe.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Lancement et fonctionnement du logiciel</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Le lot doit être suffisamment terminé pour être évaluable.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Difficulté apparante</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Vous devez proposer un lot qui ne soit pas trop facile par rapport à ce qui a été proposé avant.</td>
+      </tr>
+  <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+
+
+       
+
+                    
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-10-41">Tâche H.1 - Libre</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-10-42">Tâche H.2 - Libre</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-10-43">Tâche H.3 - Libre</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-10-44">Tâche H.4 - Libre</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+                
+            
+      <tr class="eval-even">
+        <th class="eval-desc-cell eval-lot-row" id="eval-11">Lot I - Libre (Math)</th>
+        <th class="eval-evaluation-cell eval-lot-row"></th>
+        <th class="eval-help-cell eval-lot-row"></th> 
+      </tr>
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur le lot</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur le lot.</td>
+        </tr>
+         
+
+        <tr class="eval-even">
+    <td class="eval-desc-cell">Date du dernier commit</td>
+          <td class="eval-evaluation-cell">Non reporté</td>
+      <td class="eval-help-cell">Votre dernier commit sur ce lot doit dater, au plus tard, du . Vous avez le choix de commiter après cette date ou non. Dans le second cas, quelques points vous sont attribués pour un lot rendu à l'heure.</td>
+      </tr>
+   
+
+
+       
+      
+
+       
+
+                    
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-11-45">Tâche I.1 Libre</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-11-46">Tâche I.2 Libre</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-odd">
+          <th class="eval-desc-cell eval-job-row" id="eval-11-47">Tâche I.3 Libre</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-odd">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+              
+
+        <tr class="eval-even">
+          <th class="eval-desc-cell eval-job-row" id="eval-11-48">Tâche I.4 Libre</th>
+          <th class="eval-evaluation-cell eval-job-row"></th>
+          <th class="eval-help-cell eval-job-row"></th> 
+        </tr>
+        
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Responsable</td>
+          <td class="eval-evaluation-cell">Non défini</td>
+      <td class="eval-help-cell">Pour rappel, le ou la responsable de la tâche est la personne indiquée comme telle dans le fichier ganttproject et qui a commité majoritairement sur cette tâche.</td>
+      </tr>
+   
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Commentaire général sur la tâche</td>
+                <td class="eval-evaluation-cell">Pas de commentaire</td>
+      <td class="eval-help-cell">Un commentaire de votre chargé(e) sur le travail fourni sur cette tâche.</td>
+        </tr>
+   
+         
+         
+
+          <tr class="eval-even">
+    <td class="eval-desc-cell">Avis qualitatif sur le travail</td>
+    
+          <td class="eval-evaluation-cell">
+      Non évalué      </td>
+      <td class="eval-help-cell">Il s'agit d'un avis qualitatif sur le travail fourni.</td>
+      </tr>
+            </table>
+      
+    Raccourcis:
+    <ul>
+	  <li><a href="#eval-0">Evaluation du lot A - Base Mise en place (Info)</a></li>
+	  <li><a href="#eval-1">Evaluation du lot B - Base Code (Info)</a></li>
+	  <li><a href="#eval-4">Evaluation du lot C - Etude d'un jeu simplifié - Les mains (Math)</a></li>
+	  <li><a href="#eval-5">Evaluation du lot D - Reproduction d'expérience (Recherche)</a></li>
+	  <li><a href="#eval-6">Evaluation du lot E - Jeu avancé (Info)</a></li>
+	  <li><a href="#eval-8">Evaluation du lot F - Etude théorique - La première manche (Math)</a></li>
+	  <li><a href="#eval-9">Evaluation du lot G - Recherche, reproduction (Recherche)</a></li>
+	  <li><a href="#eval-10">Evaluation du lot H - Libre (Info)</a></li>
+	  <li><a href="#eval-11">Evaluation du lot I - Libre (Math)</a></li>
+		<li><a href="#eval-group-input">Bas du formulaire</a></li>
+    </ul>
+
+  
+<hr/>
+
+<h4>Barème, calcul et note</h4>
+<p>
+Vous avez une note par domaine: donc une note de type Info, une note de type Math et une note de type Recherche. Votre note de projet est la somme des notes de domaine rammenée à 20 et arrondie au demi-point supérieur.
+
+Chaque note de domaine est basée sur la somme de deux notes: une note de groupe et une note individuelle. 
+</p>
+
+<h5>Note de groupe</h5>
+<p>
+  <ul>
+    <li>Lot A - Base Mise en place (Info)
+      <ul>
+                <li>1 si le dernier commit du lot est effectué dans les temps.</li>
+                        <br/>
+      </ul>
+    </li>
+    <li>Lot B - Base Code (Info)
+      <ul>
+                <li>1 si le dernier commit du lot est effectué dans les temps.</li>
+                        <li>1 pour la qualité générale du lot.</li>
+                <br/>
+      </ul>
+    </li>
+    <li>Lot C - Etude d'un jeu simplifié - Les mains (Math)
+      <ul>
+                <li>1 si le dernier commit du lot est effectué dans les temps.</li>
+                        <br/>
+      </ul>
+    </li>
+    <li>Lot D - Reproduction d'expérience (Recherche)
+      <ul>
+                <li>1 si le dernier commit du lot est effectué dans les temps.</li>
+                        <br/>
+      </ul>
+    </li>
+    <li>Lot E - Jeu avancé (Info)
+      <ul>
+                <li>1 si le dernier commit du lot est effectué dans les temps.</li>
+                        <li>2 pour la qualité générale du lot.</li>
+                <br/>
+      </ul>
+    </li>
+    <li>Lot F - Etude théorique - La première manche (Math)
+      <ul>
+                <li>1 si le dernier commit du lot est effectué dans les temps.</li>
+                        <br/>
+      </ul>
+    </li>
+    <li>Lot G - Recherche, reproduction (Recherche)
+      <ul>
+                <li>1 si le dernier commit du lot est effectué dans les temps.</li>
+                        <br/>
+      </ul>
+    </li>
+    <li>Lot H - Libre (Info)
+      <ul>
+                        <li>2 pour la qualité générale du lot.</li>
+                <br/>
+      </ul>
+    </li>
+    <li>Lot I - Libre (Math)
+      <ul>
+                        <li>3 pour la qualité générale du lot.</li>
+                <br/>
+      </ul>
+    </li>
+    </ul>
+</p>
+
+<h5>Note individuelle</h5>
+<p>
+  Toutes les tâches dont vous êtes responsable sont évaluées, vous attribuant pour chacune une note d'au plus 4.00 points en Info, 3.00 points en Math et 8.00 points en Recherche. Plus la tâche est bien évaluée par votre tuteur et plus grand est le nombre de points. Ne sont ensuite conservées que les meilleures tâches (3 tâches de type Info, 5 tâches de type Math et 1 tâches de type Recherche) dont les points sont additionnés pour obtenir votre note individuelle. On rappelle qu'une tâche qui ne compile pas ou qui n'a manifestement pas été testée se voit attribuée la note de 0.
+</p>
+
+<h5>Exception</h5>
+<p>
+Dans le cas où vous n'auriez pas été responsable d'au moins 3 tâches de type Info, 5 tâches de type Math et 1 tâches de type Recherche, votre note de projet est de 0 / 20 quelle que soit la note de groupe et quelle que soit la note individuelle dans les différents domaines. 
+</p>
+
+
+<hr /> 
+
+<h4>Votre note pour la partie Info</h4>
+  
+<table class="show-note unstyle-table-border-tr">
+  <tr>
+    <th class="desc">Element évalué</th>
+    <th class="evaluation">Nombre de points attribués</th>
+  </tr>
+  
+      <tr class="top-bordered">
+        <td class="desc">Respect des délais du lot A - Base Mise en place</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+    
+    
+      <tr class="">
+        <td class="desc">Respect des délais du lot B - Base Code</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+    
+            
+      <tr class="">
+        <td class="desc">Qualité du lot B - Base Code</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+    
+      <tr class="">
+        <td class="desc">Respect des délais du lot E - Jeu avancé</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+    
+            
+      <tr class="">
+        <td class="desc">Qualité du lot E - Jeu avancé</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+    
+            
+      <tr class="">
+        <td class="desc">Qualité du lot H - Libre</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+      <tr>
+  <td class="project-note desc">Note du domaine Info</td>
+  <td class="project-note evaluation">
+        0 / 20    </td>
+  </tr>
+  </table>
+
+<hr /> 
+
+<h4>Votre note pour la partie Math</h4>
+  
+<table class="show-note unstyle-table-border-tr">
+  <tr>
+    <th class="desc">Element évalué</th>
+    <th class="evaluation">Nombre de points attribués</th>
+  </tr>
+  
+      <tr class="top-bordered">
+        <td class="desc">Respect des délais du lot C - Etude d'un jeu simplifié - Les mains</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+    
+    
+      <tr class="">
+        <td class="desc">Respect des délais du lot F - Etude théorique - La première manche</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+    
+    
+            
+      <tr class="">
+        <td class="desc">Qualité du lot I - Libre</td>
+        <td class="evaluation">3</td>
+      </tr>
+      <tr>
+  <td class="project-note desc">Note du domaine Math</td>
+  <td class="project-note evaluation">
+        0 / 20    </td>
+  </tr>
+  </table>
+
+<hr /> 
+
+<h4>Votre note pour la partie Recherche</h4>
+  
+<table class="show-note unstyle-table-border-tr">
+  <tr>
+    <th class="desc">Element évalué</th>
+    <th class="evaluation">Nombre de points attribués</th>
+  </tr>
+  
+      <tr class="top-bordered">
+        <td class="desc">Respect des délais du lot D - Reproduction d'expérience</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+    
+    
+      <tr class="">
+        <td class="desc">Respect des délais du lot G - Recherche, reproduction</td>
+        <td class="evaluation">Non évalué</td>
+      </tr>
+    
+      <tr>
+  <td class="project-note desc">Note du domaine Recherche</td>
+  <td class="project-note evaluation">
+        0 / 10    </td>
+  </tr>
+  </table>
+
+
+<hr/>
+</div>
+
+<hr/>
+
+<div class="copyright">Copyright © 2021, Dimitri Watel</div>
+</body>
+</html>
+
+<!-- LICENSES DES BIBLIOTHEQUES EXTERNES UTILISEES POUR CE SITE WEB -->
+
+<!-- 
+
+  ##### Bibliothèque Parsedown #####
+
+Source : https://github.com/erusev/parsedown
+License: 
+
+
+The MIT License (MIT)
+
+Copyright (c) 2013-2018 Emanuil Rusev, erusev.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+  -->
+
