@@ -32,12 +32,9 @@ int main() {
         for (int j = 0; j < NB_PLAYERS_TEAM; j++) {
             player p = create_player();
             add_player_to_team(b, i, p);
-<<<<<<< HEAD
 
             /* Création des cartes */
 
-=======
->>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
             for (int k = 0; k < 5; k++) {
                 card c = create_card();
                 set_value(c, (k + 1)); 
@@ -205,14 +202,9 @@ int main() {
         }
     }
 
-<<<<<<< HEAD
     for(int i = 0; i < NB_CARDS; i++){
         card c = get_card_by_id(i);
         free_card(c);
-=======
-    for (int i = 0; i < 20; i++) {
-        free_card(card_tot[i]);
->>>>>>> 28fabd8 (lot_d completed as of 17 04 25)
     }
     free(card_tot);
 
