@@ -4,7 +4,7 @@
 #include "card.h"
 #include "player.h"
 
-#define NB_CARDS 20 // DOIT ETRE MULTIPLE DE NB_PLAYERS_TEAM*NB_TEAMS
+#define NB_CARDS 40 // DOIT ETRE MULTIPLE DE NB_PLAYERS_TEAM*NB_TEAMS
 #define NB_TEAMS 2
 #define NB_PLAYERS_TEAM 2
 

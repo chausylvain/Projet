@@ -23,10 +23,10 @@ int main()
     fprintf(fd, "ième partie,n_tours,temps_ms,scores[0],scores[1],victoires\n");
     
     /*on crée 60 parties */
-    for (int i = 0; i < 60; i++)
+    for (int i = 0; i < 100; i++)
     {
         /*la partie se joue en n tours avec n compris entre 3 et 20*/
-        int n = (rand() %5)+1; // Changer le nombre de tours ici ------------------------------------------
+        int n = (rand() %10)+1; // Changer le nombre de tours ici ------------------------------------------
         printf("Valeur de n : %d\n", n);
         
         clock_t debut = clock();
