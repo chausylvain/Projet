@@ -26,8 +26,7 @@ int main()
     for (int i = 0; i < 60; i++)
     {
         /*la partie se joue en n tours avec n compris entre 3 et 20*/
-        srand(time(NULL) + i); // Different seed for each iteration
-        int n = (rand() % 50); // Changer le nombre de tours ici ------------------------------------------
+        int n = (rand() %5)+1; // Changer le nombre de tours ici ------------------------------------------
         printf("Valeur de n : %d\n", n);
         
         clock_t debut = clock();
@@ -45,9 +44,9 @@ int main()
         double temps_ms = ((double)(fin - debut)) * 1000.0 / CLOCKS_PER_SEC;
         
         // Déterminer le vainqueur
-        int victoires = (scores[1] > scores[0]) ? 1 : (scores[0] > scores[1]) ? 0 : -1;
+        double victoires = (scores[1] > scores[0]) ? 1.0 : (scores[0] > scores[1]) ? 0.0 : 0.5;
         
-        fprintf(fd, "%d,%d,%.2f,%d,%d,%d\n", i + 1, n, temps_ms, scores[0], scores[1], victoires);
+        fprintf(fd, "%d,%d,%.2f,%d,%d,%f\n", i + 1, n, temps_ms, scores[0], scores[1], victoires);
         
         // Libérer la mémoire allouée par probabiliste
         free(scores);

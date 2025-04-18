@@ -51,12 +51,9 @@ int * agressive_probabiliste_method(int team_id_agressive_method, int team_id_pr
             }
         }
     }
-     /* Distribution des cartes */
-     int index[NB_CARDS];
-
-     srand(time(NULL) ^ (intptr_t)NB_CARDS); // Graine plus aléatoire
-
-     
+    /* Distribution des cartes */
+    int index[NB_CARDS];
+    
     for (int i = 0; i < NB_CARDS; i++) {
         index[i] = i;
     }
