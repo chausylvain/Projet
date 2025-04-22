@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include " probability_of_hand_empiric.h"
+#include "tache_c3.h"
 
 void hist_loi_empirique_C4(int n)
 {
@@ -15,7 +15,7 @@ void hist_loi_empirique_C4(int n)
     int i =0;
     while(tab[i][2]!=NULL)
     {
-        fprintf(f,"%d,%d,%d",C¹_1,C¹_2, tab[i][2] );
+        fprintf(f,"%d C^1,C¹_2", tab[i][2] );
         i++;
     }
     fclose(f);
@@ -34,7 +34,8 @@ void hist_loi_theorique_C4()
     {
         for (int i=1; i<=j; i++)
         {
-            fprintf(f, "%d,%d,%d\n", i,j,P(i,j));
+            tirage t = {i,j};
+            fprintf(f, "%d,%d,%d\n", i,j,P(t));
         }
     }
     fclose(f);
