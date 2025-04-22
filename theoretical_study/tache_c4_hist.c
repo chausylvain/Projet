@@ -8,7 +8,6 @@ void hist_loi_empirique_C4(int n)
     if(f == NULL) // vérifie que le fichier s'est bien ouvert
     {
         perror("Erreur lors de l'ouverture du fichier");
-        return 1;
     }
     fprintf(f," C¹_1,C¹_2,P_approx_1(n)\n"); // Ligne pour les titres des colonnes
     double *tab = P_approx_1(n); //stock les valeurs de P_approx_1(n)
@@ -33,7 +32,6 @@ void hist_loi_theorique_C4()
     if(f == NULL) // vérifie que le fichier s'eest bien ouvert
     {
         perror("Erreur lors de l'ouverture du fichier");
-        return 1;
     }
     fprintf(f," C¹_1,C¹_2,P(C¹_1,C¹_2)\n"); // Ligne pour les titres des colonnes
     for(int j=1; j<4; j++)
@@ -41,15 +39,8 @@ void hist_loi_theorique_C4()
         for (int i=1; i<=j; i++)
         {
             tirage t = {i,j};
-            fprintf(f, "%d,%d,%d\n", i,j,P(t));
+            fprintf(f, "%d,%d,%f\n", i,j,P(t));
         }
     }
     fclose(f);
-}
-
-int main()
-{
-    int n = 1000;
-    hist_loi_empirique_C4(n);
-    hist_loi_theorique_C4();
 }

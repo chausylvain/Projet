@@ -1,9 +1,6 @@
 #include "tache_c3.h"
-
-typedef struct {
-    int first;
-    int second;
-} tirage;
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * \brief computes the size of a list the is made of 1, 2 and 3

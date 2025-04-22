@@ -20,12 +20,14 @@ all: $(EXEC)
 #Dépendencies 
 
 tache_c3.o	: tache_c3.c
-tache_c6.o : tache_c6.c
-tache_c10.o : tache_c10.c
-main.o: tache_c10.c 
+tache_c4_nuage.o	: tache_c4_nuage.c
+tache_c4_hist.o	: tache_c4_hist.c
+#tache_c6.o : tache_c6.c
+#tache_c10.o : tache_c10.c
+main.o: main.c
 
 # Targets 
-exec : main.o tache_c3.o tache_c6.o tache_c10.o
+exec : main.o tache_c3.o tache_c4_nuage.o tache_c4_hist.o
 	$(CC) -o $@ $^
 
 # Clean

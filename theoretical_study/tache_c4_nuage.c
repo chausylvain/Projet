@@ -33,11 +33,3 @@ void droite_C4()
     fclose(f);
    
 }
-
-int main()
-{
-    nuage_points_C4();
-    droite_C4();
-    return 0;
-}
-
