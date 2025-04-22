@@ -1,11 +1,13 @@
+#include "probability_of_hand_empiric.h"
+
 typedef struct {
     int first;
     int second;
 } tirage;
 
 /**
- * \brief computes the size of a linked list
- * \param linked_list a linked list
+ * \brief computes the size of a list
+ * \param linked_list a list
  * \return the size of this list
  */
 int size_list(int * linked_list) {
@@ -17,9 +19,9 @@ int size_list(int * linked_list) {
 }
 
 /**
- * \brief tire deux cartes parmi la pioche
- * \param pioche une linked list
- * \return un tirage
+ * \brief tire deux cartes parmi la pioche uniformément
+ * \param pioche une liste d'entiers
+ * \return un tirage de deux entiers
  */
 tirage distrib(int * pioche) {
     int size = size_list(pioche);
