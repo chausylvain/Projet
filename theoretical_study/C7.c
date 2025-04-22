@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "probability_of_hand_empiric.h"
+#include "tache_c3.h"
+#include "tache_c6.h"
+#include "tacheC5.c"
 
 
 int hist_empirique_C7(int n){
@@ -9,10 +11,18 @@ int hist_empirique_C7(int n){
         printf("Erreur d'ouverture du fichier\n");
         return 1;
     }
-    fprintf(file, "freq, (i,j)"); 
+    // fprintf(file, "freq, (i,j)"); 
+    // for (int i=1; i<4; i++){
+    //     for (int j=i; j<4; j++){
+    //         fprintf(file, "%f, (%d,%d)", P_approx_2_1(1,2,n), i, j);
+    //     }
+    // }
+
+    double* result = P_approx_2_1(1,2,n);
+    int index=0;
     for (int i=1; i<4; i++){
         for (int j=i; j<4; j++){
-            fprintf(file, "%f, (%d,%d)", P_approx_2_1(1,2,n), i, j);
+            fprintf(file, "%f, (%d,%d)",result[index], i, j);
         }
     }
     fclose(file);
@@ -29,7 +39,7 @@ int hist_tehorique_C7(int n){
     fprintf(fd,"resultat, (i,j)" );
     for (int i=1; i<4; i++){
         for(int j=i; j<4; j++){
-           fprintf(fd, "%f\n", P_cond((i,j,1,2)));
+           fprintf(fd, "%f\n", P_cond(i,j,1,2));
         }
     }
     fclose(fd);
@@ -44,7 +54,7 @@ int nuage_C7(){
     }
     fprintf(f, "N, P_approx_2_1_main(2,3,1,2,n)");
     for (int i=1; i<100001; i++){
-        fprintf(f, "%d, %f\n", i, P_approx_2_1(2,3,1,2,i));
+        fprintf(f, "%d, %f\n", i, P_approx_2_1_main(2,3,1,2,i));
     }
     fclose(f);
     return 0;
@@ -56,8 +66,8 @@ int droite (){
         printf("Erreur d'ouverture du fichier\n");
         return 1;
     }
-    fprint(fdd, "y\n");
-    fprintf(fdd, "%f\n", P_cond(2,3, 1,2));
+    fprintf(fdd, "y\n");
+    fprintf(fdd, "%f\n", P_cond(2,3,1,2));
     fclose(fdd);
 }
 
