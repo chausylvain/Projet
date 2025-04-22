@@ -262,7 +262,7 @@ travail. Vos commits doivent avoir l’indication Tâche A.2 sur la branche <cod
 <p>Vous devez créer un fichier <code>player.h</code> dans le dossier <code>include</code> contenant les informations suivantes: </p>
 <ul>
 <li>un type <strong>abstrait</strong> <code>player</code>. Une variable de type <code>player</code> permettra d'accéder à toutes les informations relatives à une joueuse. </li>
-<li>une signature de fonction <code>create_player</code> qui ne prend rien en entrée et renvoie un <code>player</code> initialement sans carte en main, sans carte posée sur la table et avec une ardoise vide. La joueuse se voit attribuer un identifiant unique entier. Cette fonction devra allouer la mémoire nécessaire pour créer un nouveau plateau. Le fait de ne rien initialiser ici vous permettra dans la partie recherche de faire des expériences en modifiant le nombre de cartes en main, sur la table ou les paris en début de partie.</li>
+<li>une signature de fonction <code>create_player</code> qui ne prend rien en entrée et renvoie un <code>player</code> initialement sans carte en main, sans carte posée sur la table et avec une ardoise vide. La joueuse se voit attribuer un identifiant unique entier. Cette fonction devra allouer la mémoire nécessaire pour créer une nouvelle joueuse. Le fait de ne rien initialiser ici vous permettra dans la partie recherche de faire des expériences en modifiant le nombre de cartes en main, sur la table ou les paris en début de partie.</li>
 <li>une signature de fonction <code>free_player</code> qui prend un <code>player</code> en entrée et ne renvoie rien. Cette fonction devra libérer toute la mémoire allouée à la joueuse donnée en entrée.</li>
 <li>une signature de fonction <code>get_player_id</code> qui prend un <code>player</code> en entrée et renvoie un entier. Cette fonction devra renvoyer l'identifiant de la joueuse.</li>
 <li>une signature de fonction <code>get_player_by_id</code> qui prend un entier en entrée et renvoie une joueuse. Cette fonction devra renvoyer la joueuse dont l'identifiant a été donné en entrée.</li>
@@ -298,7 +298,7 @@ travail. Vos commits doivent avoir l’indication Tâche A.3 sur la branche <cod
 <li>un type <strong>abstrait</strong> <code>card</code>. Une variable de type <code>card</code> permettra d'accéder à toutes les informations relatives à une carte.</li>
 <li>une signature de fonction <code>create_card</code> qui ne prend rien en entrée et renvoie une <code>card</code> initialement sans valeur. La carte se voit attribuer un identifiant unique entier. Cette fonction devra allouer la mémoire nécessaire pour créer une nouvelle carte. Le fait de ne rien initialiser ici vous permettra dans la partie recherche de faire des expériences en modifiant la valeur des cartes distribuées en début de partie. </li>
 <li>une signature de fonction <code>free_card</code> qui prend un <code>card</code> en entrée et ne renvoie rien. Cette fonction devra libérer toute la mémoire allouée à la carte donné en entrée. </li>
-<li>une signature de fonction <code>get_card_id</code> qui prend une <code>card</code> en entrée et ne renvoie rien. Cette fonction devra renvoyer l'identifiant de la carte.</li>
+<li>une signature de fonction <code>get_card_id</code> qui prend une <code>card</code> en entrée et renvoie un entier. Cette fonction devra renvoyer l'identifiant de la carte.</li>
 <li>une signature de fonction <code>get_card_by_id</code> qui prend un entier en entrée et renvoie une carte. Cette fonction devra renvoyer la carte dont l'identifiant a été donné en entrée.</li>
 <li>une signature de fonction <code>get_value</code> qui prend un <code>card</code> en entrée et renvoie un entier. Cette fonction devra renvoyer la valeur inscrite sur la carte.</li>
 <li>une signature de fonction <code>set_value</code> qui prend un <code>card</code> et un entier en entrée. Elle ne renvoie rien. Cette fonction devra remplacer la valeur inscrite sur la carte par la valeur donnée en entrée.</li>
@@ -361,12 +361,12 @@ Il est également demandé de produire des graphes/histogrammes. Ce n'est pas fo
 <li><em>Distribution des cartes</em> :</li>
 <li>
 <ul>
-<li>Dans un premier temps, <code>J1</code> reçoit 2 cartes, aléatoirement et uniformément tirées dans la pioche. Les valeurs des deux cartes sont donc des variables aléatoires, dénotées <code>C^1_1 ≤ C^1_2</code>, et on dira que <code>J1</code> a la main <code>(C^1_1, C^1_2)</code>.</li>
+<li>Dans un premier temps, <code>J1</code> reçoit 2 cartes, l'une après l'autre, aléatoirement et uniformément tirées dans la pioche. Les valeurs des deux cartes sont donc des variables aléatoires, dénotées <code>C^1_1 ≤ C^1_2</code>, et on dira que <code>J1</code> a la main <code>(C^1_1, C^1_2)</code>.</li>
 </ul>
 </li>
 <li>
 <ul>
-<li>Dans un deuxième temps, <code>J2</code> reçoit 2 cartes, aléatoirement et uniformément tirées parmi les cartes restantes. On notera <code>C^2_1 ≤ C^2_2</code>, et on dira que <code>J2</code> a la main <code>(C^2_1, C^2_2)</code>.</li>
+<li>Dans un deuxième temps, <code>J2</code> reçoit 2 cartes, l'une après l'autre, aléatoirement et uniformément tirées parmi les cartes restantes. On notera <code>C^2_1 ≤ C^2_2</code>, et on dira que <code>J2</code> a la main <code>(C^2_1, C^2_2)</code>.</li>
 </ul>
 </li>
 <li><em>Déroulé du jeu, en 2 manches</em> :</li>
@@ -430,7 +430,7 @@ Il est également demandé de produire des graphes/histogrammes. Ce n'est pas fo
       <ul>
 <li>Implémenter une fonction <code>distrib(pioche)</code>, prenant en argument un vecteur <code>pioche</code> contenant les valeurs des cartes disponibles dans la pioche, et retournant 2 cartes de la pioche, aléatoirement et uniformément choisies.</li>
 <li>Implémenter une fonction <code>main_J1</code> simulant la distribution des cartes à <code>J1</code>.</li>
-<li>Utiliser la fonction <code>main_J1</code> pour implémenter une fonction <code>P_approx_1(i,j,n)</code> retournant la proportion de mains (i,j) obtenues par <code>J1</code> lors de <code>n</code> distributions indépendantes.</li>
+<li>Utiliser la fonction <code>main_J1</code> pour implémenter une fonction <code>P_approx_1_main(i,j,n)</code> retournant la proportion de mains (i,j) obtenues par <code>J1</code> lors de <code>n</code> distributions indépendantes.</li>
 <li>Utiliser la fonction <code>main_J1</code> pour implémenter une fonction <code>P_approx_1(n)</code> retournant, pour chaque main (i,j), la proportion de telles mains obtenues par <code>J1</code> lors de <code>n</code> distributions indépendantes.</li>
 </ul>
 <p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.3 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
@@ -451,7 +451,7 @@ Il est également demandé de produire des graphes/histogrammes. Ce n'est pas fo
 </li>
 <li>
 <ul>
-<li>un nuage de points <code>(n, P_approx_1(1,2,n))</code>, pour <code>n</code> allant de 1 à <code>N = 100000</code>,</li>
+<li>un nuage de points <code>(n, P_approx_1_main(1,2,n))</code>, pour <code>n</code> allant de 1 à <code>N = 100000</code>,</li>
 </ul>
 </li>
 <li>
@@ -475,7 +475,7 @@ Il est également demandé de produire des graphes/histogrammes. Ce n'est pas fo
             <h2>Tâche C.6 - Etude empirique de la main de J2, conditionnellement à la main de J1 (Concevoir des modèles et des solutions techniques adaptées)</h2>
       <ul>
 <li>Implémenter une fonction <code>main_J2(i,j)</code> prenant en argument la main <code>(i,j)</code> de <code>J1</code>, et simulant la distribution des cartes à <code>J2</code>.</li>
-<li>Utiliser la fonction <code>main_J2(i,j)</code> pour implémenter une fonction <code>P_approx_2_1(i',j',i,j,n)</code> retournant la proportion de mains (i',j') obtenues par <code>J2</code> lors de <code>n</code> distributions indépendantes de la main de <code>J2</code>, conditionnellement à <code>(C^1_1,C^1_2)=(i,j)</code>.</li>
+<li>Utiliser la fonction <code>main_J2(i,j)</code> pour implémenter une fonction <code>P_approx_2_1_main(i',j',i,j,n)</code> retournant la proportion de mains (i',j') obtenues par <code>J2</code> lors de <code>n</code> distributions indépendantes de la main de <code>J2</code>, conditionnellement à <code>(C^1_1,C^1_2)=(i,j)</code>.</li>
 <li>Utiliser la fonction <code>main_J2(i,j)</code> pour implémenter une fonction <code>P_approx_2_1(i,j,n)</code> retournant, pour chaque main (i',j'), la proportion de telles mains obtenues par <code>J2</code> lors de <code>n</code> distributions indépendantes de la main de <code>J2</code>, conditionnellement à <code>(C^1_1,C^1_2)=(i,j)</code>.</li>
 </ul>
 <p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.6 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
@@ -499,7 +499,7 @@ Il est également demandé de produire des graphes/histogrammes. Ce n'est pas fo
 </li>
 <li>
 <ul>
-<li>un nuage de points <code>(n, P_approx(2,3,1,2,n))</code>, pour <code>n</code> allant de 1 à <code>N = 100000</code>,</li>
+<li>un nuage de points <code>(n, P_approx_2_1_main(2,3,1,2,n))</code>, pour <code>n</code> allant de 1 à <code>N = 100000</code>,</li>
 </ul>
 </li>
 <li>
@@ -521,13 +521,13 @@ Il est également demandé de produire des graphes/histogrammes. Ce n'est pas fo
             <h2>Tâche C.9 - Etude empirique de la main de J2 (Concevoir des modèles et des solutions techniques adaptées)</h2>
       <ul>
 <li>En utilisant les fonctions <code>main_J1</code> et <code>main_J2(i,j)</code>, implémenter une fonction <code>main_J2</code> simulant la distribution des cartes à <code>J2</code>.</li>
-<li>Utiliser la fonction <code>main_J2</code> pour implémenter une fonction <code>P_approx_2(i',j',n)</code> retournant la proportion de mains (i',j') obtenues par J2 lors de n distributions indépendantes de la main de <code>J2</code>.</li>
+<li>Utiliser la fonction <code>main_J2</code> pour implémenter une fonction <code>P_approx_2_main(i',j',n)</code> retournant la proportion de mains (i',j') obtenues par J2 lors de n distributions indépendantes de la main de <code>J2</code>.</li>
 <li>Utiliser la fonction <code>main_J2</code> pour implémenter une fonction <code>P_approx_2(n)</code> retournant, pour chaque main (i',j'), la proportion de telles mains obtenues par <code>J2</code> lors de n distributions indépendantes de la main de <code>J2</code>.</li>
 </ul>
 <p>Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche C.9 sur la branche <code>lot_c</code> (en plus d’un message décrivant le commit).</p>        
             <h2>Tâche C.10 - Etude empirique alternative de la main de J2 (Concevoir des modèles et des solutions techniques adaptées)</h2>
       <ul>
-<li>En utilisant les fonctions <code>P_approx_1(i,j,n)</code> (de la tâche C.3) et <code>P_approx_2_1(i',j',i,j,n)</code> (de la tâche C.6), ainsi que la formule des probabilités totales, implémenter une fonction <code>P_approx_2_1_alter(i',j',n)</code> retournant la proportion de telles mains obtenues par <code>J2</code>.</li>
+<li>En utilisant les fonctions <code>P_approx_1_main(i,j,n)</code> (de la tâche C.3) et <code>P_approx_2_1_main(i',j',i,j,n)</code> (de la tâche C.6), ainsi que la formule des probabilités totales, implémenter une fonction <code>P_approx_2_main_alter(i',j',n)</code> retournant la proportion de telles mains obtenues par <code>J2</code>.</li>
 <li>En utilisant la fonction <code>P_approx_2_1(i,j,n)</code> de la tâche C.6 et la formule des probabilités totales, implémenter une fonction <code>P_approx_2_alter(n)</code> retournant, pour chaque main <code>(i',j')</code>, la proportion de telles mains obtenues par <code>J2</code>.</li>
 <li>Comparer les résultats obtenus avec <code>P_approx_2(n)</code> et <code>P_approx_2_alter(n)</code>. Pour le même <code>n</code>, pensez-vous que l'une est plus précise que l'autre ?</li>
 </ul>
