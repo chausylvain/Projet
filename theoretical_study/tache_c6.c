@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+#include "tache_c6.h"
 /** 
 \brief :  simule la distribution des cartes à J2 en prenant en argument la main (i,j) de J1
 \param : i et j entiers, cartes de J1
