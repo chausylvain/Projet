@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2025-02-10" view-index="0" gantt-divider-location="540" resource-divider-location="300" version="3.3.3316" locale="en_GB">
+    <description/>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="Name" width="298" order="0"/>
+        <field id="tpd4" name="Begin date" width="112" order="1"/>
+        <field id="tpd5" name="End date" width="114" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#00ffff #ff0033 #0000cc #ff00ff #0033ff #e1e1e1 #33ff00 #33ff33 #66ff00]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="515af954d769477e9fdf6e94fe98af8d" name="Lot_A" meeting="false" start="2025-02-28" duration="1" complete="0" expand="true">
+            <depend id="2" type="2" difference="0" hardness="Strong"/>
+            <depend id="52" type="2" difference="0" hardness="Strong"/>
+            <task id="1" uid="f5c9d0a4ed354350bd73c21d94e4d986" name="A.1 - git, ganttproject, organisation" color="#ff0033" meeting="false" start="2025-02-28" duration="1" complete="0" expand="true"/>
+            <task id="9" uid="e5f3ae5a8a074ddca477e563948cff84" name="A.2 - board.h" color="#ff00ff" meeting="false" start="2025-02-28" duration="1" complete="0" expand="true"/>
+            <task id="10" uid="bc3a80c1d436491a9eed7deed79ba7dc" name="A.3 - player.h" color="#00ffff" meeting="false" start="2025-02-28" duration="1" complete="0" expand="true"/>
+            <task id="11" uid="43e16d2bbd234329987f68131e971f42" name="A.4 - interface.h et card.h" color="#0000cc" meeting="false" start="2025-02-28" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="2" uid="a7327232c37a40d7aeb6af3ca88262c5" name="Lot_B" meeting="false" start="2025-03-03" duration="15" complete="0" expand="true">
+            <depend id="5" type="3" difference="0" hardness="Strong"/>
+            <depend id="16" type="2" difference="0" hardness="Strong"/>
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+            <task id="12" uid="fffac94471634f7fbab8e5551fa1d1e1" name="B.1 - main.c" color="#ff0033" meeting="false" start="2025-03-03" duration="15" complete="0" expand="false"/>
+            <task id="13" uid="c476afd5ce2648dcb7f890eccdb1286f" name="B.2 - board.c" color="#ff00ff" meeting="false" start="2025-03-03" duration="15" complete="0" expand="true"/>
+            <task id="14" uid="347dc1c70b254eba83c4ae0124e0c76d" name="B.3 - player.c et card.c" color="#00ffff" meeting="false" start="2025-03-03" duration="15" complete="0" expand="true"/>
+            <task id="15" uid="8c4760ebba9f4060960c51f13eeb1587" name="B.4 - interface.c" color="#0000cc" meeting="false" start="2025-03-03" duration="15" complete="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="3" uid="be4a688a55c844e295f680f0c3b7fa7f" name="Lot_C" meeting="false" start="2025-03-24" duration="21" complete="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+            <task id="16" uid="56806cc19f724890abef1b45000707d3" name="C.1 - Initialisation du lot (Appliquer des normes et référentiels de qualité, Coordonner une équipe projet)" color="#ff00ff" meeting="false" start="2025-03-24" duration="7" complete="0" expand="true">
+                <depend id="17" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="17" uid="c66c050c7e87481b946009e0e157ae4a" name="C.2 - Etude théorique de la main de J1 (Mobiliser des connaissances pour diagnostiquer et modéliser)" color="#ff00ff" meeting="false" start="2025-04-02" duration="7" complete="0" expand="true">
+                <depend id="18" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="18" uid="82f8acd198864687a81a5ed2bed585d8" name="C.3 - Etude empirique de la main de J1 (Concevoir des modèles et des solutions techniques adaptées)" color="#ff00ff" meeting="false" start="2025-04-11" duration="7" complete="0" expand="true"/>
+            <task id="19" uid="9455fed81c4c4f358bcfd53ef78b7093" name="C.4 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)" color="#0000cc" meeting="false" start="2025-03-24" duration="7" complete="0" expand="true">
+                <depend id="20" type="2" difference="0" hardness="Strong"/>
+                <depend id="22" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="20" uid="ae1b01f2d82d43d98f36d20e5f1eaa0f" name="C.5 - Etude théorique de la main de J2, conditionnellement à la main de J1 (Mobiliser des connaissances pour diagnostiquer et modéliser)" color="#0000cc" meeting="false" start="2025-04-02" duration="7" complete="0" expand="true">
+                <depend id="22" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="22" uid="74cb5aa54fea4a7eb64ac1394946dfb3" name="C.6 - Etude empirique de la main de J2, conditionnellement à la main de J1 (Concevoir des modèles et des solutions techniques adaptées)" color="#0000cc" meeting="false" start="2025-04-11" duration="7" complete="0" expand="true"/>
+            <task id="23" uid="5171a7273dd845428d04a95687ca760a" name="C.7 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)" color="#00ffff" meeting="false" start="2025-03-24" duration="7" complete="0" expand="true">
+                <depend id="24" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="24" uid="e07e260bd9f5493391f59acebc6cc5c8" name="C.8 - Etude théorique de la main de J2 (Mobiliser des connaissances pour diagnostiquer et modéliser)" color="#00ffff" meeting="false" start="2025-04-02" duration="7" complete="0" expand="true">
+                <depend id="25" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="25" uid="32b39ffad991489891f8bbaf4b4b13b7" name="C.9 - Etude empirique de la main de J2 (Concevoir des modèles et des solutions techniques adaptées)" color="#00ffff" meeting="false" start="2025-04-11" duration="7" complete="0" expand="true"/>
+            <task id="26" uid="fdcb7f6503ea4ac3aedcafb2254e1c9f" name="C.10 - Etude empirique alternative de la main de J2 (Concevoir des modèles et des solutions techniques adaptées)" color="#ff0033" meeting="false" start="2025-03-24" duration="7" complete="0" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" uid="ae758931493440f585a833768907f1f0" name="C.11 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)" color="#ff0033" meeting="false" start="2025-04-02" duration="7" complete="0" expand="true">
+                <depend id="28" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="28" uid="1f912c2828d346339bce2611299760e9" name="C.12 - Calculs supplémentaires (Mobiliser des connaissances pour diagnostiquer et modéliser)" color="#ff0033" meeting="false" start="2025-04-11" duration="7" complete="0" expand="true"/>
+        </task>
+        <task id="4" uid="c9d09b256b78436c83cdf7e00b840e49" name="Lot_D" meeting="false" start="2025-02-17" duration="39" complete="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <task id="21" uid="f6f5eb5d3c4644ffbcb6f5bc572e1174" name="D.1 - Développement" color="#ff00ff" meeting="false" start="2025-02-17" duration="39" complete="0" expand="true"/>
+            <task id="29" uid="b9503c6d12a048a0b4b3924d4a50dcd3" name="D.2 - Évaluation, rapport d'évaluation" color="#00ffff" meeting="false" start="2025-02-17" duration="39" complete="0" expand="true"/>
+        </task>
+        <task id="5" uid="a62aa1bd66c246aeaf752a7f312ceb61" name="Lot_E" meeting="false" start="2025-03-24" duration="60" complete="0" expand="true">
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+            <task id="30" uid="191b5820febb4c67b651a7aca91cbec5" name="E.1 - Réorganisation et tests" color="#ff0033" meeting="false" start="2025-03-24" duration="60" complete="0" expand="true"/>
+            <task id="31" uid="27391e9bd26c450799bb45a73c736ae2" name="E.2 - Couleurs et constantes" color="#ff00ff" meeting="false" start="2025-03-24" duration="60" complete="0" expand="true"/>
+            <task id="32" uid="3bf35a0e3589402f9c32e748e2149ecb" name="E.3 - Mises" color="#00ffff" meeting="false" start="2025-03-24" duration="60" complete="0" expand="true"/>
+            <task id="33" uid="63d80c9184164cf09242320e4be958ea" name="E.4 - Cartes spéciales" color="#0000cc" meeting="false" start="2025-03-24" duration="60" complete="0" expand="true"/>
+        </task>
+        <task id="6" uid="9e9fda4b20f744cd87219df618ca2673" name="Lof_F" meeting="false" start="2025-04-22" duration="19" complete="1" expand="true">
+            <task id="34" uid="3cba679fc70b40bba04d322d2d38a3d0" name="F.1 - Initialisation du lot (Appliquer des normes et référentiels de qualité, Coordonner une équipe projet)" color="#ff0033" meeting="false" start="2025-04-22" duration="8" complete="0" expand="true"/>
+            <task id="35" uid="53e649b6bbff4943be96e896529b8863" name="F.2 - Etude théorique des gains en première manche, stratégies pures (Mobiliser des connaissances pour diagnostiquer et modéliser)" color="#ff00ff" meeting="false" start="2025-04-22" duration="8" complete="0" expand="true"/>
+            <task id="36" uid="c074ac323d4e44f8af59f5bf48e7573f" name="F.3 - Etude empirique des gains en première manche, stratégies pures (Concevoir des modèles et des solutions techniques adaptées)" color="#00ffff" meeting="false" start="2025-04-22" duration="8" complete="0" expand="true"/>
+            <task id="37" uid="bdebb15fef62470c91ca14b93dbf3974" name="F.4 - Comparaison théorique/empirique (Réaliser des analyses de cas pour une prise de décision éclairée)" color="#0000cc" meeting="false" start="2025-04-22" duration="8" complete="0" expand="true"/>
+            <task id="38" uid="735d89db2a094d8e88870ca384f46396" name="F.5 - Etude théorique des gains en première manche, stratégies mixtes (Mobiliser des connaissances pour diagnostiquer et modéliser)" color="#ff0033" meeting="false" start="2025-05-02" duration="11" complete="0" expand="true"/>
+            <task id="39" uid="671574c4f7ab479698a7c7b124d72aa6" name="F.6 - Etude théorique des stratégies mixtes en première manche (Mobiliser des connaissances pour diagnostiquer et modéliser)" color="#ff00ff" meeting="false" start="2025-05-02" duration="11" complete="0" expand="true"/>
+            <task id="40" uid="cfaf023791f944e6abd32de0739e6bbb" name="F.7 - Etude empirique des gains en première manche, stratégies mixtes (Concevoir des modèles et des solutions techniques adaptées)" color="#00ffff" meeting="false" start="2025-05-02" duration="11" complete="0" expand="true"/>
+            <task id="41" uid="2b5257ab8a0b417f897ac990882eeed4" name="F.8 - Etude empirique des stratégies mixtes (Concevoir des modèles et des solutions techniques adaptées)" color="#0000cc" meeting="false" start="2025-05-02" duration="11" complete="9" expand="true"/>
+        </task>
+        <task id="7" uid="71950547334d4d4da77b6a29fe965e9c" name="Lot_G" meeting="false" start="2025-04-11" duration="10" complete="0" expand="true">
+            <task id="42" uid="2b7ceee9f3a3444d88abaeb036eb67f8" name="G.1 - Reproduction" color="#ff0033" meeting="false" start="2025-04-11" duration="10" complete="0" expand="true"/>
+            <task id="43" uid="013fb03de43945d193836c99ec9ae228" name="G.2 - Rapport de Reproductibilité" color="#0000cc" meeting="false" start="2025-04-11" duration="10" complete="0" expand="true"/>
+        </task>
+        <task id="8" uid="cd6ff041167345efb6052e507532ca90" name="Lot_H" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true">
+            <depend id="48" type="2" difference="0" hardness="Strong"/>
+            <task id="44" uid="c2bb859d86d841a59f3126ef8c344c50" name="H.1 - Libre" color="#ff0033" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true"/>
+            <task id="45" uid="deca0a26c3f9464f88f87b7ec1224182" name="H.2 - Libre" color="#ff00ff" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true"/>
+            <task id="46" uid="b0752674778b428d8625e7dc74e5cdc0" name="H.3 - Libre" color="#00ffff" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true"/>
+            <task id="47" uid="2bba22e85da14e789fa12e5fa638b99f" name="H.4 - Libre" color="#0000cc" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="48" uid="b0e24e81dcd94138b33a37a3fa0ba21f" name="Lot_I" color="#000000" meeting="false" start="2025-06-17" duration="1" complete="0" expand="true">
+            <task id="49" uid="d68099a5a0f24c08b4ec77e7b4f11d9d" name="I.1 - Libre" color="#ff0033" meeting="false" start="2025-06-17" duration="1" complete="0" expand="true"/>
+            <task id="50" uid="7143febd98944ccea6e418239c07add1" name="I.2 - Libre" color="#ff00ff" meeting="false" start="2025-06-17" duration="1" complete="0" expand="true"/>
+            <task id="51" uid="3a409a08b4054c0c8e7989fb0fdc1ea6" name="I.3 - Libre" color="#00ffff" meeting="false" start="2025-06-17" duration="1" complete="0" expand="true"/>
+            <task id="52" uid="4d7e47369e6943149fccc20ec2f863c3" name="I.4 - Libre" color="#0000cc" meeting="false" start="2025-06-17" duration="1" complete="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Lilou" function="1" contacts="" phone=""/>
+        <resource id="1" name="Marie" function="1" contacts="" phone=""/>
+        <resource id="2" name="Ewen" function="1" contacts="" phone=""/>
+        <resource id="3" name="Sylvain" function="Default:1" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="10" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="14" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="24" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="29" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="32" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="36" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="43" resource-id="0" function="1" responsible="false" load="100.0"/>
+        <allocation task-id="40" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="46" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="51" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="15" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="29" resource-id="1" function="1" responsible="false" load="100.0"/>
+        <allocation task-id="33" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="37" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="43" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="41" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="47" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="52" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="19" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="20" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="22" resource-id="1" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="9" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="13" resource-id="2" function="1" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="31" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="35" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="39" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="42" resource-id="2" function="1" responsible="false" load="100.0"/>
+        <allocation task-id="45" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="50" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="16" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="17" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="1" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="12" resource-id="3" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="3" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="30" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="34" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="38" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="42" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="44" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="49" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="26" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles>
+        <role id="1" name="Developper"/>
+    </roles>
+</project>
